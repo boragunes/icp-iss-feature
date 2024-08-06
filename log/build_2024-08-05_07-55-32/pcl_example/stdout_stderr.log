@@ -1,0 +1,17 @@
+[35m[1mConsolidate compiler generated dependencies of target pcl_example_node[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/pcl_example_node.dir/src/pcl_example.cpp.o[0m
+[01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:48:7:[m[K [01;31m[Kerror: [m[Kredefinition of ‘[01m[Kclass Pcl_Example[m[K’
+   48 | class [01;31m[KPcl_Example[m[K : public rclcpp::Node
+      |       [01;31m[K^~~~~~~~~~~[m[K
+In file included from [01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:26[m[K:
+[01m[K/home/ws/src/pcl_example/include/pcl_example/pcl_example_node.hpp:13:7:[m[K [01;36m[Knote: [m[Kprevious definition of ‘[01m[Kclass Pcl_Example[m[K’
+   13 | class [01;36m[KPcl_Example[m[K : public rclcpp::Node
+      |       [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:48:1:[m[K [01;31m[Kerror: [m[Knew types may not be defined in a return type
+   48 | [01;31m[Kclass[m[K Pcl_Example : public rclcpp::Node
+      | [01;31m[K^~~~~[m[K
+[01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:48:1:[m[K [01;36m[Knote: [m[K(perhaps a semicolon is missing after the definition of ‘[01m[K<type error>[m[K’)
+[01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:48:1:[m[K [01;31m[Kerror: [m[Ktwo or more data types in declaration of ‘[01m[Ktopic_callback[m[K’
+gmake[2]: *** [CMakeFiles/pcl_example_node.dir/build.make:90: CMakeFiles/pcl_example_node.dir/src/pcl_example.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/pcl_example_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

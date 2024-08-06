@@ -1,0 +1,28 @@
+[0.008s] Invoking command in '/home/ws/src/pcl_example/build/pcl_example': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/ws/src/pcl_example/build/pcl_example -- -j20 -l20
+[0.041s] [35m[1mConsolidate compiler generated dependencies of target pcl_example_node[0m
+[0.061s] [100%] Built target pcl_example_node
+[0.069s] Invoked command in '/home/ws/src/pcl_example/build/pcl_example' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/ws/src/pcl_example/build/pcl_example -- -j20 -l20
+[0.088s] Invoking command in '/home/ws/src/pcl_example/build/pcl_example': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/ws/src/pcl_example/build/pcl_example
+[0.092s] -- Install configuration: "Release"
+[0.092s] -- Execute custom install script
+[0.092s] -- Up-to-date symlink: /home/ws/src/pcl_example/install/pcl_example/lib/pcl_example/pcl_example_node
+[0.092s] -- Up-to-date symlink: /home/ws/src/pcl_example/install/pcl_example/lib/pcl_example/cube1_record_1.yaml
+[0.092s] -- Up-to-date symlink: /home/ws/src/pcl_example/install/pcl_example/lib/pcl_example/cube1_record_2.yaml
+[0.093s] -- Up-to-date symlink: /home/ws/src/pcl_example/install/pcl_example/lib/pcl_example/pcl_example_launch.testing.py
+[0.093s] -- Up-to-date symlink: /home/ws/src/pcl_example/install/pcl_example/lib/pcl_example/pcl_example.rviz
+[0.093s] -- Up-to-date symlink: /home/ws/src/pcl_example/install/pcl_example/share/ament_index/resource_index/package_run_dependencies/pcl_example
+[0.093s] -- Up-to-date symlink: /home/ws/src/pcl_example/install/pcl_example/share/ament_index/resource_index/parent_prefix_path/pcl_example
+[0.093s] -- Up-to-date symlink: /home/ws/src/pcl_example/install/pcl_example/share/pcl_example/environment/ament_prefix_path.sh
+[0.093s] -- Up-to-date symlink: /home/ws/src/pcl_example/install/pcl_example/share/pcl_example/environment/ament_prefix_path.dsv
+[0.093s] -- Up-to-date symlink: /home/ws/src/pcl_example/install/pcl_example/share/pcl_example/environment/path.sh
+[0.093s] -- Up-to-date symlink: /home/ws/src/pcl_example/install/pcl_example/share/pcl_example/environment/path.dsv
+[0.093s] -- Up-to-date symlink: /home/ws/src/pcl_example/install/pcl_example/share/pcl_example/local_setup.bash
+[0.093s] -- Up-to-date symlink: /home/ws/src/pcl_example/install/pcl_example/share/pcl_example/local_setup.sh
+[0.093s] -- Up-to-date symlink: /home/ws/src/pcl_example/install/pcl_example/share/pcl_example/local_setup.zsh
+[0.093s] -- Up-to-date symlink: /home/ws/src/pcl_example/install/pcl_example/share/pcl_example/local_setup.dsv
+[0.093s] -- Symlinking: /home/ws/src/pcl_example/install/pcl_example/share/pcl_example/package.dsv
+[0.098s] -- Up-to-date symlink: /home/ws/src/pcl_example/install/pcl_example/share/ament_index/resource_index/packages/pcl_example
+[0.098s] -- Up-to-date symlink: /home/ws/src/pcl_example/install/pcl_example/share/pcl_example/cmake/pcl_exampleConfig.cmake
+[0.098s] -- Up-to-date symlink: /home/ws/src/pcl_example/install/pcl_example/share/pcl_example/cmake/pcl_exampleConfig-version.cmake
+[0.098s] -- Up-to-date symlink: /home/ws/src/pcl_example/install/pcl_example/share/pcl_example/package.xml
+[0.099s] Invoked command in '/home/ws/src/pcl_example/build/pcl_example' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/ws/src/pcl_example/build/pcl_example

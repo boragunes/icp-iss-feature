@@ -1,0 +1,31 @@
+[0.007s] Invoking command in '/home/ws/src/pcl_example/build/pcl_example': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/ws/src/pcl_example/build/pcl_example -- -j20 -l20
+[0.035s] [35m[1mConsolidate compiler generated dependencies of target pcl_example_node[0m
+[0.053s] [ 33%] [32mBuilding CXX object CMakeFiles/pcl_example_node.dir/src/pcl_example_node.cpp.o[0m
+[0.055s] [ 66%] [32mBuilding CXX object CMakeFiles/pcl_example_node.dir/src/pcl_example.cpp.o[0m
+[9.804s] [100%] [32m[1mLinking CXX executable pcl_example_node[0m
+[10.977s] [100%] Built target pcl_example_node
+[10.988s] Invoked command in '/home/ws/src/pcl_example/build/pcl_example' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/ws/src/pcl_example/build/pcl_example -- -j20 -l20
+[11.007s] Invoking command in '/home/ws/src/pcl_example/build/pcl_example': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/ws/src/pcl_example/build/pcl_example
+[11.011s] -- Install configuration: "Release"
+[11.011s] -- Execute custom install script
+[11.012s] -- Up-to-date symlink: /home/ws/src/pcl_example/install/pcl_example/lib/pcl_example/pcl_example_node
+[11.012s] -- Up-to-date symlink: /home/ws/src/pcl_example/install/pcl_example/lib/pcl_example/cube1_record_1.yaml
+[11.012s] -- Up-to-date symlink: /home/ws/src/pcl_example/install/pcl_example/lib/pcl_example/cube1_record_2.yaml
+[11.012s] -- Up-to-date symlink: /home/ws/src/pcl_example/install/pcl_example/lib/pcl_example/pcl_example_launch.testing.py
+[11.012s] -- Up-to-date symlink: /home/ws/src/pcl_example/install/pcl_example/lib/pcl_example/pcl_example.rviz
+[11.012s] -- Up-to-date symlink: /home/ws/src/pcl_example/install/pcl_example/share/ament_index/resource_index/package_run_dependencies/pcl_example
+[11.012s] -- Up-to-date symlink: /home/ws/src/pcl_example/install/pcl_example/share/ament_index/resource_index/parent_prefix_path/pcl_example
+[11.012s] -- Up-to-date symlink: /home/ws/src/pcl_example/install/pcl_example/share/pcl_example/environment/ament_prefix_path.sh
+[11.012s] -- Up-to-date symlink: /home/ws/src/pcl_example/install/pcl_example/share/pcl_example/environment/ament_prefix_path.dsv
+[11.012s] -- Up-to-date symlink: /home/ws/src/pcl_example/install/pcl_example/share/pcl_example/environment/path.sh
+[11.012s] -- Up-to-date symlink: /home/ws/src/pcl_example/install/pcl_example/share/pcl_example/environment/path.dsv
+[11.012s] -- Up-to-date symlink: /home/ws/src/pcl_example/install/pcl_example/share/pcl_example/local_setup.bash
+[11.012s] -- Up-to-date symlink: /home/ws/src/pcl_example/install/pcl_example/share/pcl_example/local_setup.sh
+[11.012s] -- Up-to-date symlink: /home/ws/src/pcl_example/install/pcl_example/share/pcl_example/local_setup.zsh
+[11.012s] -- Up-to-date symlink: /home/ws/src/pcl_example/install/pcl_example/share/pcl_example/local_setup.dsv
+[11.012s] -- Symlinking: /home/ws/src/pcl_example/install/pcl_example/share/pcl_example/package.dsv
+[11.017s] -- Up-to-date symlink: /home/ws/src/pcl_example/install/pcl_example/share/ament_index/resource_index/packages/pcl_example
+[11.017s] -- Up-to-date symlink: /home/ws/src/pcl_example/install/pcl_example/share/pcl_example/cmake/pcl_exampleConfig.cmake
+[11.017s] -- Up-to-date symlink: /home/ws/src/pcl_example/install/pcl_example/share/pcl_example/cmake/pcl_exampleConfig-version.cmake
+[11.017s] -- Up-to-date symlink: /home/ws/src/pcl_example/install/pcl_example/share/pcl_example/package.xml
+[11.018s] Invoked command in '/home/ws/src/pcl_example/build/pcl_example' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/ws/src/pcl_example/build/pcl_example

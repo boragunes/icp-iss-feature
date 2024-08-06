@@ -1,0 +1,11 @@
+[0m** WARNING ** io features related to pcap will be disabled[0m
+[01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:[m[K In constructor ‘[01m[KPcl_Example::Pcl_Example(const rclcpp::NodeOptions&)[m[K’:
+[01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:50:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kparam_topic_iss_features[m[K’ was not declared in this scope
+   50 |   [01;31m[Kparam_topic_iss_features[m[K = get_parameter("topic_iss_features").as_string();
+      |   [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:54:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kiss_features_publisher_[m[K’ was not declared in this scope
+   54 |   [01;31m[Kiss_features_publisher_[m[K = this->create_publisher<sensor_msgs::msg::PointCloud2>(param_topic_iss_features,2 );
+      |   [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/pcl_example_node.dir/build.make:90: CMakeFiles/pcl_example_node.dir/src/pcl_example.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/pcl_example_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

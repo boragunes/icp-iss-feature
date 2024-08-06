@@ -1,0 +1,70 @@
+[35m[1mConsolidate compiler generated dependencies of target pcl_example_node[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/pcl_example_node.dir/src/pcl_example.cpp.o[0m
+[01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:[m[K In member function ‘[01m[Kvoid Pcl_Example::topic_callback(sensor_msgs::msg::PointCloud2_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:128:28:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Ksensor_msgs::msg::PointCloud2[m[K’ {aka ‘[01m[Ksensor_msgs::msg::PointCloud2_<std::allocator<void> >[m[K’} to ‘[01m[Kconst PointCloudSourceConstPtr&[m[K’ {aka ‘[01m[Kconst std::shared_ptr<const pcl::PointCloud<pcl::PointXYZ> >&[m[K’}
+  128 |         icp.setInputSource([01;31m[Kkeypoints_msg[m[K);
+      |                            [01;31m[K^~~~~~~~~~~~~[m[K
+      |                            [01;31m[K|[m[K
+      |                            [01;31m[Ksensor_msgs::msg::PointCloud2 {aka sensor_msgs::msg::PointCloud2_<std::allocator<void> >}[m[K
+In file included from [01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:36[m[K:
+[01m[K/usr/include/pcl-1.12/pcl/registration/icp.h:207:50:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Kvoid pcl::IterativeClosestPoint<PointSource, PointTarget, Scalar>::setInputSource(const PointCloudSourceConstPtr&) [with PointSource = pcl::PointXYZ; PointTarget = pcl::PointXYZ; Scalar = float; pcl::IterativeClosestPoint<PointSource, PointTarget, Scalar>::PointCloudSourceConstPtr = std::shared_ptr<const pcl::PointCloud<pcl::PointXYZ> >][m[K’
+  207 |   setInputSource([01;36m[Kconst PointCloudSourceConstPtr& cloud[m[K) override
+      |                  [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~[m[K
+[01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:170:24:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator*[m[K’ (operand type is ‘[01m[Ksensor_msgs::msg::PointCloud2[m[K’ {aka ‘[01m[Ksensor_msgs::msg::PointCloud2_<std::allocator<void> >[m[K’})
+  170 |     *previous_cloud_ = [01;31m[K*keypoints_msg[m[K;
+      |                        [01;31m[K^~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:18[m[K:
+[01m[K/usr/include/c++/11/chrono:691:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Rep1, class _Period, class _Rep2> constexpr std::chrono::duration<std::chrono::__common_rep_t<_Rep1, _Rep2>, _Period> std::chrono::operator*(const std::chrono::duration<_Rep1, _Period1>&, const _Rep2&)[m[K’
+  691 |       [01;36m[Koperator[m[K*(const duration<_Rep1, _Period>& __d, const _Rep2& __s)
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/chrono:691:7:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:170:25:[m[K [01;36m[Knote: [m[K  ‘[01m[Ksensor_msgs::msg::PointCloud2[m[K’ {aka ‘[01m[Ksensor_msgs::msg::PointCloud2_<std::allocator<void> >[m[K’} is not derived from ‘[01m[Kconst std::chrono::duration<_Rep1, _Period1>[m[K’
+  170 |     *previous_cloud_ = *[01;36m[Kkeypoints_msg[m[K;
+      |                         [01;36m[K^~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:18[m[K:
+[01m[K/usr/include/c++/11/chrono:700:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Rep1, class _Rep2, class _Period> constexpr std::chrono::duration<std::chrono::__common_rep_t<_Rep2, _Rep1>, _Period> std::chrono::operator*(const _Rep1&, const std::chrono::duration<_Rep, _Period>&)[m[K’
+  700 |       [01;36m[Koperator[m[K*(const _Rep1& __s, const duration<_Rep2, _Period>& __d)
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/chrono:700:7:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:170:25:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 1 provided
+  170 |     *previous_cloud_ = *[01;36m[Kkeypoints_msg[m[K;
+      |                         [01;36m[K^~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:50[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/StdVector:14[m[K,
+                 from [01m[K/usr/include/pcl-1.12/pcl/point_cloud.h:45[m[K,
+                 from [01m[K/home/ws/src/pcl_example/include/pcl_example/pcl_example_node.hpp:8[m[K,
+                 from [01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:26[m[K:
+[01m[K/usr/include/c++/11/complex:392:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> std::complex<_Tp> std::operator*(const std::complex<_Tp>&, const std::complex<_Tp>&)[m[K’
+  392 |     [01;36m[Koperator[m[K*(const complex<_Tp>& __x, const complex<_Tp>& __y)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/complex:392:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:170:25:[m[K [01;36m[Knote: [m[K  ‘[01m[Ksensor_msgs::msg::PointCloud2[m[K’ {aka ‘[01m[Ksensor_msgs::msg::PointCloud2_<std::allocator<void> >[m[K’} is not derived from ‘[01m[Kconst std::complex<_Tp>[m[K’
+  170 |     *previous_cloud_ = *[01;36m[Kkeypoints_msg[m[K;
+      |                         [01;36m[K^~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:50[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/StdVector:14[m[K,
+                 from [01m[K/usr/include/pcl-1.12/pcl/point_cloud.h:45[m[K,
+                 from [01m[K/home/ws/src/pcl_example/include/pcl_example/pcl_example_node.hpp:8[m[K,
+                 from [01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:26[m[K:
+[01m[K/usr/include/c++/11/complex:401:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> std::complex<_Tp> std::operator*(const std::complex<_Tp>&, const _Tp&)[m[K’
+  401 |     [01;36m[Koperator[m[K*(const complex<_Tp>& __x, const _Tp& __y)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/complex:401:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:170:25:[m[K [01;36m[Knote: [m[K  ‘[01m[Ksensor_msgs::msg::PointCloud2[m[K’ {aka ‘[01m[Ksensor_msgs::msg::PointCloud2_<std::allocator<void> >[m[K’} is not derived from ‘[01m[Kconst std::complex<_Tp>[m[K’
+  170 |     *previous_cloud_ = *[01;36m[Kkeypoints_msg[m[K;
+      |                         [01;36m[K^~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:50[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/StdVector:14[m[K,
+                 from [01m[K/usr/include/pcl-1.12/pcl/point_cloud.h:45[m[K,
+                 from [01m[K/home/ws/src/pcl_example/include/pcl_example/pcl_example_node.hpp:8[m[K,
+                 from [01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:26[m[K:
+[01m[K/usr/include/c++/11/complex:410:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> std::complex<_Tp> std::operator*(const _Tp&, const std::complex<_Tp>&)[m[K’
+  410 |     [01;36m[Koperator[m[K*(const _Tp& __x, const complex<_Tp>& __y)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/complex:410:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:170:25:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 1 provided
+  170 |     *previous_cloud_ = *[01;36m[Kkeypoints_msg[m[K;
+      |                         [01;36m[K^~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/pcl_example_node.dir/build.make:90: CMakeFiles/pcl_example_node.dir/src/pcl_example.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/pcl_example_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

@@ -1,0 +1,14 @@
+[0.007s] Invoking command in '/home/ws/src/pcl_example/build/pcl_example': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/ws/src/pcl_example/build/pcl_example -- -j20 -l20
+[0.035s] [35m[1mConsolidate compiler generated dependencies of target pcl_example_node[0m
+[0.055s] [ 33%] [32mBuilding CXX object CMakeFiles/pcl_example_node.dir/src/pcl_example.cpp.o[0m
+[3.061s] [01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:[m[K In constructor ‘[01m[KPcl_Example::Pcl_Example(const rclcpp::NodeOptions&)[m[K’:
+[3.061s] [01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:51:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kparam_topic_iss_features[m[K’ was not declared in this scope
+[3.061s]    51 |   [01;31m[Kparam_topic_iss_features[m[K = get_parameter("topic_iss_features").as_string();
+[3.061s]       |   [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.076s] [01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:55:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kiss_features_publisher_[m[K’ was not declared in this scope
+[3.076s]    55 |   [01;31m[Kiss_features_publisher_[m[K = this->create_publisher<sensor_msgs::msg::PointCloud2>(param_topic_iss_features,2 );
+[3.077s]       |   [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[5.144s] gmake[2]: *** [CMakeFiles/pcl_example_node.dir/build.make:90: CMakeFiles/pcl_example_node.dir/src/pcl_example.cpp.o] Error 1
+[5.144s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/pcl_example_node.dir/all] Error 2
+[5.144s] gmake: *** [Makefile:146: all] Error 2
+[5.146s] Invoked command in '/home/ws/src/pcl_example/build/pcl_example' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/ws/src/pcl_example/build/pcl_example -- -j20 -l20

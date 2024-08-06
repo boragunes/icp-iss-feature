@@ -1,0 +1,138 @@
+[0.000000] (-) TimerEvent: {}
+[0.000116] (pcl_example) JobQueued: {'identifier': 'pcl_example', 'dependencies': OrderedDict()}
+[0.000135] (pcl_example) JobStarted: {'identifier': 'pcl_example'}
+[0.004409] (pcl_example) JobProgress: {'identifier': 'pcl_example', 'progress': 'cmake'}
+[0.005538] (pcl_example) JobProgress: {'identifier': 'pcl_example', 'progress': 'build'}
+[0.005620] (pcl_example) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/ws/src/pcl_example/build/pcl_example', '--', '-j20', '-l20'], 'cwd': '/home/ws/src/pcl_example/build/pcl_example', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('HOSTNAME', 'boragunes'), ('GIT_ASKPASS', '/vscode/vscode-server/bin/linux-x64/b1c0a14de1414fcdaa400695b4db1c0799bc3124/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/vscode/vscode-server/bin/linux-x64/b1c0a14de1414fcdaa400695b4db1c0799bc3124/bin/helpers/browser.sh'), ('HOME', '/home/boragunes'), ('OLDPWD', '/home/ws/src'), ('TERM_PROGRAM_VERSION', '1.92.0'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-cdf7b069-9c48-4b48-a406-61c0a5d4abf9.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/vscode/vscode-server/bin/linux-x64/b1c0a14de1414fcdaa400695b4db1c0799bc3124/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/vscode/vscode-server/bin/linux-x64/b1c0a14de1414fcdaa400695b4db1c0799bc3124/node'), ('COLORTERM', 'truecolor'), ('REMOTE_CONTAINERS', 'true'), ('_colcon_cd_root', '/opt/ros/humble/'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-957eff9c-6ca1-4510-8791-b73bc0c89efd.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '1'), ('PATH', '/vscode/vscode-server/bin/linux-x64/b1c0a14de1414fcdaa400695b4db1c0799bc3124/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-957eff9c-6ca1-4510-8791-b73bc0c89efd.sock","/home/boragunes/.gnupg/S.gpg-agent"]'), ('DISPLAY', ':1'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-98efb1034d.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-957eff9c-6ca1-4510-8791-b73bc0c89efd.sock'), ('ROS_DOMAIN_ID', '42'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/ws/src/pcl_example/build/pcl_example'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.032659] (pcl_example) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target pcl_example_node\x1b[0m\n'}
+[0.053002] (pcl_example) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/pcl_example_node.dir/src/pcl_example.cpp.o\x1b[0m\n'}
+[0.099474] (-) TimerEvent: {}
+[0.199808] (-) TimerEvent: {}
+[0.300053] (-) TimerEvent: {}
+[0.400342] (-) TimerEvent: {}
+[0.500737] (-) TimerEvent: {}
+[0.601085] (-) TimerEvent: {}
+[0.701465] (-) TimerEvent: {}
+[0.801753] (-) TimerEvent: {}
+[0.902078] (-) TimerEvent: {}
+[1.002401] (-) TimerEvent: {}
+[1.102725] (-) TimerEvent: {}
+[1.202985] (-) TimerEvent: {}
+[1.303235] (-) TimerEvent: {}
+[1.403588] (-) TimerEvent: {}
+[1.503914] (-) TimerEvent: {}
+[1.604249] (-) TimerEvent: {}
+[1.704600] (-) TimerEvent: {}
+[1.804914] (-) TimerEvent: {}
+[1.905376] (-) TimerEvent: {}
+[2.005751] (-) TimerEvent: {}
+[2.105996] (-) TimerEvent: {}
+[2.206334] (-) TimerEvent: {}
+[2.306608] (-) TimerEvent: {}
+[2.406908] (-) TimerEvent: {}
+[2.507150] (-) TimerEvent: {}
+[2.607483] (-) TimerEvent: {}
+[2.707756] (-) TimerEvent: {}
+[2.807997] (-) TimerEvent: {}
+[2.908368] (-) TimerEvent: {}
+[3.008733] (-) TimerEvent: {}
+[3.109007] (-) TimerEvent: {}
+[3.131173] (pcl_example) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ws/src/pcl_example/src/pcl_example.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid Pcl_Example::topic_callback(sensor_msgs::msg::PointCloud2_<std::allocator<void> >::SharedPtr)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[3.131356] (pcl_example) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ws/src/pcl_example/src/pcl_example.cpp:142:27:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kusing _pose_type = struct geometry_msgs::msg::Pose_<std::allocator<void> >\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kstruct geometry_msgs::msg::Pose_<std::allocator<void> >\x1b[m\x1b[K\xe2\x80\x99} has no member named \xe2\x80\x98\x1b[01m\x1b[Kpose\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.131429] (pcl_example) StderrLine: {'line': b'  142 |             odom_msg.pose.\x1b[01;31m\x1b[Kpose\x1b[m\x1b[K.position.x = transformation(0, 3);\n'}
+[3.131492] (pcl_example) StderrLine: {'line': b'      |                           \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[3.131818] (pcl_example) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ws/src/pcl_example/src/pcl_example.cpp:143:27:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kusing _pose_type = struct geometry_msgs::msg::Pose_<std::allocator<void> >\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kstruct geometry_msgs::msg::Pose_<std::allocator<void> >\x1b[m\x1b[K\xe2\x80\x99} has no member named \xe2\x80\x98\x1b[01m\x1b[Kpose\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.131919] (pcl_example) StderrLine: {'line': b'  143 |             odom_msg.pose.\x1b[01;31m\x1b[Kpose\x1b[m\x1b[K.position.y = transformation(1, 3);\n'}
+[3.131988] (pcl_example) StderrLine: {'line': b'      |                           \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[3.132050] (pcl_example) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ws/src/pcl_example/src/pcl_example.cpp:144:27:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kusing _pose_type = struct geometry_msgs::msg::Pose_<std::allocator<void> >\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kstruct geometry_msgs::msg::Pose_<std::allocator<void> >\x1b[m\x1b[K\xe2\x80\x99} has no member named \xe2\x80\x98\x1b[01m\x1b[Kpose\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.132113] (pcl_example) StderrLine: {'line': b'  144 |             odom_msg.pose.\x1b[01;31m\x1b[Kpose\x1b[m\x1b[K.position.z = transformation(2, 3);\n'}
+[3.132173] (pcl_example) StderrLine: {'line': b'      |                           \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[3.132231] (pcl_example) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ws/src/pcl_example/src/pcl_example.cpp:145:27:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kusing _pose_type = struct geometry_msgs::msg::Pose_<std::allocator<void> >\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kstruct geometry_msgs::msg::Pose_<std::allocator<void> >\x1b[m\x1b[K\xe2\x80\x99} has no member named \xe2\x80\x98\x1b[01m\x1b[Kpose\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.132299] (pcl_example) StderrLine: {'line': b'  145 |             odom_msg.pose.\x1b[01;31m\x1b[Kpose\x1b[m\x1b[K.orientation.x = q.x();\n'}
+[3.132360] (pcl_example) StderrLine: {'line': b'      |                           \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[3.132419] (pcl_example) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ws/src/pcl_example/src/pcl_example.cpp:146:27:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kusing _pose_type = struct geometry_msgs::msg::Pose_<std::allocator<void> >\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kstruct geometry_msgs::msg::Pose_<std::allocator<void> >\x1b[m\x1b[K\xe2\x80\x99} has no member named \xe2\x80\x98\x1b[01m\x1b[Kpose\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.132478] (pcl_example) StderrLine: {'line': b'  146 |             odom_msg.pose.\x1b[01;31m\x1b[Kpose\x1b[m\x1b[K.orientation.y = q.y();\n'}
+[3.132535] (pcl_example) StderrLine: {'line': b'      |                           \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[3.132593] (pcl_example) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ws/src/pcl_example/src/pcl_example.cpp:147:27:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kusing _pose_type = struct geometry_msgs::msg::Pose_<std::allocator<void> >\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kstruct geometry_msgs::msg::Pose_<std::allocator<void> >\x1b[m\x1b[K\xe2\x80\x99} has no member named \xe2\x80\x98\x1b[01m\x1b[Kpose\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.132652] (pcl_example) StderrLine: {'line': b'  147 |             odom_msg.pose.\x1b[01;31m\x1b[Kpose\x1b[m\x1b[K.orientation.z = q.z();\n'}
+[3.132709] (pcl_example) StderrLine: {'line': b'      |                           \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[3.132769] (pcl_example) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ws/src/pcl_example/src/pcl_example.cpp:148:27:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kusing _pose_type = struct geometry_msgs::msg::Pose_<std::allocator<void> >\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kstruct geometry_msgs::msg::Pose_<std::allocator<void> >\x1b[m\x1b[K\xe2\x80\x99} has no member named \xe2\x80\x98\x1b[01m\x1b[Kpose\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.132829] (pcl_example) StderrLine: {'line': b'  148 |             odom_msg.pose.\x1b[01;31m\x1b[Kpose\x1b[m\x1b[K.orientation.w = q.w();\n'}
+[3.132888] (pcl_example) StderrLine: {'line': b'      |                           \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[3.141993] (pcl_example) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ws/src/pcl_example/src/pcl_example.cpp:150:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kpath_history_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[3.142152] (pcl_example) StderrLine: {'line': b'  150 |             \x1b[01;31m\x1b[Kpath_history_\x1b[m\x1b[K.push_back(odom_msg);\n'}
+[3.142221] (pcl_example) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.143186] (pcl_example) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ws/src/pcl_example/src/pcl_example.cpp:160:30:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kinsert\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[3.143283] (pcl_example) StderrLine: {'line': b'  160 |             path_msg.poses = \x1b[01;31m\x1b[Kinsert\x1b[m\x1b[K(path_msg.poses.end(),path_history_.begin(),path_history_.end());\n'}
+[3.143359] (pcl_example) StderrLine: {'line': b'      |                              \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[3.143420] (pcl_example) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ws/src/pcl_example/src/pcl_example.cpp:160:30:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Ksuggested alternatives:\n'}
+[3.143485] (pcl_example) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/boost/mpl/insert.hpp:17\x1b[m\x1b[K,\n'}
+[3.143542] (pcl_example) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/fusion/mpl/insert.hpp:11\x1b[m\x1b[K,\n'}
+[3.143599] (pcl_example) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/fusion/mpl.hpp:24\x1b[m\x1b[K,\n'}
+[3.143655] (pcl_example) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/fusion/include/mpl.hpp:12\x1b[m\x1b[K,\n'}
+[3.143711] (pcl_example) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/pcl-1.12/pcl/common/impl/accumulators.hpp:44\x1b[m\x1b[K,\n'}
+[3.143767] (pcl_example) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/pcl-1.12/pcl/common/centroid.h:955\x1b[m\x1b[K,\n'}
+[3.143823] (pcl_example) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/pcl-1.12/pcl/features/normal_3d.h:46\x1b[m\x1b[K,\n'}
+[3.143878] (pcl_example) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/pcl-1.12/pcl/features/normal_3d_omp.h:43\x1b[m\x1b[K,\n'}
+[3.143934] (pcl_example) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/ws/src/pcl_example/src/pcl_example.cpp:31\x1b[m\x1b[K:\n'}
+[3.143989] (pcl_example) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/boost/mpl/insert_fwd.hpp:20:69:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Kboost::mpl::insert\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.144046] (pcl_example) StderrLine: {'line': b'   20 | template< typename Sequence, typename Pos_or_T, typename T > struct \x1b[01;36m\x1b[Kinsert\x1b[m\x1b[K;\n'}
+[3.144102] (pcl_example) StderrLine: {'line': b'      |                                                                     \x1b[01;36m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[3.144158] (pcl_example) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/boost/fusion/mpl/insert.hpp:13\x1b[m\x1b[K,\n'}
+[3.144213] (pcl_example) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/fusion/mpl.hpp:24\x1b[m\x1b[K,\n'}
+[3.144268] (pcl_example) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/fusion/include/mpl.hpp:12\x1b[m\x1b[K,\n'}
+[3.144324] (pcl_example) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/pcl-1.12/pcl/common/impl/accumulators.hpp:44\x1b[m\x1b[K,\n'}
+[3.144379] (pcl_example) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/pcl-1.12/pcl/common/centroid.h:955\x1b[m\x1b[K,\n'}
+[3.144437] (pcl_example) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/pcl-1.12/pcl/features/normal_3d.h:46\x1b[m\x1b[K,\n'}
+[3.144492] (pcl_example) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/pcl-1.12/pcl/features/normal_3d_omp.h:43\x1b[m\x1b[K,\n'}
+[3.144548] (pcl_example) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/ws/src/pcl_example/src/pcl_example.cpp:31\x1b[m\x1b[K:\n'}
+[3.144603] (pcl_example) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/boost/fusion/algorithm/transformation/insert.hpp:49:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Kboost::fusion::insert\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.144660] (pcl_example) StderrLine: {'line': b'   49 |     \x1b[01;36m\x1b[Kinsert\x1b[m\x1b[K(Sequence const& seq, Position const& pos, T const& x)\n'}
+[3.144716] (pcl_example) StderrLine: {'line': b'      |     \x1b[01;36m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[3.144772] (pcl_example) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/boost/fusion/algorithm/transformation/insert.hpp:27:16:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Kboost::fusion::result_of::insert\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.144829] (pcl_example) StderrLine: {'line': b'   27 |         struct \x1b[01;36m\x1b[Kinsert\x1b[m\x1b[K\n'}
+[3.144885] (pcl_example) StderrLine: {'line': b'      |                \x1b[01;36m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[3.209170] (-) TimerEvent: {}
+[3.309534] (-) TimerEvent: {}
+[3.409897] (-) TimerEvent: {}
+[3.510229] (-) TimerEvent: {}
+[3.610608] (-) TimerEvent: {}
+[3.710906] (-) TimerEvent: {}
+[3.811156] (-) TimerEvent: {}
+[3.911433] (-) TimerEvent: {}
+[4.011801] (-) TimerEvent: {}
+[4.112095] (-) TimerEvent: {}
+[4.212471] (-) TimerEvent: {}
+[4.312822] (-) TimerEvent: {}
+[4.413162] (-) TimerEvent: {}
+[4.513507] (-) TimerEvent: {}
+[4.613833] (-) TimerEvent: {}
+[4.714200] (-) TimerEvent: {}
+[4.814502] (-) TimerEvent: {}
+[4.914867] (-) TimerEvent: {}
+[5.015108] (-) TimerEvent: {}
+[5.115471] (-) TimerEvent: {}
+[5.215833] (-) TimerEvent: {}
+[5.316207] (-) TimerEvent: {}
+[5.416492] (-) TimerEvent: {}
+[5.516834] (-) TimerEvent: {}
+[5.617193] (-) TimerEvent: {}
+[5.717573] (-) TimerEvent: {}
+[5.817905] (-) TimerEvent: {}
+[5.918262] (-) TimerEvent: {}
+[6.018589] (-) TimerEvent: {}
+[6.118924] (-) TimerEvent: {}
+[6.219165] (-) TimerEvent: {}
+[6.319438] (-) TimerEvent: {}
+[6.419796] (-) TimerEvent: {}
+[6.520156] (-) TimerEvent: {}
+[6.620525] (-) TimerEvent: {}
+[6.720887] (-) TimerEvent: {}
+[6.821176] (-) TimerEvent: {}
+[6.908218] (pcl_example) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/pcl_example_node.dir/build.make:90: CMakeFiles/pcl_example_node.dir/src/pcl_example.cpp.o] Error 1\n'}
+[6.908374] (pcl_example) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/pcl_example_node.dir/all] Error 2\n'}
+[6.908531] (pcl_example) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[6.910634] (pcl_example) CommandEnded: {'returncode': 2}
+[6.921363] (-) TimerEvent: {}
+[6.930039] (pcl_example) JobEnded: {'identifier': 'pcl_example', 'rc': 2}
+[6.940873] (-) EventReactorShutdown: {}

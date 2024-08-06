@@ -1,0 +1,14 @@
+[35m[1mConsolidate compiler generated dependencies of target pcl_example_node[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/pcl_example_node.dir/src/pcl_example.cpp.o[0m
+[01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:[m[K In member function ‘[01m[Kvoid Pcl_Example::topic_callback(sensor_msgs::msg::PointCloud2_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:125:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kprevious_cloud_[m[K’ was not declared in this scope; did you mean ‘[01m[Kprevious_cloud[m[K’?
+  125 |    if (![01;31m[Kprevious_cloud_[m[K->empty())
+      |         [01;31m[K^~~~~~~~~~~~~~~[m[K
+      |         [32m[Kprevious_cloud[m[K
+[01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:161:6:[m[K [01;31m[Kerror: [m[K‘[01m[Kprevious_cloud_[m[K’ was not declared in this scope; did you mean ‘[01m[Kprevious_cloud[m[K’?
+  161 |     *[01;31m[Kprevious_cloud_[m[K = *cloud_filtered;
+      |      [01;31m[K^~~~~~~~~~~~~~~[m[K
+      |      [32m[Kprevious_cloud[m[K
+gmake[2]: *** [CMakeFiles/pcl_example_node.dir/build.make:90: CMakeFiles/pcl_example_node.dir/src/pcl_example.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/pcl_example_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

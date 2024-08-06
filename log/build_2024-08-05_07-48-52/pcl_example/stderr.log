@@ -1,0 +1,42 @@
+[01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:[m[K In member function ‘[01m[Kvoid Pcl_Example::topic_callback(sensor_msgs::msg::PointCloud2_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:150:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kpath_history_[m[K’ was not declared in this scope
+  150 |             [01;31m[Kpath_history_[m[K.push_back(odom_msg);
+      |             [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:157:40:[m[K [01;31m[Kerror: [m[K‘[01m[Kmap[m[K’ was not declared in this scope
+  157 |             path_msg.header.frame_id = [01;31m[Kmap[m[K;
+      |                                        [01;31m[K^~~[m[K
+[01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:157:40:[m[K [01;36m[Knote: [m[Ksuggested alternatives:
+In file included from [01m[K/usr/include/c++/11/map:61[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/ws/src/pcl_example/include/pcl_example/pcl_example_node.hpp:4[m[K,
+                 from [01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:26[m[K:
+[01m[K/usr/include/c++/11/bits/stl_map.h:100:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::map[m[K’
+  100 |     class [01;36m[Kmap[m[K
+      |           [01;36m[K^~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/ws/src/pcl_example/include/pcl_example/pcl_example_node.hpp:4[m[K,
+                 from [01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:26[m[K:
+[01m[K/usr/include/c++/11/map:78:13:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::pmr::map[m[K’
+   78 |       using [01;36m[Kmap[m[K
+      |             [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/boost/fusion/mpl/detail/clear.hpp:13[m[K,
+                 from [01m[K/usr/include/boost/fusion/mpl/clear.hpp:13[m[K,
+                 from [01m[K/usr/include/boost/fusion/mpl.hpp:17[m[K,
+                 from [01m[K/usr/include/boost/fusion/include/mpl.hpp:12[m[K,
+                 from [01m[K/usr/include/pcl-1.12/pcl/common/impl/accumulators.hpp:44[m[K,
+                 from [01m[K/usr/include/pcl-1.12/pcl/common/centroid.h:955[m[K,
+                 from [01m[K/usr/include/pcl-1.12/pcl/features/normal_3d.h:46[m[K,
+                 from [01m[K/usr/include/pcl-1.12/pcl/features/normal_3d_omp.h:43[m[K,
+                 from [01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:31[m[K:
+[01m[K/usr/include/boost/fusion/container/map/map_fwd.hpp:45:12:[m[K [01;36m[Knote: [m[K  ‘[01m[Kboost::fusion::map[m[K’
+   45 |     struct [01;36m[Kmap[m[K;
+      |            [01;36m[K^~~[m[K
+gmake[2]: *** [CMakeFiles/pcl_example_node.dir/build.make:90: CMakeFiles/pcl_example_node.dir/src/pcl_example.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/pcl_example_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

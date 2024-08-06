@@ -1,0 +1,18 @@
+[0.007s] Invoking command in '/home/ws/src/pcl_example/build/pcl_example': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/ws/src/pcl_example/build/pcl_example -- -j20 -l20
+[0.038s] [35m[1mConsolidate compiler generated dependencies of target pcl_example_node[0m
+[0.057s] [ 33%] [32mBuilding CXX object CMakeFiles/pcl_example_node.dir/src/pcl_example.cpp.o[0m
+[3.396s] [01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:[m[K In constructor ‘[01m[KPcl_Example::Pcl_Example(const rclcpp::NodeOptions&)[m[K’:
+[3.396s] [01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:63:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kprevious_cloud_[m[K’ was not declared in this scope
+[3.396s]    63 |   [01;31m[Kprevious_cloud_[m[K = std::make_shared<pcl::PointCloud<pcl::PointXYZ>>();
+[3.396s]       |   [01;31m[K^~~~~~~~~~~~~~~[m[K
+[3.441s] [01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:[m[K In member function ‘[01m[Kvoid Pcl_Example::topic_callback(sensor_msgs::msg::PointCloud2_<std::allocator<void> >::SharedPtr)[m[K’:
+[3.441s] [01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:123:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kprevious_cloud_[m[K’ was not declared in this scope
+[3.441s]   123 |    if (![01;31m[Kprevious_cloud_[m[K->empty())
+[3.441s]       |         [01;31m[K^~~~~~~~~~~~~~~[m[K
+[3.470s] [01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:159:6:[m[K [01;31m[Kerror: [m[K‘[01m[Kprevious_cloud_[m[K’ was not declared in this scope
+[3.470s]   159 |     *[01;31m[Kprevious_cloud_[m[K = *cloud_filtered;
+[3.470s]       |      [01;31m[K^~~~~~~~~~~~~~~[m[K
+[8.087s] gmake[2]: *** [CMakeFiles/pcl_example_node.dir/build.make:90: CMakeFiles/pcl_example_node.dir/src/pcl_example.cpp.o] Error 1
+[8.087s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/pcl_example_node.dir/all] Error 2
+[8.087s] gmake: *** [Makefile:146: all] Error 2
+[8.089s] Invoked command in '/home/ws/src/pcl_example/build/pcl_example' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/ws/src/pcl_example/build/pcl_example -- -j20 -l20

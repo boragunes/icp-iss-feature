@@ -1,0 +1,26 @@
+[35m[1mConsolidate compiler generated dependencies of target pcl_example_node[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/pcl_example_node.dir/src/pcl_example.cpp.o[0m
+[ 66%] [32m[1mLinking CXX executable pcl_example_node[0m
+[100%] Built target pcl_example_node
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/ws/src/pcl_example/install/pcl_example/lib/pcl_example/pcl_example_node
+-- Symlinking: /home/ws/src/pcl_example/install/pcl_example/lib/pcl_example/cube1_record_1.yaml
+-- Symlinking: /home/ws/src/pcl_example/install/pcl_example/lib/pcl_example/cube1_record_2.yaml
+-- Symlinking: /home/ws/src/pcl_example/install/pcl_example/lib/pcl_example/pcl_example_launch.testing.py
+-- Symlinking: /home/ws/src/pcl_example/install/pcl_example/lib/pcl_example/pcl_example.rviz
+-- Symlinking: /home/ws/src/pcl_example/install/pcl_example/share/ament_index/resource_index/package_run_dependencies/pcl_example
+-- Symlinking: /home/ws/src/pcl_example/install/pcl_example/share/ament_index/resource_index/parent_prefix_path/pcl_example
+-- Symlinking: /home/ws/src/pcl_example/install/pcl_example/share/pcl_example/environment/ament_prefix_path.sh
+-- Symlinking: /home/ws/src/pcl_example/install/pcl_example/share/pcl_example/environment/ament_prefix_path.dsv
+-- Symlinking: /home/ws/src/pcl_example/install/pcl_example/share/pcl_example/environment/path.sh
+-- Symlinking: /home/ws/src/pcl_example/install/pcl_example/share/pcl_example/environment/path.dsv
+-- Symlinking: /home/ws/src/pcl_example/install/pcl_example/share/pcl_example/local_setup.bash
+-- Symlinking: /home/ws/src/pcl_example/install/pcl_example/share/pcl_example/local_setup.sh
+-- Symlinking: /home/ws/src/pcl_example/install/pcl_example/share/pcl_example/local_setup.zsh
+-- Symlinking: /home/ws/src/pcl_example/install/pcl_example/share/pcl_example/local_setup.dsv
+-- Symlinking: /home/ws/src/pcl_example/install/pcl_example/share/pcl_example/package.dsv
+-- Symlinking: /home/ws/src/pcl_example/install/pcl_example/share/ament_index/resource_index/packages/pcl_example
+-- Symlinking: /home/ws/src/pcl_example/install/pcl_example/share/pcl_example/cmake/pcl_exampleConfig.cmake
+-- Symlinking: /home/ws/src/pcl_example/install/pcl_example/share/pcl_example/cmake/pcl_exampleConfig-version.cmake
+-- Symlinking: /home/ws/src/pcl_example/install/pcl_example/share/pcl_example/package.xml

@@ -1,0 +1,18 @@
+[0.007s] Invoking command in '/home/ws/src/pcl_example/build/pcl_example': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/ws/src/pcl_example/build/pcl_example -- -j20 -l20
+[0.036s] [35m[1mConsolidate compiler generated dependencies of target pcl_example_node[0m
+[0.056s] [ 33%] [32mBuilding CXX object CMakeFiles/pcl_example_node.dir/src/pcl_example.cpp.o[0m
+[3.411s] [01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:[m[K In member function ‘[01m[Kvoid Pcl_Example::topic_callback(sensor_msgs::msg::PointCloud2_<std::allocator<void> >::SharedPtr)[m[K’:
+[3.411s] [01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:87:21:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kstd::__shared_ptr_access<pcl::PointCloud<pcl::PointXYZ>, __gnu_cxx::_S_atomic, false, false>::element_type[m[K’ {aka ‘[01m[Kpcl::PointCloud<pcl::PointXYZ>[m[K’} to ‘[01m[Kpcl::Filter<pcl::PCLPointCloud2>::PCLPointCloud2&[m[K’ {aka ‘[01m[Kpcl::PCLPointCloud2&[m[K’}
+[3.411s]    87 |   voxel_grid.filter([01;31m[K*cloud_filtered[m[K);
+[3.411s]       |                     [01;31m[K^~~~~~~~~~~~~~~[m[K
+[3.411s]       |                     [01;31m[K|[m[K
+[3.411s]       |                     [01;31m[Kstd::__shared_ptr_access<pcl::PointCloud<pcl::PointXYZ>, __gnu_cxx::_S_atomic, false, false>::element_type {aka pcl::PointCloud<pcl::PointXYZ>}[m[K
+[3.411s] In file included from [01m[K/usr/include/pcl-1.12/pcl/filters/voxel_grid.h:42[m[K,
+[3.412s]                  from [01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:35[m[K:
+[3.412s] [01m[K/usr/include/pcl-1.12/pcl/filters/filter.h:226:31:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Kvoid pcl::Filter<pcl::PCLPointCloud2>::filter(pcl::Filter<pcl::PCLPointCloud2>::PCLPointCloud2&)[m[K’
+[3.412s]   226 |       filter ([01;36m[KPCLPointCloud2 &output[m[K);
+[3.412s]       |               [01;36m[K~~~~~~~~~~~~~~~~^~~~~~[m[K
+[6.078s] gmake[2]: *** [CMakeFiles/pcl_example_node.dir/build.make:90: CMakeFiles/pcl_example_node.dir/src/pcl_example.cpp.o] Error 1
+[6.079s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/pcl_example_node.dir/all] Error 2
+[6.079s] gmake: *** [Makefile:146: all] Error 2
+[6.081s] Invoked command in '/home/ws/src/pcl_example/build/pcl_example' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/ws/src/pcl_example/build/pcl_example -- -j20 -l20

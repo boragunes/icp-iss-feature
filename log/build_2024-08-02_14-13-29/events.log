@@ -1,0 +1,158 @@
+[0.000000] (-) TimerEvent: {}
+[0.000177] (pcl_example) JobQueued: {'identifier': 'pcl_example', 'dependencies': OrderedDict()}
+[0.000209] (pcl_example) JobStarted: {'identifier': 'pcl_example'}
+[0.006062] (pcl_example) JobProgress: {'identifier': 'pcl_example', 'progress': 'cmake'}
+[0.006879] (pcl_example) JobProgress: {'identifier': 'pcl_example', 'progress': 'build'}
+[0.007009] (pcl_example) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/ws/src/pcl_example/build/pcl_example', '--', '-j20', '-l20'], 'cwd': '/home/ws/src/pcl_example/build/pcl_example', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('HOSTNAME', 'boragunes'), ('GIT_ASKPASS', '/vscode/vscode-server/bin/linux-x64/b1c0a14de1414fcdaa400695b4db1c0799bc3124/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/home/ws/install/scanmatcher/lib:/home/ws/install/graph_based_slam/lib:/home/ws/install/lidarslam_msgs/lib:/home/ws/install/examples_rclcpp_wait_set/lib:/home/ws/install/examples_rclcpp_minimal_subscriber/lib:/home/ws/install/examples_rclcpp_minimal_composition/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/vscode/vscode-server/bin/linux-x64/b1c0a14de1414fcdaa400695b4db1c0799bc3124/bin/helpers/browser.sh'), ('HOME', '/home/boragunes'), ('OLDPWD', '/home/ws/src'), ('TERM_PROGRAM_VERSION', '1.92.0'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-bf744421-b278-4244-90d3-d3ec3d3b0a13.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/vscode/vscode-server/bin/linux-x64/b1c0a14de1414fcdaa400695b4db1c0799bc3124/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/vscode/vscode-server/bin/linux-x64/b1c0a14de1414fcdaa400695b4db1c0799bc3124/node'), ('COLORTERM', 'truecolor'), ('REMOTE_CONTAINERS', 'true'), ('_colcon_cd_root', '/opt/ros/humble/'), ('COLCON_PREFIX_PATH', '/home/ws/src/pcl_example/install:/home/boragunes/ros2_ws/src/pcl_example/install:/home/ws/install'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-ef0cca47-4967-474c-9f57-1cb66d2cdeba.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '1'), ('PATH', '/home/ws/install/ndt_omp_ros2/bin:/vscode/vscode-server/bin/linux-x64/b1c0a14de1414fcdaa400695b4db1c0799bc3124/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-ef0cca47-4967-474c-9f57-1cb66d2cdeba.sock","/home/boragunes/.gnupg/S.gpg-agent"]'), ('DISPLAY', ':1'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-d9ed358602.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-ef0cca47-4967-474c-9f57-1cb66d2cdeba.sock'), ('ROS_DOMAIN_ID', '42'), ('AMENT_PREFIX_PATH', '/home/ws/src/pcl_example/install/pcl_example:/home/boragunes/ros2_ws/src/pcl_example/install/pcl_example:/home/ws/install/lidarslam:/home/ws/install/scanmatcher:/home/ws/install/pcl_example:/home/ws/install/graph_based_slam:/home/ws/install/ndt_omp_ros2:/home/ws/install/lidarslam_msgs:/home/ws/install/launch_testing_examples:/home/ws/install/examples_rclpy_pointcloud_publisher:/home/ws/install/examples_rclpy_minimal_subscriber:/home/ws/install/examples_rclpy_minimal_service:/home/ws/install/examples_rclpy_minimal_publisher:/home/ws/install/examples_rclpy_minimal_client:/home/ws/install/examples_rclpy_minimal_action_server:/home/ws/install/examples_rclpy_minimal_action_client:/home/ws/install/examples_rclpy_guard_conditions:/home/ws/install/examples_rclpy_executors:/home/ws/install/examples_rclcpp_wait_set:/home/ws/install/examples_rclcpp_multithreaded_executor:/home/ws/install/examples_rclcpp_minimal_timer:/home/ws/install/examples_rclcpp_minimal_subscriber:/home/ws/install/examples_rclcpp_minimal_service:/home/ws/install/examples_rclcpp_minimal_publisher:/home/ws/install/examples_rclcpp_minimal_composition:/home/ws/install/examples_rclcpp_minimal_client:/home/ws/install/examples_rclcpp_minimal_action_server:/home/ws/install/examples_rclcpp_minimal_action_client:/home/ws/install/examples_rclcpp_cbg_executor:/home/ws/install/examples_rclcpp_async_client:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/ws/src/pcl_example/build/pcl_example'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/home/ws/install/lidarslam_msgs/local/lib/python3.10/dist-packages:/home/ws/build/launch_testing_examples:/home/ws/install/launch_testing_examples/lib/python3.10/site-packages:/home/ws/build/examples_rclpy_pointcloud_publisher:/home/ws/install/examples_rclpy_pointcloud_publisher/lib/python3.10/site-packages:/home/ws/build/examples_rclpy_minimal_subscriber:/home/ws/install/examples_rclpy_minimal_subscriber/lib/python3.10/site-packages:/home/ws/build/examples_rclpy_minimal_service:/home/ws/install/examples_rclpy_minimal_service/lib/python3.10/site-packages:/home/ws/build/examples_rclpy_minimal_publisher:/home/ws/install/examples_rclpy_minimal_publisher/lib/python3.10/site-packages:/home/ws/build/examples_rclpy_minimal_client:/home/ws/install/examples_rclpy_minimal_client/lib/python3.10/site-packages:/home/ws/build/examples_rclpy_minimal_action_server:/home/ws/install/examples_rclpy_minimal_action_server/lib/python3.10/site-packages:/home/ws/build/examples_rclpy_minimal_action_client:/home/ws/install/examples_rclpy_minimal_action_client/lib/python3.10/site-packages:/home/ws/build/examples_rclpy_guard_conditions:/home/ws/install/examples_rclpy_guard_conditions/lib/python3.10/site-packages:/home/ws/build/examples_rclpy_executors:/home/ws/install/examples_rclpy_executors/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/ws/src/pcl_example/install/pcl_example:/home/boragunes/ros2_ws/src/pcl_example/install/pcl_example:/home/ws/install/lidarslam:/home/ws/install/scanmatcher:/home/ws/install/pcl_example:/home/ws/install/graph_based_slam:/home/ws/install/ndt_omp_ros2:/home/ws/install/lidarslam_msgs:/home/ws/install/examples_rclcpp_wait_set:/home/ws/install/examples_rclcpp_multithreaded_executor:/home/ws/install/examples_rclcpp_minimal_timer:/home/ws/install/examples_rclcpp_minimal_subscriber:/home/ws/install/examples_rclcpp_minimal_service:/home/ws/install/examples_rclcpp_minimal_publisher:/home/ws/install/examples_rclcpp_minimal_composition:/home/ws/install/examples_rclcpp_minimal_client:/home/ws/install/examples_rclcpp_minimal_action_server:/home/ws/install/examples_rclcpp_minimal_action_client:/home/ws/install/examples_rclcpp_cbg_executor:/home/ws/install/examples_rclcpp_async_client:/home/ws/install/launch_testing_examples:/home/ws/install/examples_rclpy_pointcloud_publisher:/home/ws/install/examples_rclpy_minimal_subscriber:/home/ws/install/examples_rclpy_minimal_service:/home/ws/install/examples_rclpy_minimal_publisher:/home/ws/install/examples_rclpy_minimal_client:/home/ws/install/examples_rclpy_minimal_action_server:/home/ws/install/examples_rclpy_minimal_action_client:/home/ws/install/examples_rclpy_guard_conditions:/home/ws/install/examples_rclpy_executors:/opt/ros/humble')]), 'shell': False}
+[0.038975] (pcl_example) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target pcl_example_node\x1b[0m\n'}
+[0.058523] (pcl_example) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/pcl_example_node.dir/src/pcl_example.cpp.o\x1b[0m\n'}
+[0.099752] (-) TimerEvent: {}
+[0.200058] (-) TimerEvent: {}
+[0.300439] (-) TimerEvent: {}
+[0.400719] (-) TimerEvent: {}
+[0.500964] (-) TimerEvent: {}
+[0.601356] (-) TimerEvent: {}
+[0.701714] (-) TimerEvent: {}
+[0.802076] (-) TimerEvent: {}
+[0.902405] (-) TimerEvent: {}
+[1.002673] (-) TimerEvent: {}
+[1.103017] (-) TimerEvent: {}
+[1.203359] (-) TimerEvent: {}
+[1.303720] (-) TimerEvent: {}
+[1.404077] (-) TimerEvent: {}
+[1.504351] (-) TimerEvent: {}
+[1.604674] (-) TimerEvent: {}
+[1.705044] (-) TimerEvent: {}
+[1.805353] (-) TimerEvent: {}
+[1.905729] (-) TimerEvent: {}
+[2.006108] (-) TimerEvent: {}
+[2.106355] (-) TimerEvent: {}
+[2.206721] (-) TimerEvent: {}
+[2.307047] (-) TimerEvent: {}
+[2.407440] (-) TimerEvent: {}
+[2.507738] (-) TimerEvent: {}
+[2.608064] (-) TimerEvent: {}
+[2.708411] (-) TimerEvent: {}
+[2.808695] (-) TimerEvent: {}
+[2.908933] (-) TimerEvent: {}
+[3.009277] (-) TimerEvent: {}
+[3.109615] (-) TimerEvent: {}
+[3.209890] (-) TimerEvent: {}
+[3.310279] (-) TimerEvent: {}
+[3.381250] (pcl_example) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ws/src/pcl_example/src/pcl_example.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid Pcl_Example::topic_callback(sensor_msgs::msg::PointCloud2_<std::allocator<void> >::SharedPtr)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[3.381436] (pcl_example) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ws/src/pcl_example/src/pcl_example.cpp:158:8:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kduration\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[3.381512] (pcl_example) StderrLine: {'line': b'  158 |   auto \x1b[01;35m\x1b[Kduration\x1b[m\x1b[K = duration_cast<microseconds>(end - start).count();\n'}
+[3.381575] (pcl_example) StderrLine: {'line': b'      |        \x1b[01;35m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[3.410415] (-) TimerEvent: {}
+[3.510805] (-) TimerEvent: {}
+[3.611170] (-) TimerEvent: {}
+[3.711508] (-) TimerEvent: {}
+[3.811883] (-) TimerEvent: {}
+[3.912127] (-) TimerEvent: {}
+[4.012392] (-) TimerEvent: {}
+[4.112693] (-) TimerEvent: {}
+[4.212972] (-) TimerEvent: {}
+[4.313338] (-) TimerEvent: {}
+[4.413707] (-) TimerEvent: {}
+[4.514041] (-) TimerEvent: {}
+[4.614380] (-) TimerEvent: {}
+[4.714671] (-) TimerEvent: {}
+[4.814925] (-) TimerEvent: {}
+[4.915358] (-) TimerEvent: {}
+[5.015740] (-) TimerEvent: {}
+[5.116113] (-) TimerEvent: {}
+[5.216426] (-) TimerEvent: {}
+[5.316700] (-) TimerEvent: {}
+[5.417072] (-) TimerEvent: {}
+[5.517369] (-) TimerEvent: {}
+[5.617668] (-) TimerEvent: {}
+[5.718045] (-) TimerEvent: {}
+[5.818415] (-) TimerEvent: {}
+[5.918799] (-) TimerEvent: {}
+[6.019080] (-) TimerEvent: {}
+[6.119460] (-) TimerEvent: {}
+[6.219803] (-) TimerEvent: {}
+[6.320084] (-) TimerEvent: {}
+[6.420330] (-) TimerEvent: {}
+[6.520559] (-) TimerEvent: {}
+[6.620820] (-) TimerEvent: {}
+[6.721190] (-) TimerEvent: {}
+[6.821643] (-) TimerEvent: {}
+[6.922123] (-) TimerEvent: {}
+[7.022476] (-) TimerEvent: {}
+[7.122748] (-) TimerEvent: {}
+[7.223014] (-) TimerEvent: {}
+[7.323318] (-) TimerEvent: {}
+[7.423648] (-) TimerEvent: {}
+[7.523904] (-) TimerEvent: {}
+[7.624170] (-) TimerEvent: {}
+[7.724460] (-) TimerEvent: {}
+[7.824741] (-) TimerEvent: {}
+[7.924995] (-) TimerEvent: {}
+[8.025314] (-) TimerEvent: {}
+[8.125600] (-) TimerEvent: {}
+[8.225840] (-) TimerEvent: {}
+[8.326140] (-) TimerEvent: {}
+[8.426480] (-) TimerEvent: {}
+[8.526805] (-) TimerEvent: {}
+[8.627135] (-) TimerEvent: {}
+[8.727472] (-) TimerEvent: {}
+[8.827848] (-) TimerEvent: {}
+[8.928209] (-) TimerEvent: {}
+[9.028545] (-) TimerEvent: {}
+[9.128824] (-) TimerEvent: {}
+[9.229087] (-) TimerEvent: {}
+[9.329365] (-) TimerEvent: {}
+[9.429711] (-) TimerEvent: {}
+[9.530029] (-) TimerEvent: {}
+[9.630340] (-) TimerEvent: {}
+[9.730550] (-) TimerEvent: {}
+[9.830806] (-) TimerEvent: {}
+[9.931115] (-) TimerEvent: {}
+[10.031514] (-) TimerEvent: {}
+[10.131859] (-) TimerEvent: {}
+[10.232209] (-) TimerEvent: {}
+[10.332428] (-) TimerEvent: {}
+[10.335012] (pcl_example) StdoutLine: {'line': b'[ 66%] \x1b[32m\x1b[1mLinking CXX executable pcl_example_node\x1b[0m\n'}
+[10.432545] (-) TimerEvent: {}
+[10.532850] (-) TimerEvent: {}
+[10.633294] (-) TimerEvent: {}
+[10.733738] (-) TimerEvent: {}
+[10.834185] (-) TimerEvent: {}
+[10.934707] (-) TimerEvent: {}
+[11.035171] (-) TimerEvent: {}
+[11.135664] (-) TimerEvent: {}
+[11.235989] (-) TimerEvent: {}
+[11.336360] (-) TimerEvent: {}
+[11.436756] (-) TimerEvent: {}
+[11.537130] (-) TimerEvent: {}
+[11.637427] (-) TimerEvent: {}
+[11.648098] (pcl_example) StdoutLine: {'line': b'[100%] Built target pcl_example_node\n'}
+[11.655031] (pcl_example) CommandEnded: {'returncode': 0}
+[11.672459] (pcl_example) JobProgress: {'identifier': 'pcl_example', 'progress': 'install'}
+[11.677519] (pcl_example) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/ws/src/pcl_example/build/pcl_example'], 'cwd': '/home/ws/src/pcl_example/build/pcl_example', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('HOSTNAME', 'boragunes'), ('GIT_ASKPASS', '/vscode/vscode-server/bin/linux-x64/b1c0a14de1414fcdaa400695b4db1c0799bc3124/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/home/ws/install/scanmatcher/lib:/home/ws/install/graph_based_slam/lib:/home/ws/install/lidarslam_msgs/lib:/home/ws/install/examples_rclcpp_wait_set/lib:/home/ws/install/examples_rclcpp_minimal_subscriber/lib:/home/ws/install/examples_rclcpp_minimal_composition/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/vscode/vscode-server/bin/linux-x64/b1c0a14de1414fcdaa400695b4db1c0799bc3124/bin/helpers/browser.sh'), ('HOME', '/home/boragunes'), ('OLDPWD', '/home/ws/src'), ('TERM_PROGRAM_VERSION', '1.92.0'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-bf744421-b278-4244-90d3-d3ec3d3b0a13.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/vscode/vscode-server/bin/linux-x64/b1c0a14de1414fcdaa400695b4db1c0799bc3124/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/vscode/vscode-server/bin/linux-x64/b1c0a14de1414fcdaa400695b4db1c0799bc3124/node'), ('COLORTERM', 'truecolor'), ('REMOTE_CONTAINERS', 'true'), ('_colcon_cd_root', '/opt/ros/humble/'), ('COLCON_PREFIX_PATH', '/home/ws/src/pcl_example/install:/home/boragunes/ros2_ws/src/pcl_example/install:/home/ws/install'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-ef0cca47-4967-474c-9f57-1cb66d2cdeba.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '1'), ('PATH', '/home/ws/install/ndt_omp_ros2/bin:/vscode/vscode-server/bin/linux-x64/b1c0a14de1414fcdaa400695b4db1c0799bc3124/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-ef0cca47-4967-474c-9f57-1cb66d2cdeba.sock","/home/boragunes/.gnupg/S.gpg-agent"]'), ('DISPLAY', ':1'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-d9ed358602.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-ef0cca47-4967-474c-9f57-1cb66d2cdeba.sock'), ('ROS_DOMAIN_ID', '42'), ('AMENT_PREFIX_PATH', '/home/ws/src/pcl_example/install/pcl_example:/home/boragunes/ros2_ws/src/pcl_example/install/pcl_example:/home/ws/install/lidarslam:/home/ws/install/scanmatcher:/home/ws/install/pcl_example:/home/ws/install/graph_based_slam:/home/ws/install/ndt_omp_ros2:/home/ws/install/lidarslam_msgs:/home/ws/install/launch_testing_examples:/home/ws/install/examples_rclpy_pointcloud_publisher:/home/ws/install/examples_rclpy_minimal_subscriber:/home/ws/install/examples_rclpy_minimal_service:/home/ws/install/examples_rclpy_minimal_publisher:/home/ws/install/examples_rclpy_minimal_client:/home/ws/install/examples_rclpy_minimal_action_server:/home/ws/install/examples_rclpy_minimal_action_client:/home/ws/install/examples_rclpy_guard_conditions:/home/ws/install/examples_rclpy_executors:/home/ws/install/examples_rclcpp_wait_set:/home/ws/install/examples_rclcpp_multithreaded_executor:/home/ws/install/examples_rclcpp_minimal_timer:/home/ws/install/examples_rclcpp_minimal_subscriber:/home/ws/install/examples_rclcpp_minimal_service:/home/ws/install/examples_rclcpp_minimal_publisher:/home/ws/install/examples_rclcpp_minimal_composition:/home/ws/install/examples_rclcpp_minimal_client:/home/ws/install/examples_rclcpp_minimal_action_server:/home/ws/install/examples_rclcpp_minimal_action_client:/home/ws/install/examples_rclcpp_cbg_executor:/home/ws/install/examples_rclcpp_async_client:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/ws/src/pcl_example/build/pcl_example'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/home/ws/install/lidarslam_msgs/local/lib/python3.10/dist-packages:/home/ws/build/launch_testing_examples:/home/ws/install/launch_testing_examples/lib/python3.10/site-packages:/home/ws/build/examples_rclpy_pointcloud_publisher:/home/ws/install/examples_rclpy_pointcloud_publisher/lib/python3.10/site-packages:/home/ws/build/examples_rclpy_minimal_subscriber:/home/ws/install/examples_rclpy_minimal_subscriber/lib/python3.10/site-packages:/home/ws/build/examples_rclpy_minimal_service:/home/ws/install/examples_rclpy_minimal_service/lib/python3.10/site-packages:/home/ws/build/examples_rclpy_minimal_publisher:/home/ws/install/examples_rclpy_minimal_publisher/lib/python3.10/site-packages:/home/ws/build/examples_rclpy_minimal_client:/home/ws/install/examples_rclpy_minimal_client/lib/python3.10/site-packages:/home/ws/build/examples_rclpy_minimal_action_server:/home/ws/install/examples_rclpy_minimal_action_server/lib/python3.10/site-packages:/home/ws/build/examples_rclpy_minimal_action_client:/home/ws/install/examples_rclpy_minimal_action_client/lib/python3.10/site-packages:/home/ws/build/examples_rclpy_guard_conditions:/home/ws/install/examples_rclpy_guard_conditions/lib/python3.10/site-packages:/home/ws/build/examples_rclpy_executors:/home/ws/install/examples_rclpy_executors/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/ws/src/pcl_example/install/pcl_example:/home/boragunes/ros2_ws/src/pcl_example/install/pcl_example:/home/ws/install/lidarslam:/home/ws/install/scanmatcher:/home/ws/install/pcl_example:/home/ws/install/graph_based_slam:/home/ws/install/ndt_omp_ros2:/home/ws/install/lidarslam_msgs:/home/ws/install/examples_rclcpp_wait_set:/home/ws/install/examples_rclcpp_multithreaded_executor:/home/ws/install/examples_rclcpp_minimal_timer:/home/ws/install/examples_rclcpp_minimal_subscriber:/home/ws/install/examples_rclcpp_minimal_service:/home/ws/install/examples_rclcpp_minimal_publisher:/home/ws/install/examples_rclcpp_minimal_composition:/home/ws/install/examples_rclcpp_minimal_client:/home/ws/install/examples_rclcpp_minimal_action_server:/home/ws/install/examples_rclcpp_minimal_action_client:/home/ws/install/examples_rclcpp_cbg_executor:/home/ws/install/examples_rclcpp_async_client:/home/ws/install/launch_testing_examples:/home/ws/install/examples_rclpy_pointcloud_publisher:/home/ws/install/examples_rclpy_minimal_subscriber:/home/ws/install/examples_rclpy_minimal_service:/home/ws/install/examples_rclpy_minimal_publisher:/home/ws/install/examples_rclpy_minimal_client:/home/ws/install/examples_rclpy_minimal_action_server:/home/ws/install/examples_rclpy_minimal_action_client:/home/ws/install/examples_rclpy_guard_conditions:/home/ws/install/examples_rclpy_executors:/opt/ros/humble')]), 'shell': False}
+[11.681468] (pcl_example) StdoutLine: {'line': b'-- Install configuration: "Release"\n'}
+[11.681669] (pcl_example) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[11.681899] (pcl_example) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ws/src/pcl_example/install/pcl_example/lib/pcl_example/pcl_example_node\n'}
+[11.681994] (pcl_example) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ws/src/pcl_example/install/pcl_example/lib/pcl_example/cube1_record_1.yaml\n'}
+[11.682200] (pcl_example) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ws/src/pcl_example/install/pcl_example/lib/pcl_example/cube1_record_2.yaml\n'}
+[11.682308] (pcl_example) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ws/src/pcl_example/install/pcl_example/lib/pcl_example/pcl_example_launch.testing.py\n'}
+[11.682398] (pcl_example) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ws/src/pcl_example/install/pcl_example/lib/pcl_example/pcl_example.rviz\n'}
+[11.682476] (pcl_example) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ws/src/pcl_example/install/pcl_example/share/ament_index/resource_index/package_run_dependencies/pcl_example\n'}
+[11.682551] (pcl_example) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ws/src/pcl_example/install/pcl_example/share/ament_index/resource_index/parent_prefix_path/pcl_example\n'}
+[11.682613] (pcl_example) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ws/src/pcl_example/install/pcl_example/share/pcl_example/environment/ament_prefix_path.sh\n'}
+[11.682684] (pcl_example) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ws/src/pcl_example/install/pcl_example/share/pcl_example/environment/ament_prefix_path.dsv\n'}
+[11.682771] (pcl_example) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ws/src/pcl_example/install/pcl_example/share/pcl_example/environment/path.sh\n'}
+[11.682831] (pcl_example) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ws/src/pcl_example/install/pcl_example/share/pcl_example/environment/path.dsv\n'}
+[11.682891] (pcl_example) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ws/src/pcl_example/install/pcl_example/share/pcl_example/local_setup.bash\n'}
+[11.682951] (pcl_example) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ws/src/pcl_example/install/pcl_example/share/pcl_example/local_setup.sh\n'}
+[11.683015] (pcl_example) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ws/src/pcl_example/install/pcl_example/share/pcl_example/local_setup.zsh\n'}
+[11.683074] (pcl_example) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ws/src/pcl_example/install/pcl_example/share/pcl_example/local_setup.dsv\n'}
+[11.683133] (pcl_example) StdoutLine: {'line': b'-- Symlinking: /home/ws/src/pcl_example/install/pcl_example/share/pcl_example/package.dsv\n'}
+[11.687055] (pcl_example) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ws/src/pcl_example/install/pcl_example/share/ament_index/resource_index/packages/pcl_example\n'}
+[11.687188] (pcl_example) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ws/src/pcl_example/install/pcl_example/share/pcl_example/cmake/pcl_exampleConfig.cmake\n'}
+[11.687257] (pcl_example) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ws/src/pcl_example/install/pcl_example/share/pcl_example/cmake/pcl_exampleConfig-version.cmake\n'}
+[11.687319] (pcl_example) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ws/src/pcl_example/install/pcl_example/share/pcl_example/package.xml\n'}
+[11.688778] (pcl_example) CommandEnded: {'returncode': 0}
+[11.715587] (pcl_example) JobEnded: {'identifier': 'pcl_example', 'rc': 0}
+[11.716074] (-) EventReactorShutdown: {}

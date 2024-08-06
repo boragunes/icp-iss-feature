@@ -1,0 +1,39 @@
+[35m[1mConsolidate compiler generated dependencies of target pcl_example_node[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/pcl_example_node.dir/src/pcl_example.cpp.o[0m
+[01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:[m[K In member function ‘[01m[Kvoid Pcl_Example::topic_callback(sensor_msgs::msg::PointCloud2_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:70:16:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KfromROSMsg(const SharedPtr&, std::__shared_ptr_access<pcl::PointCloud<pcl::PointXYZ>, __gnu_cxx::_S_atomic, false, false>::element_type&)[m[K’
+   70 | [01;31m[Kpcl::fromROSMsg(msg, *cloud_xyz)[m[K;
+      | [01;31m[K~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:30[m[K:
+[01m[K/opt/ros/humble/include/pcl_conversions/pcl_conversions.h:566:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class T> void pcl::fromROSMsg(const PointCloud2&, pcl::PointCloud<PointT>&)[m[K’
+  566 |   void [01;36m[KfromROSMsg[m[K(const sensor_msgs::msg::PointCloud2 &cloud, pcl::PointCloud<T> &pcl_cloud)
+      |        [01;36m[K^~~~~~~~~~[m[K
+[01m[K/opt/ros/humble/include/pcl_conversions/pcl_conversions.h:566:8:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:70:17:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kmsg[m[K’ (type ‘[01m[Kconst SharedPtr[m[K’ {aka ‘[01m[Kconst std::shared_ptr<sensor_msgs::msg::PointCloud2_<std::allocator<void> > >[m[K’}) to type ‘[01m[Kconst PointCloud2&[m[K’ {aka ‘[01m[Kconst sensor_msgs::msg::PointCloud2_<std::allocator<void> >&[m[K’}
+   70 | pcl::fromROSMsg([01;36m[Kmsg[m[K, *cloud_xyz);
+      |                 [01;36m[K^~~[m[K
+[01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:83:28:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kpcl::PointCloud<pcl::PointXYZ>::Ptr[m[K’ {aka ‘[01m[Kstd::shared_ptr<pcl::PointCloud<pcl::PointXYZ> >[m[K’} to ‘[01m[Kconst PCLPointCloud2ConstPtr&[m[K’ {aka ‘[01m[Kconst std::shared_ptr<const pcl::PCLPointCloud2>&[m[K’}
+   83 |   voxel_grid.setInputCloud([01;31m[Kcloud_xyz[m[K);
+      |                            [01;31m[K^~~~~~~~~[m[K
+      |                            [01;31m[K|[m[K
+      |                            [01;31m[Kpcl::PointCloud<pcl::PointXYZ>::Ptr {aka std::shared_ptr<pcl::PointCloud<pcl::PointXYZ> >}[m[K
+In file included from [01m[K/usr/include/pcl-1.12/pcl/features/feature.h:49[m[K,
+                 from [01m[K/usr/include/pcl-1.12/pcl/features/normal_3d.h:45[m[K,
+                 from [01m[K/usr/include/pcl-1.12/pcl/features/normal_3d_omp.h:43[m[K,
+                 from [01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:31[m[K:
+[01m[K/usr/include/pcl-1.12/pcl/pcl_base.h:201:52:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Kvoid pcl::PCLBase<pcl::PCLPointCloud2>::setInputCloud(const PCLPointCloud2ConstPtr&)[m[K’
+  201 |       setInputCloud ([01;36m[Kconst PCLPointCloud2ConstPtr &cloud[m[K);
+      |                      [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~[m[K
+[01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:86:21:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kstd::__shared_ptr_access<pcl::PointCloud<pcl::PointXYZ>, __gnu_cxx::_S_atomic, false, false>::element_type[m[K’ {aka ‘[01m[Kpcl::PointCloud<pcl::PointXYZ>[m[K’} to ‘[01m[Kpcl::Filter<pcl::PCLPointCloud2>::PCLPointCloud2&[m[K’ {aka ‘[01m[Kpcl::PCLPointCloud2&[m[K’}
+   86 |   voxel_grid.filter([01;31m[K*cloud_filtered[m[K);
+      |                     [01;31m[K^~~~~~~~~~~~~~~[m[K
+      |                     [01;31m[K|[m[K
+      |                     [01;31m[Kstd::__shared_ptr_access<pcl::PointCloud<pcl::PointXYZ>, __gnu_cxx::_S_atomic, false, false>::element_type {aka pcl::PointCloud<pcl::PointXYZ>}[m[K
+In file included from [01m[K/usr/include/pcl-1.12/pcl/filters/voxel_grid.h:42[m[K,
+                 from [01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:35[m[K:
+[01m[K/usr/include/pcl-1.12/pcl/filters/filter.h:226:31:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Kvoid pcl::Filter<pcl::PCLPointCloud2>::filter(pcl::Filter<pcl::PCLPointCloud2>::PCLPointCloud2&)[m[K’
+  226 |       filter ([01;36m[KPCLPointCloud2 &output[m[K);
+      |               [01;36m[K~~~~~~~~~~~~~~~~^~~~~~[m[K
+gmake[2]: *** [CMakeFiles/pcl_example_node.dir/build.make:90: CMakeFiles/pcl_example_node.dir/src/pcl_example.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/pcl_example_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

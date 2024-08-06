@@ -1,0 +1,191 @@
+[0.000000] (-) TimerEvent: {}
+[0.000088] (pcl_example) JobQueued: {'identifier': 'pcl_example', 'dependencies': OrderedDict()}
+[0.000106] (pcl_example) JobStarted: {'identifier': 'pcl_example'}
+[0.004437] (pcl_example) JobProgress: {'identifier': 'pcl_example', 'progress': 'cmake'}
+[0.005390] (pcl_example) JobProgress: {'identifier': 'pcl_example', 'progress': 'build'}
+[0.005444] (pcl_example) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/ws/src/pcl_example/build/pcl_example', '--', '-j20', '-l20'], 'cwd': '/home/ws/src/pcl_example/build/pcl_example', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('HOSTNAME', 'boragunes'), ('GIT_ASKPASS', '/vscode/vscode-server/bin/linux-x64/b1c0a14de1414fcdaa400695b4db1c0799bc3124/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/vscode/vscode-server/bin/linux-x64/b1c0a14de1414fcdaa400695b4db1c0799bc3124/bin/helpers/browser.sh'), ('HOME', '/home/boragunes'), ('TERM_PROGRAM_VERSION', '1.92.0'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-e3e0eae9-40a2-4110-9552-c54f3dddf0cb.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/vscode/vscode-server/bin/linux-x64/b1c0a14de1414fcdaa400695b4db1c0799bc3124/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/vscode/vscode-server/bin/linux-x64/b1c0a14de1414fcdaa400695b4db1c0799bc3124/node'), ('COLORTERM', 'truecolor'), ('REMOTE_CONTAINERS', 'true'), ('_colcon_cd_root', '/opt/ros/humble/'), ('COLCON_PREFIX_PATH', '/home/ws/src/pcl_example/install'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-fe2abf22-df3b-4782-b725-2cccb3635ef8.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '1'), ('PATH', '/vscode/vscode-server/bin/linux-x64/b1c0a14de1414fcdaa400695b4db1c0799bc3124/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-fe2abf22-df3b-4782-b725-2cccb3635ef8.sock","/home/boragunes/.gnupg/S.gpg-agent"]'), ('DISPLAY', ':1'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-d9ed358602.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-fe2abf22-df3b-4782-b725-2cccb3635ef8.sock'), ('ROS_DOMAIN_ID', '42'), ('AMENT_PREFIX_PATH', '/home/ws/src/pcl_example/install/pcl_example:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/ws/src/pcl_example/build/pcl_example'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/ws/src/pcl_example/install/pcl_example:/opt/ros/humble')]), 'shell': False}
+[0.034133] (pcl_example) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target pcl_example_node\x1b[0m\n'}
+[0.052545] (pcl_example) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/pcl_example_node.dir/src/pcl_example_node.cpp.o\x1b[0m\n'}
+[0.054299] (pcl_example) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding CXX object CMakeFiles/pcl_example_node.dir/src/pcl_example.cpp.o\x1b[0m\n'}
+[0.099215] (-) TimerEvent: {}
+[0.199545] (-) TimerEvent: {}
+[0.299881] (-) TimerEvent: {}
+[0.400216] (-) TimerEvent: {}
+[0.500534] (-) TimerEvent: {}
+[0.600879] (-) TimerEvent: {}
+[0.701232] (-) TimerEvent: {}
+[0.801588] (-) TimerEvent: {}
+[0.901939] (-) TimerEvent: {}
+[1.002262] (-) TimerEvent: {}
+[1.102530] (-) TimerEvent: {}
+[1.202749] (-) TimerEvent: {}
+[1.303027] (-) TimerEvent: {}
+[1.403251] (-) TimerEvent: {}
+[1.503590] (-) TimerEvent: {}
+[1.603936] (-) TimerEvent: {}
+[1.704288] (-) TimerEvent: {}
+[1.804631] (-) TimerEvent: {}
+[1.904967] (-) TimerEvent: {}
+[2.005319] (-) TimerEvent: {}
+[2.105694] (-) TimerEvent: {}
+[2.206120] (-) TimerEvent: {}
+[2.306355] (-) TimerEvent: {}
+[2.406579] (-) TimerEvent: {}
+[2.506829] (-) TimerEvent: {}
+[2.607079] (-) TimerEvent: {}
+[2.707444] (-) TimerEvent: {}
+[2.807802] (-) TimerEvent: {}
+[2.908042] (-) TimerEvent: {}
+[3.008362] (-) TimerEvent: {}
+[3.108603] (-) TimerEvent: {}
+[3.208930] (-) TimerEvent: {}
+[3.309254] (-) TimerEvent: {}
+[3.409592] (-) TimerEvent: {}
+[3.509976] (-) TimerEvent: {}
+[3.610336] (-) TimerEvent: {}
+[3.710872] (-) TimerEvent: {}
+[3.811155] (-) TimerEvent: {}
+[3.911408] (-) TimerEvent: {}
+[4.011757] (-) TimerEvent: {}
+[4.112091] (-) TimerEvent: {}
+[4.212428] (-) TimerEvent: {}
+[4.312799] (-) TimerEvent: {}
+[4.413189] (-) TimerEvent: {}
+[4.513551] (-) TimerEvent: {}
+[4.613910] (-) TimerEvent: {}
+[4.714280] (-) TimerEvent: {}
+[4.814573] (-) TimerEvent: {}
+[4.914851] (-) TimerEvent: {}
+[5.015130] (-) TimerEvent: {}
+[5.115413] (-) TimerEvent: {}
+[5.215745] (-) TimerEvent: {}
+[5.316080] (-) TimerEvent: {}
+[5.416403] (-) TimerEvent: {}
+[5.516727] (-) TimerEvent: {}
+[5.617055] (-) TimerEvent: {}
+[5.717395] (-) TimerEvent: {}
+[5.817730] (-) TimerEvent: {}
+[5.918060] (-) TimerEvent: {}
+[6.018395] (-) TimerEvent: {}
+[6.118715] (-) TimerEvent: {}
+[6.219048] (-) TimerEvent: {}
+[6.319389] (-) TimerEvent: {}
+[6.419727] (-) TimerEvent: {}
+[6.520060] (-) TimerEvent: {}
+[6.620411] (-) TimerEvent: {}
+[6.720736] (-) TimerEvent: {}
+[6.821092] (-) TimerEvent: {}
+[6.921464] (-) TimerEvent: {}
+[7.021780] (-) TimerEvent: {}
+[7.122103] (-) TimerEvent: {}
+[7.222432] (-) TimerEvent: {}
+[7.322692] (-) TimerEvent: {}
+[7.422947] (-) TimerEvent: {}
+[7.523269] (-) TimerEvent: {}
+[7.623578] (-) TimerEvent: {}
+[7.723910] (-) TimerEvent: {}
+[7.824226] (-) TimerEvent: {}
+[7.924538] (-) TimerEvent: {}
+[8.024852] (-) TimerEvent: {}
+[8.125180] (-) TimerEvent: {}
+[8.225548] (-) TimerEvent: {}
+[8.325832] (-) TimerEvent: {}
+[8.426218] (-) TimerEvent: {}
+[8.526420] (-) TimerEvent: {}
+[8.626646] (-) TimerEvent: {}
+[8.726901] (-) TimerEvent: {}
+[8.827266] (-) TimerEvent: {}
+[8.927634] (-) TimerEvent: {}
+[9.027956] (-) TimerEvent: {}
+[9.128288] (-) TimerEvent: {}
+[9.228623] (-) TimerEvent: {}
+[9.328824] (-) TimerEvent: {}
+[9.429141] (-) TimerEvent: {}
+[9.529453] (-) TimerEvent: {}
+[9.629787] (-) TimerEvent: {}
+[9.730093] (-) TimerEvent: {}
+[9.830412] (-) TimerEvent: {}
+[9.930626] (-) TimerEvent: {}
+[10.030865] (-) TimerEvent: {}
+[10.131078] (-) TimerEvent: {}
+[10.231292] (-) TimerEvent: {}
+[10.331517] (-) TimerEvent: {}
+[10.431851] (-) TimerEvent: {}
+[10.532156] (-) TimerEvent: {}
+[10.632458] (-) TimerEvent: {}
+[10.732695] (-) TimerEvent: {}
+[10.833010] (-) TimerEvent: {}
+[10.933327] (-) TimerEvent: {}
+[11.033712] (-) TimerEvent: {}
+[11.134064] (-) TimerEvent: {}
+[11.234383] (-) TimerEvent: {}
+[11.334606] (-) TimerEvent: {}
+[11.434810] (-) TimerEvent: {}
+[11.535060] (-) TimerEvent: {}
+[11.635312] (-) TimerEvent: {}
+[11.735634] (-) TimerEvent: {}
+[11.835976] (-) TimerEvent: {}
+[11.936304] (-) TimerEvent: {}
+[12.036647] (-) TimerEvent: {}
+[12.136958] (-) TimerEvent: {}
+[12.237264] (-) TimerEvent: {}
+[12.337583] (-) TimerEvent: {}
+[12.437925] (-) TimerEvent: {}
+[12.538249] (-) TimerEvent: {}
+[12.638552] (-) TimerEvent: {}
+[12.738884] (-) TimerEvent: {}
+[12.839228] (-) TimerEvent: {}
+[12.939470] (-) TimerEvent: {}
+[13.039769] (-) TimerEvent: {}
+[13.140082] (-) TimerEvent: {}
+[13.240396] (-) TimerEvent: {}
+[13.340708] (-) TimerEvent: {}
+[13.441063] (-) TimerEvent: {}
+[13.541401] (-) TimerEvent: {}
+[13.641765] (-) TimerEvent: {}
+[13.742084] (-) TimerEvent: {}
+[13.842416] (-) TimerEvent: {}
+[13.942631] (-) TimerEvent: {}
+[14.042878] (-) TimerEvent: {}
+[14.090612] (pcl_example) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable pcl_example_node\x1b[0m\n'}
+[14.142994] (-) TimerEvent: {}
+[14.243337] (-) TimerEvent: {}
+[14.343689] (-) TimerEvent: {}
+[14.443982] (-) TimerEvent: {}
+[14.544327] (-) TimerEvent: {}
+[14.644689] (-) TimerEvent: {}
+[14.745028] (-) TimerEvent: {}
+[14.845262] (-) TimerEvent: {}
+[14.945659] (-) TimerEvent: {}
+[15.045987] (-) TimerEvent: {}
+[15.146363] (-) TimerEvent: {}
+[15.203271] (pcl_example) StdoutLine: {'line': b'[100%] Built target pcl_example_node\n'}
+[15.209567] (pcl_example) CommandEnded: {'returncode': 0}
+[15.222930] (pcl_example) JobProgress: {'identifier': 'pcl_example', 'progress': 'install'}
+[15.226718] (pcl_example) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/ws/src/pcl_example/build/pcl_example'], 'cwd': '/home/ws/src/pcl_example/build/pcl_example', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('HOSTNAME', 'boragunes'), ('GIT_ASKPASS', '/vscode/vscode-server/bin/linux-x64/b1c0a14de1414fcdaa400695b4db1c0799bc3124/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/vscode/vscode-server/bin/linux-x64/b1c0a14de1414fcdaa400695b4db1c0799bc3124/bin/helpers/browser.sh'), ('HOME', '/home/boragunes'), ('TERM_PROGRAM_VERSION', '1.92.0'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-e3e0eae9-40a2-4110-9552-c54f3dddf0cb.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/vscode/vscode-server/bin/linux-x64/b1c0a14de1414fcdaa400695b4db1c0799bc3124/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/vscode/vscode-server/bin/linux-x64/b1c0a14de1414fcdaa400695b4db1c0799bc3124/node'), ('COLORTERM', 'truecolor'), ('REMOTE_CONTAINERS', 'true'), ('_colcon_cd_root', '/opt/ros/humble/'), ('COLCON_PREFIX_PATH', '/home/ws/src/pcl_example/install'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-fe2abf22-df3b-4782-b725-2cccb3635ef8.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '1'), ('PATH', '/vscode/vscode-server/bin/linux-x64/b1c0a14de1414fcdaa400695b4db1c0799bc3124/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-fe2abf22-df3b-4782-b725-2cccb3635ef8.sock","/home/boragunes/.gnupg/S.gpg-agent"]'), ('DISPLAY', ':1'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-d9ed358602.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-fe2abf22-df3b-4782-b725-2cccb3635ef8.sock'), ('ROS_DOMAIN_ID', '42'), ('AMENT_PREFIX_PATH', '/home/ws/src/pcl_example/install/pcl_example:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/ws/src/pcl_example/build/pcl_example'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/ws/src/pcl_example/install/pcl_example:/opt/ros/humble')]), 'shell': False}
+[15.230916] (pcl_example) StdoutLine: {'line': b'-- Install configuration: "Release"\n'}
+[15.231612] (pcl_example) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[15.231788] (pcl_example) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ws/src/pcl_example/install/pcl_example/lib/pcl_example/pcl_example_node\n'}
+[15.231866] (pcl_example) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ws/src/pcl_example/install/pcl_example/lib/pcl_example/cube1_record_1.yaml\n'}
+[15.232065] (pcl_example) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ws/src/pcl_example/install/pcl_example/lib/pcl_example/cube1_record_2.yaml\n'}
+[15.232170] (pcl_example) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ws/src/pcl_example/install/pcl_example/lib/pcl_example/pcl_example_launch.testing.py\n'}
+[15.232259] (pcl_example) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ws/src/pcl_example/install/pcl_example/lib/pcl_example/pcl_example.rviz\n'}
+[15.232335] (pcl_example) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ws/src/pcl_example/install/pcl_example/share/ament_index/resource_index/package_run_dependencies/pcl_example\n'}
+[15.232408] (pcl_example) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ws/src/pcl_example/install/pcl_example/share/ament_index/resource_index/parent_prefix_path/pcl_example\n'}
+[15.232486] (pcl_example) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ws/src/pcl_example/install/pcl_example/share/pcl_example/environment/ament_prefix_path.sh\n'}
+[15.232559] (pcl_example) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ws/src/pcl_example/install/pcl_example/share/pcl_example/environment/ament_prefix_path.dsv\n'}
+[15.232617] (pcl_example) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ws/src/pcl_example/install/pcl_example/share/pcl_example/environment/path.sh\n'}
+[15.232675] (pcl_example) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ws/src/pcl_example/install/pcl_example/share/pcl_example/environment/path.dsv\n'}
+[15.232732] (pcl_example) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ws/src/pcl_example/install/pcl_example/share/pcl_example/local_setup.bash\n'}
+[15.232791] (pcl_example) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ws/src/pcl_example/install/pcl_example/share/pcl_example/local_setup.sh\n'}
+[15.232848] (pcl_example) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ws/src/pcl_example/install/pcl_example/share/pcl_example/local_setup.zsh\n'}
+[15.232913] (pcl_example) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ws/src/pcl_example/install/pcl_example/share/pcl_example/local_setup.dsv\n'}
+[15.232971] (pcl_example) StdoutLine: {'line': b'-- Symlinking: /home/ws/src/pcl_example/install/pcl_example/share/pcl_example/package.dsv\n'}
+[15.236338] (pcl_example) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ws/src/pcl_example/install/pcl_example/share/ament_index/resource_index/packages/pcl_example\n'}
+[15.236498] (pcl_example) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ws/src/pcl_example/install/pcl_example/share/pcl_example/cmake/pcl_exampleConfig.cmake\n'}
+[15.236596] (pcl_example) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ws/src/pcl_example/install/pcl_example/share/pcl_example/cmake/pcl_exampleConfig-version.cmake\n'}
+[15.236663] (pcl_example) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ws/src/pcl_example/install/pcl_example/share/pcl_example/package.xml\n'}
+[15.237643] (pcl_example) CommandEnded: {'returncode': 0}
+[15.246444] (-) TimerEvent: {}
+[15.260019] (pcl_example) JobEnded: {'identifier': 'pcl_example', 'rc': 0}
+[15.260496] (-) EventReactorShutdown: {}

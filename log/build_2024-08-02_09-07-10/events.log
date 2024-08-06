@@ -1,0 +1,92 @@
+[0.000000] (-) TimerEvent: {}
+[0.000136] (pcl_example) JobQueued: {'identifier': 'pcl_example', 'dependencies': OrderedDict()}
+[0.000156] (pcl_example) JobStarted: {'identifier': 'pcl_example'}
+[0.005195] (pcl_example) JobProgress: {'identifier': 'pcl_example', 'progress': 'cmake'}
+[0.005700] (pcl_example) JobProgress: {'identifier': 'pcl_example', 'progress': 'build'}
+[0.006216] (pcl_example) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/ws/src/pcl_example/build/pcl_example', '--', '-j20', '-l20'], 'cwd': '/home/ws/src/pcl_example/build/pcl_example', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('HOSTNAME', 'boragunes'), ('GIT_ASKPASS', '/vscode/vscode-server/bin/linux-x64/b1c0a14de1414fcdaa400695b4db1c0799bc3124/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/vscode/vscode-server/bin/linux-x64/b1c0a14de1414fcdaa400695b4db1c0799bc3124/bin/helpers/browser.sh'), ('HOME', '/home/boragunes'), ('TERM_PROGRAM_VERSION', '1.92.0'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-7e5bfd0b-d03b-4e94-82fc-e10c9de64056.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/vscode/vscode-server/bin/linux-x64/b1c0a14de1414fcdaa400695b4db1c0799bc3124/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/vscode/vscode-server/bin/linux-x64/b1c0a14de1414fcdaa400695b4db1c0799bc3124/node'), ('COLORTERM', 'truecolor'), ('REMOTE_CONTAINERS', 'true'), ('_colcon_cd_root', '/opt/ros/humble/'), ('COLCON_PREFIX_PATH', '/home/ws/src/pcl_example/install'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-c745513c-920e-4115-ad8d-e5a4edcb0ff3.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '1'), ('PATH', '/vscode/vscode-server/bin/linux-x64/b1c0a14de1414fcdaa400695b4db1c0799bc3124/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('RCLCPP_LOG_LEVEL', 'INFO'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-c745513c-920e-4115-ad8d-e5a4edcb0ff3.sock","/home/boragunes/.gnupg/S.gpg-agent"]'), ('DISPLAY', ':1'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-d9ed358602.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-c745513c-920e-4115-ad8d-e5a4edcb0ff3.sock'), ('ROS_DOMAIN_ID', '42'), ('AMENT_PREFIX_PATH', '/home/ws/src/pcl_example/install/pcl_example:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/ws/src/pcl_example/build/pcl_example'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/ws/src/pcl_example/install/pcl_example:/opt/ros/humble')]), 'shell': False}
+[0.036856] (pcl_example) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target pcl_example_node\x1b[0m\n'}
+[0.057337] (pcl_example) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/pcl_example_node.dir/src/pcl_example.cpp.o\x1b[0m\n'}
+[0.099437] (-) TimerEvent: {}
+[0.199766] (-) TimerEvent: {}
+[0.300014] (-) TimerEvent: {}
+[0.400237] (-) TimerEvent: {}
+[0.500524] (-) TimerEvent: {}
+[0.600787] (-) TimerEvent: {}
+[0.701140] (-) TimerEvent: {}
+[0.801379] (-) TimerEvent: {}
+[0.901777] (-) TimerEvent: {}
+[1.001994] (-) TimerEvent: {}
+[1.102222] (-) TimerEvent: {}
+[1.202499] (-) TimerEvent: {}
+[1.302747] (-) TimerEvent: {}
+[1.403093] (-) TimerEvent: {}
+[1.503515] (-) TimerEvent: {}
+[1.603878] (-) TimerEvent: {}
+[1.704095] (-) TimerEvent: {}
+[1.804431] (-) TimerEvent: {}
+[1.904794] (-) TimerEvent: {}
+[2.005139] (-) TimerEvent: {}
+[2.105367] (-) TimerEvent: {}
+[2.205685] (-) TimerEvent: {}
+[2.306033] (-) TimerEvent: {}
+[2.406250] (-) TimerEvent: {}
+[2.506507] (-) TimerEvent: {}
+[2.606837] (-) TimerEvent: {}
+[2.707070] (-) TimerEvent: {}
+[2.807453] (-) TimerEvent: {}
+[2.907883] (-) TimerEvent: {}
+[3.008250] (-) TimerEvent: {}
+[3.108608] (-) TimerEvent: {}
+[3.163685] (pcl_example) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ws/src/pcl_example/src/pcl_example.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid Pcl_Example::topic_callback(sensor_msgs::msg::PointCloud2_<std::allocator<void> >::SharedPtr)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[3.163830] (pcl_example) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ws/src/pcl_example/src/pcl_example.cpp:89:28:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kcannot convert \xe2\x80\x98\x1b[01m\x1b[Kpcl::PointCloud<pcl::PointXYZ>::Ptr\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kstd::shared_ptr<pcl::PointCloud<pcl::PointXYZ> >\x1b[m\x1b[K\xe2\x80\x99} to \xe2\x80\x98\x1b[01m\x1b[Kconst PCLPointCloud2ConstPtr&\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kconst std::shared_ptr<const pcl::PCLPointCloud2>&\x1b[m\x1b[K\xe2\x80\x99}\n'}
+[3.163870] (pcl_example) StderrLine: {'line': b'   89 |   voxel_grid.setInputCloud(\x1b[01;31m\x1b[Kcloud_xyz\x1b[m\x1b[K);\n'}
+[3.163901] (pcl_example) StderrLine: {'line': b'      |                            \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[3.163930] (pcl_example) StderrLine: {'line': b'      |                            \x1b[01;31m\x1b[K|\x1b[m\x1b[K\n'}
+[3.163957] (pcl_example) StderrLine: {'line': b'      |                            \x1b[01;31m\x1b[Kpcl::PointCloud<pcl::PointXYZ>::Ptr {aka std::shared_ptr<pcl::PointCloud<pcl::PointXYZ> >}\x1b[m\x1b[K\n'}
+[3.163985] (pcl_example) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/pcl-1.12/pcl/features/feature.h:49\x1b[m\x1b[K,\n'}
+[3.164012] (pcl_example) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/pcl-1.12/pcl/features/normal_3d.h:45\x1b[m\x1b[K,\n'}
+[3.164040] (pcl_example) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/pcl-1.12/pcl/features/normal_3d_omp.h:43\x1b[m\x1b[K,\n'}
+[3.164067] (pcl_example) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/ws/src/pcl_example/src/pcl_example.cpp:31\x1b[m\x1b[K:\n'}
+[3.164095] (pcl_example) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/pcl-1.12/pcl/pcl_base.h:201:52:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  initializing argument 1 of \xe2\x80\x98\x1b[01m\x1b[Kvoid pcl::PCLBase<pcl::PCLPointCloud2>::setInputCloud(const PCLPointCloud2ConstPtr&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.164124] (pcl_example) StderrLine: {'line': b'  201 |       setInputCloud (\x1b[01;36m\x1b[Kconst PCLPointCloud2ConstPtr &cloud\x1b[m\x1b[K);\n'}
+[3.164155] (pcl_example) StderrLine: {'line': b'      |                      \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~\x1b[m\x1b[K\n'}
+[3.164181] (pcl_example) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ws/src/pcl_example/src/pcl_example.cpp:92:21:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kcannot convert \xe2\x80\x98\x1b[01m\x1b[Kstd::__shared_ptr_access<pcl::PointCloud<pcl::PointXYZ>, __gnu_cxx::_S_atomic, false, false>::element_type\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kpcl::PointCloud<pcl::PointXYZ>\x1b[m\x1b[K\xe2\x80\x99} to \xe2\x80\x98\x1b[01m\x1b[Kpcl::Filter<pcl::PCLPointCloud2>::PCLPointCloud2&\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kpcl::PCLPointCloud2&\x1b[m\x1b[K\xe2\x80\x99}\n'}
+[3.164209] (pcl_example) StderrLine: {'line': b'   92 |   voxel_grid.filter(\x1b[01;31m\x1b[K*cloud_filtered\x1b[m\x1b[K);\n'}
+[3.164235] (pcl_example) StderrLine: {'line': b'      |                     \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.164261] (pcl_example) StderrLine: {'line': b'      |                     \x1b[01;31m\x1b[K|\x1b[m\x1b[K\n'}
+[3.164286] (pcl_example) StderrLine: {'line': b'      |                     \x1b[01;31m\x1b[Kstd::__shared_ptr_access<pcl::PointCloud<pcl::PointXYZ>, __gnu_cxx::_S_atomic, false, false>::element_type {aka pcl::PointCloud<pcl::PointXYZ>}\x1b[m\x1b[K\n'}
+[3.164312] (pcl_example) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/pcl-1.12/pcl/filters/voxel_grid.h:42\x1b[m\x1b[K,\n'}
+[3.164339] (pcl_example) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/ws/src/pcl_example/src/pcl_example.cpp:35\x1b[m\x1b[K:\n'}
+[3.164364] (pcl_example) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/pcl-1.12/pcl/filters/filter.h:226:31:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  initializing argument 1 of \xe2\x80\x98\x1b[01m\x1b[Kvoid pcl::Filter<pcl::PCLPointCloud2>::filter(pcl::Filter<pcl::PCLPointCloud2>::PCLPointCloud2&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.164391] (pcl_example) StderrLine: {'line': b'  226 |       filter (\x1b[01;36m\x1b[KPCLPointCloud2 &output\x1b[m\x1b[K);\n'}
+[3.164417] (pcl_example) StderrLine: {'line': b'      |               \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~^~~~~~\x1b[m\x1b[K\n'}
+[3.208784] (-) TimerEvent: {}
+[3.309181] (-) TimerEvent: {}
+[3.409590] (-) TimerEvent: {}
+[3.510003] (-) TimerEvent: {}
+[3.610233] (-) TimerEvent: {}
+[3.710487] (-) TimerEvent: {}
+[3.810780] (-) TimerEvent: {}
+[3.911113] (-) TimerEvent: {}
+[4.011430] (-) TimerEvent: {}
+[4.111774] (-) TimerEvent: {}
+[4.212045] (-) TimerEvent: {}
+[4.312395] (-) TimerEvent: {}
+[4.412735] (-) TimerEvent: {}
+[4.513098] (-) TimerEvent: {}
+[4.613364] (-) TimerEvent: {}
+[4.713753] (-) TimerEvent: {}
+[4.814120] (-) TimerEvent: {}
+[4.914346] (-) TimerEvent: {}
+[5.014766] (-) TimerEvent: {}
+[5.115109] (-) TimerEvent: {}
+[5.215458] (-) TimerEvent: {}
+[5.315705] (-) TimerEvent: {}
+[5.415927] (-) TimerEvent: {}
+[5.516291] (-) TimerEvent: {}
+[5.558610] (pcl_example) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/pcl_example_node.dir/build.make:90: CMakeFiles/pcl_example_node.dir/src/pcl_example.cpp.o] Error 1\n'}
+[5.558762] (pcl_example) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/pcl_example_node.dir/all] Error 2\n'}
+[5.558990] (pcl_example) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[5.560813] (pcl_example) CommandEnded: {'returncode': 2}
+[5.581629] (pcl_example) JobEnded: {'identifier': 'pcl_example', 'rc': 2}
+[5.592215] (-) EventReactorShutdown: {}

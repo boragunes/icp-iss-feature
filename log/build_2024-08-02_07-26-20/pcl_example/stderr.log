@@ -1,0 +1,8 @@
+[01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:[m[K In member function ‘[01m[Kvoid Pcl_Example::topic_callback(sensor_msgs::msg::PointCloud2_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:101:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kcloud_out[m[K’ was not declared in this scope; did you mean ‘[01m[Kcloud_xyz[m[K’?
+  101 |   [01;31m[Kcloud_out[m[K.header.frame_id = msg->header.frame_id;
+      |   [01;31m[K^~~~~~~~~[m[K
+      |   [32m[Kcloud_xyz[m[K
+gmake[2]: *** [CMakeFiles/pcl_example_node.dir/build.make:90: CMakeFiles/pcl_example_node.dir/src/pcl_example.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/pcl_example_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

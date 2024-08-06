@@ -1,0 +1,35 @@
+[01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:[m[K In member function ‘[01m[Kvoid Pcl_Example::topic_callback(sensor_msgs::msg::PointCloud2_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:66:18:[m[K [01;31m[Kerror: [m[K‘[01m[Khigh_resolution_clock[m[K’ has not been declared
+   66 |     auto start = [01;31m[Khigh_resolution_clock[m[K::now();
+      |                  [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:110:14:[m[K [01;31m[Kerror: [m[K‘[01m[Khigh_resolution_clock[m[K’ has not been declared
+  110 |   auto end = [01;31m[Khigh_resolution_clock[m[K::now();
+      |              [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:111:19:[m[K [01;31m[Kerror: [m[K‘[01m[Kduration_cast[m[K’ was not declared in this scope
+  111 |   auto duration = [01;31m[Kduration_cast[m[K<microseconds>(end - start).count();
+      |                   [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:111:19:[m[K [01;36m[Knote: [m[Ksuggested alternatives:
+In file included from [01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:18[m[K:
+[01m[K/usr/include/c++/11/chrono:267:7:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::chrono::duration_cast[m[K’
+  267 |       [01;36m[Kduration_cast[m[K(const duration<_Rep, _Period>& __d)
+      |       [01;36m[K^~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/11/chrono:267:7:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::chrono::duration_cast[m[K’
+[01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:111:33:[m[K [01;31m[Kerror: [m[K‘[01m[Kmicroseconds[m[K’ was not declared in this scope
+  111 |   auto duration = duration_cast<[01;31m[Kmicroseconds[m[K>(end - start).count();
+      |                                 [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:111:33:[m[K [01;36m[Knote: [m[Ksuggested alternatives:
+In file included from [01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:18[m[K:
+[01m[K/usr/include/c++/11/chrono:841:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::chrono::microseconds[m[K’
+  841 |     using [01;36m[Kmicroseconds[m[K  = duration<_GLIBCXX_CHRONO_INT64_T, micro>;
+      |           [01;36m[K^~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/boost/interprocess/detail/posix_time_types_wrk.hpp:33[m[K,
+                 from [01m[K/usr/include/boost/interprocess/detail/os_thread_functions.hpp:36[m[K,
+                 from [01m[K/usr/include/boost/interprocess/sync/file_lock.hpp:26[m[K,
+                 from [01m[K/usr/include/pcl-1.12/pcl/io/pcd_io.h:46[m[K,
+                 from [01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:28[m[K:
+[01m[K/usr/include/boost/date_time/posix_time/posix_time_duration.hpp:74:64:[m[K [01;36m[Knote: [m[K  ‘[01m[Kboost::posix_time::microseconds[m[K’
+   74 |   typedef date_time::subsecond_duration<time_duration,1000000> [01;36m[Kmicroseconds[m[K;
+      |                                                                [01;36m[K^~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/pcl_example_node.dir/build.make:90: CMakeFiles/pcl_example_node.dir/src/pcl_example.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/pcl_example_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

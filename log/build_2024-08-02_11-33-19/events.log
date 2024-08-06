@@ -1,0 +1,95 @@
+[0.000000] (-) TimerEvent: {}
+[0.000105] (pcl_example) JobQueued: {'identifier': 'pcl_example', 'dependencies': OrderedDict()}
+[0.000130] (pcl_example) JobStarted: {'identifier': 'pcl_example'}
+[0.004927] (pcl_example) JobProgress: {'identifier': 'pcl_example', 'progress': 'cmake'}
+[0.005975] (pcl_example) JobProgress: {'identifier': 'pcl_example', 'progress': 'build'}
+[0.006017] (pcl_example) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/ws/src/pcl_example/build/pcl_example', '--', '-j20', '-l20'], 'cwd': '/home/ws/src/pcl_example/build/pcl_example', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('HOSTNAME', 'boragunes'), ('GIT_ASKPASS', '/vscode/vscode-server/bin/linux-x64/b1c0a14de1414fcdaa400695b4db1c0799bc3124/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/vscode/vscode-server/bin/linux-x64/b1c0a14de1414fcdaa400695b4db1c0799bc3124/bin/helpers/browser.sh'), ('HOME', '/home/boragunes'), ('TERM_PROGRAM_VERSION', '1.92.0'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-60b6cc52-1064-40ae-9c87-0deb05a120ad.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/vscode/vscode-server/bin/linux-x64/b1c0a14de1414fcdaa400695b4db1c0799bc3124/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/vscode/vscode-server/bin/linux-x64/b1c0a14de1414fcdaa400695b4db1c0799bc3124/node'), ('COLORTERM', 'truecolor'), ('REMOTE_CONTAINERS', 'true'), ('_colcon_cd_root', '/opt/ros/humble/'), ('COLCON_PREFIX_PATH', '/home/ws/src/pcl_example/install'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-941500fa-cfec-4182-8d53-2123507c4aaa.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '1'), ('PATH', '/vscode/vscode-server/bin/linux-x64/b1c0a14de1414fcdaa400695b4db1c0799bc3124/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-941500fa-cfec-4182-8d53-2123507c4aaa.sock","/home/boragunes/.gnupg/S.gpg-agent"]'), ('DISPLAY', ':1'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-d9ed358602.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-941500fa-cfec-4182-8d53-2123507c4aaa.sock'), ('ROS_DOMAIN_ID', '42'), ('AMENT_PREFIX_PATH', '/home/ws/src/pcl_example/install/pcl_example:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/ws/src/pcl_example/build/pcl_example'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/ws/src/pcl_example/install/pcl_example:/opt/ros/humble')]), 'shell': False}
+[0.036347] (pcl_example) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target pcl_example_node\x1b[0m\n'}
+[0.056433] (pcl_example) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/pcl_example_node.dir/src/pcl_example.cpp.o\x1b[0m\n'}
+[0.099585] (-) TimerEvent: {}
+[0.200051] (-) TimerEvent: {}
+[0.300338] (-) TimerEvent: {}
+[0.400605] (-) TimerEvent: {}
+[0.500909] (-) TimerEvent: {}
+[0.601115] (-) TimerEvent: {}
+[0.701426] (-) TimerEvent: {}
+[0.801797] (-) TimerEvent: {}
+[0.902121] (-) TimerEvent: {}
+[1.002404] (-) TimerEvent: {}
+[1.102672] (-) TimerEvent: {}
+[1.203112] (-) TimerEvent: {}
+[1.303340] (-) TimerEvent: {}
+[1.403634] (-) TimerEvent: {}
+[1.503979] (-) TimerEvent: {}
+[1.604325] (-) TimerEvent: {}
+[1.704691] (-) TimerEvent: {}
+[1.804986] (-) TimerEvent: {}
+[1.905418] (-) TimerEvent: {}
+[2.005766] (-) TimerEvent: {}
+[2.106200] (-) TimerEvent: {}
+[2.206574] (-) TimerEvent: {}
+[2.307027] (-) TimerEvent: {}
+[2.407270] (-) TimerEvent: {}
+[2.507551] (-) TimerEvent: {}
+[2.607830] (-) TimerEvent: {}
+[2.708202] (-) TimerEvent: {}
+[2.808480] (-) TimerEvent: {}
+[2.908864] (-) TimerEvent: {}
+[3.009262] (-) TimerEvent: {}
+[3.109621] (-) TimerEvent: {}
+[3.210005] (-) TimerEvent: {}
+[3.255382] (pcl_example) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ws/src/pcl_example/src/pcl_example.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid Pcl_Example::topic_callback(sensor_msgs::msg::PointCloud2_<std::allocator<void> >::SharedPtr)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[3.255553] (pcl_example) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ws/src/pcl_example/src/pcl_example.cpp:125:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kprevious_cloud_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kprevious_cloud\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[3.255622] (pcl_example) StderrLine: {'line': b'  125 |    if (!\x1b[01;31m\x1b[Kprevious_cloud_\x1b[m\x1b[K->empty())\n'}
+[3.255682] (pcl_example) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.255740] (pcl_example) StderrLine: {'line': b'      |         \x1b[32m\x1b[Kprevious_cloud\x1b[m\x1b[K\n'}
+[3.276596] (pcl_example) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ws/src/pcl_example/src/pcl_example.cpp:161:6:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kprevious_cloud_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kprevious_cloud\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[3.276752] (pcl_example) StderrLine: {'line': b'  161 |     *\x1b[01;31m\x1b[Kprevious_cloud_\x1b[m\x1b[K = *cloud_filtered;\n'}
+[3.276818] (pcl_example) StderrLine: {'line': b'      |      \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.276879] (pcl_example) StderrLine: {'line': b'      |      \x1b[32m\x1b[Kprevious_cloud\x1b[m\x1b[K\n'}
+[3.310201] (-) TimerEvent: {}
+[3.410538] (-) TimerEvent: {}
+[3.510892] (-) TimerEvent: {}
+[3.611138] (-) TimerEvent: {}
+[3.711428] (-) TimerEvent: {}
+[3.811914] (-) TimerEvent: {}
+[3.912305] (-) TimerEvent: {}
+[4.012785] (-) TimerEvent: {}
+[4.113258] (-) TimerEvent: {}
+[4.213597] (-) TimerEvent: {}
+[4.313990] (-) TimerEvent: {}
+[4.414219] (-) TimerEvent: {}
+[4.514443] (-) TimerEvent: {}
+[4.614764] (-) TimerEvent: {}
+[4.715122] (-) TimerEvent: {}
+[4.815373] (-) TimerEvent: {}
+[4.915879] (-) TimerEvent: {}
+[5.016244] (-) TimerEvent: {}
+[5.116610] (-) TimerEvent: {}
+[5.216964] (-) TimerEvent: {}
+[5.317311] (-) TimerEvent: {}
+[5.417666] (-) TimerEvent: {}
+[5.518032] (-) TimerEvent: {}
+[5.618406] (-) TimerEvent: {}
+[5.718782] (-) TimerEvent: {}
+[5.819148] (-) TimerEvent: {}
+[5.919531] (-) TimerEvent: {}
+[6.019921] (-) TimerEvent: {}
+[6.120258] (-) TimerEvent: {}
+[6.220648] (-) TimerEvent: {}
+[6.321015] (-) TimerEvent: {}
+[6.421412] (-) TimerEvent: {}
+[6.521785] (-) TimerEvent: {}
+[6.622166] (-) TimerEvent: {}
+[6.722429] (-) TimerEvent: {}
+[6.822735] (-) TimerEvent: {}
+[6.923218] (-) TimerEvent: {}
+[7.023477] (-) TimerEvent: {}
+[7.123775] (-) TimerEvent: {}
+[7.220319] (pcl_example) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/pcl_example_node.dir/build.make:90: CMakeFiles/pcl_example_node.dir/src/pcl_example.cpp.o] Error 1\n'}
+[7.220663] (pcl_example) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/pcl_example_node.dir/all] Error 2\n'}
+[7.220865] (pcl_example) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[7.222777] (pcl_example) CommandEnded: {'returncode': 2}
+[7.223910] (-) TimerEvent: {}
+[7.244829] (pcl_example) JobEnded: {'identifier': 'pcl_example', 'rc': 2}
+[7.255331] (-) EventReactorShutdown: {}

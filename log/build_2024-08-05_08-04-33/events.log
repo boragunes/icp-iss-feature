@@ -1,0 +1,150 @@
+[0.000000] (-) TimerEvent: {}
+[0.000741] (pcl_example) JobQueued: {'identifier': 'pcl_example', 'dependencies': OrderedDict()}
+[0.000765] (pcl_example) JobStarted: {'identifier': 'pcl_example'}
+[0.005766] (pcl_example) JobProgress: {'identifier': 'pcl_example', 'progress': 'cmake'}
+[0.006493] (pcl_example) JobProgress: {'identifier': 'pcl_example', 'progress': 'build'}
+[0.006967] (pcl_example) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/ws/src/pcl_example/build/pcl_example', '--', '-j20', '-l20'], 'cwd': '/home/ws/src/pcl_example/build/pcl_example', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('HOSTNAME', 'boragunes'), ('GIT_ASKPASS', '/vscode/vscode-server/bin/linux-x64/b1c0a14de1414fcdaa400695b4db1c0799bc3124/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/vscode/vscode-server/bin/linux-x64/b1c0a14de1414fcdaa400695b4db1c0799bc3124/bin/helpers/browser.sh'), ('HOME', '/home/boragunes'), ('TERM_PROGRAM_VERSION', '1.92.0'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-e3e0eae9-40a2-4110-9552-c54f3dddf0cb.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/vscode/vscode-server/bin/linux-x64/b1c0a14de1414fcdaa400695b4db1c0799bc3124/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/vscode/vscode-server/bin/linux-x64/b1c0a14de1414fcdaa400695b4db1c0799bc3124/node'), ('COLORTERM', 'truecolor'), ('REMOTE_CONTAINERS', 'true'), ('_colcon_cd_root', '/opt/ros/humble/'), ('COLCON_PREFIX_PATH', '/home/ws/src/pcl_example/install'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-fe2abf22-df3b-4782-b725-2cccb3635ef8.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '1'), ('PATH', '/vscode/vscode-server/bin/linux-x64/b1c0a14de1414fcdaa400695b4db1c0799bc3124/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-fe2abf22-df3b-4782-b725-2cccb3635ef8.sock","/home/boragunes/.gnupg/S.gpg-agent"]'), ('DISPLAY', ':1'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-d9ed358602.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-fe2abf22-df3b-4782-b725-2cccb3635ef8.sock'), ('ROS_DOMAIN_ID', '42'), ('AMENT_PREFIX_PATH', '/home/ws/src/pcl_example/install/pcl_example:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/ws/src/pcl_example/build/pcl_example'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/ws/src/pcl_example/install/pcl_example:/opt/ros/humble')]), 'shell': False}
+[0.041512] (pcl_example) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target pcl_example_node\x1b[0m\n'}
+[0.063596] (pcl_example) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/pcl_example_node.dir/src/pcl_example.cpp.o\x1b[0m\n'}
+[0.100094] (-) TimerEvent: {}
+[0.200406] (-) TimerEvent: {}
+[0.300712] (-) TimerEvent: {}
+[0.401035] (-) TimerEvent: {}
+[0.501393] (-) TimerEvent: {}
+[0.601721] (-) TimerEvent: {}
+[0.702047] (-) TimerEvent: {}
+[0.802290] (-) TimerEvent: {}
+[0.902495] (-) TimerEvent: {}
+[1.002842] (-) TimerEvent: {}
+[1.103067] (-) TimerEvent: {}
+[1.203310] (-) TimerEvent: {}
+[1.303558] (-) TimerEvent: {}
+[1.403881] (-) TimerEvent: {}
+[1.504232] (-) TimerEvent: {}
+[1.604491] (-) TimerEvent: {}
+[1.704830] (-) TimerEvent: {}
+[1.805186] (-) TimerEvent: {}
+[1.905539] (-) TimerEvent: {}
+[2.005846] (-) TimerEvent: {}
+[2.106163] (-) TimerEvent: {}
+[2.206488] (-) TimerEvent: {}
+[2.306806] (-) TimerEvent: {}
+[2.407021] (-) TimerEvent: {}
+[2.507262] (-) TimerEvent: {}
+[2.607504] (-) TimerEvent: {}
+[2.707742] (-) TimerEvent: {}
+[2.808055] (-) TimerEvent: {}
+[2.908375] (-) TimerEvent: {}
+[3.008712] (-) TimerEvent: {}
+[3.109059] (-) TimerEvent: {}
+[3.166696] (pcl_example) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ws/src/pcl_example/src/pcl_example.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid Pcl_Example::topic_callback(sensor_msgs::msg::PointCloud2_<std::allocator<void> >::SharedPtr)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[3.166844] (pcl_example) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ws/src/pcl_example/src/pcl_example.cpp:128:28:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kcannot convert \xe2\x80\x98\x1b[01m\x1b[Ksensor_msgs::msg::PointCloud2\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Ksensor_msgs::msg::PointCloud2_<std::allocator<void> >\x1b[m\x1b[K\xe2\x80\x99} to \xe2\x80\x98\x1b[01m\x1b[Kconst PointCloudSourceConstPtr&\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kconst std::shared_ptr<const pcl::PointCloud<pcl::PointXYZ> >&\x1b[m\x1b[K\xe2\x80\x99}\n'}
+[3.166884] (pcl_example) StderrLine: {'line': b'  128 |         icp.setInputSource(\x1b[01;31m\x1b[Kkeypoints_msg\x1b[m\x1b[K);\n'}
+[3.166916] (pcl_example) StderrLine: {'line': b'      |                            \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.166943] (pcl_example) StderrLine: {'line': b'      |                            \x1b[01;31m\x1b[K|\x1b[m\x1b[K\n'}
+[3.166970] (pcl_example) StderrLine: {'line': b'      |                            \x1b[01;31m\x1b[Ksensor_msgs::msg::PointCloud2 {aka sensor_msgs::msg::PointCloud2_<std::allocator<void> >}\x1b[m\x1b[K\n'}
+[3.166996] (pcl_example) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/ws/src/pcl_example/src/pcl_example.cpp:36\x1b[m\x1b[K:\n'}
+[3.167021] (pcl_example) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/pcl-1.12/pcl/registration/icp.h:207:50:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  initializing argument 1 of \xe2\x80\x98\x1b[01m\x1b[Kvoid pcl::IterativeClosestPoint<PointSource, PointTarget, Scalar>::setInputSource(const PointCloudSourceConstPtr&) [with PointSource = pcl::PointXYZ; PointTarget = pcl::PointXYZ; Scalar = float; pcl::IterativeClosestPoint<PointSource, PointTarget, Scalar>::PointCloudSourceConstPtr = std::shared_ptr<const pcl::PointCloud<pcl::PointXYZ> >]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.167049] (pcl_example) StderrLine: {'line': b'  207 |   setInputSource(\x1b[01;36m\x1b[Kconst PointCloudSourceConstPtr& cloud\x1b[m\x1b[K) override\n'}
+[3.167075] (pcl_example) StderrLine: {'line': b'      |                  \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~\x1b[m\x1b[K\n'}
+[3.175502] (pcl_example) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ws/src/pcl_example/src/pcl_example.cpp:170:24:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno match for \xe2\x80\x98\x1b[01m\x1b[Koperator*\x1b[m\x1b[K\xe2\x80\x99 (operand type is \xe2\x80\x98\x1b[01m\x1b[Ksensor_msgs::msg::PointCloud2\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Ksensor_msgs::msg::PointCloud2_<std::allocator<void> >\x1b[m\x1b[K\xe2\x80\x99})\n'}
+[3.175757] (pcl_example) StderrLine: {'line': b'  170 |     *previous_cloud_ = \x1b[01;31m\x1b[K*keypoints_msg\x1b[m\x1b[K;\n'}
+[3.175797] (pcl_example) StderrLine: {'line': b'      |                        \x1b[01;31m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.175828] (pcl_example) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/ws/src/pcl_example/src/pcl_example.cpp:18\x1b[m\x1b[K:\n'}
+[3.175858] (pcl_example) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/chrono:691:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _Rep1, class _Period, class _Rep2> constexpr std::chrono::duration<std::chrono::__common_rep_t<_Rep1, _Rep2>, _Period> std::chrono::operator*(const std::chrono::duration<_Rep1, _Period1>&, const _Rep2&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.175888] (pcl_example) StderrLine: {'line': b'  691 |       \x1b[01;36m\x1b[Koperator\x1b[m\x1b[K*(const duration<_Rep1, _Period>& __d, const _Rep2& __s)\n'}
+[3.175917] (pcl_example) StderrLine: {'line': b'      |       \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[3.175946] (pcl_example) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/chrono:691:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[3.175975] (pcl_example) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ws/src/pcl_example/src/pcl_example.cpp:170:25:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Ksensor_msgs::msg::PointCloud2\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Ksensor_msgs::msg::PointCloud2_<std::allocator<void> >\x1b[m\x1b[K\xe2\x80\x99} is not derived from \xe2\x80\x98\x1b[01m\x1b[Kconst std::chrono::duration<_Rep1, _Period1>\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.176009] (pcl_example) StderrLine: {'line': b'  170 |     *previous_cloud_ = *\x1b[01;36m\x1b[Kkeypoints_msg\x1b[m\x1b[K;\n'}
+[3.176037] (pcl_example) StderrLine: {'line': b'      |                         \x1b[01;36m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.176064] (pcl_example) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/ws/src/pcl_example/src/pcl_example.cpp:18\x1b[m\x1b[K:\n'}
+[3.176091] (pcl_example) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/chrono:700:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _Rep1, class _Rep2, class _Period> constexpr std::chrono::duration<std::chrono::__common_rep_t<_Rep2, _Rep1>, _Period> std::chrono::operator*(const _Rep1&, const std::chrono::duration<_Rep, _Period>&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.176125] (pcl_example) StderrLine: {'line': b'  700 |       \x1b[01;36m\x1b[Koperator\x1b[m\x1b[K*(const _Rep1& __s, const duration<_Rep2, _Period>& __d)\n'}
+[3.176152] (pcl_example) StderrLine: {'line': b'      |       \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[3.176180] (pcl_example) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/chrono:700:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[3.176208] (pcl_example) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ws/src/pcl_example/src/pcl_example.cpp:170:25:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 2 arguments, 1 provided\n'}
+[3.176238] (pcl_example) StderrLine: {'line': b'  170 |     *previous_cloud_ = *\x1b[01;36m\x1b[Kkeypoints_msg\x1b[m\x1b[K;\n'}
+[3.176266] (pcl_example) StderrLine: {'line': b'      |                         \x1b[01;36m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.176292] (pcl_example) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/eigen3/Eigen/Core:50\x1b[m\x1b[K,\n'}
+[3.176320] (pcl_example) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/eigen3/Eigen/StdVector:14\x1b[m\x1b[K,\n'}
+[3.176348] (pcl_example) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/pcl-1.12/pcl/point_cloud.h:45\x1b[m\x1b[K,\n'}
+[3.176374] (pcl_example) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/ws/src/pcl_example/include/pcl_example/pcl_example_node.hpp:8\x1b[m\x1b[K,\n'}
+[3.176400] (pcl_example) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/ws/src/pcl_example/src/pcl_example.cpp:26\x1b[m\x1b[K:\n'}
+[3.176427] (pcl_example) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/complex:392:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _Tp> std::complex<_Tp> std::operator*(const std::complex<_Tp>&, const std::complex<_Tp>&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.176454] (pcl_example) StderrLine: {'line': b'  392 |     \x1b[01;36m\x1b[Koperator\x1b[m\x1b[K*(const complex<_Tp>& __x, const complex<_Tp>& __y)\n'}
+[3.176481] (pcl_example) StderrLine: {'line': b'      |     \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[3.176507] (pcl_example) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/complex:392:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[3.176533] (pcl_example) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ws/src/pcl_example/src/pcl_example.cpp:170:25:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Ksensor_msgs::msg::PointCloud2\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Ksensor_msgs::msg::PointCloud2_<std::allocator<void> >\x1b[m\x1b[K\xe2\x80\x99} is not derived from \xe2\x80\x98\x1b[01m\x1b[Kconst std::complex<_Tp>\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.176560] (pcl_example) StderrLine: {'line': b'  170 |     *previous_cloud_ = *\x1b[01;36m\x1b[Kkeypoints_msg\x1b[m\x1b[K;\n'}
+[3.176586] (pcl_example) StderrLine: {'line': b'      |                         \x1b[01;36m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.176612] (pcl_example) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/eigen3/Eigen/Core:50\x1b[m\x1b[K,\n'}
+[3.176638] (pcl_example) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/eigen3/Eigen/StdVector:14\x1b[m\x1b[K,\n'}
+[3.176664] (pcl_example) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/pcl-1.12/pcl/point_cloud.h:45\x1b[m\x1b[K,\n'}
+[3.176689] (pcl_example) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/ws/src/pcl_example/include/pcl_example/pcl_example_node.hpp:8\x1b[m\x1b[K,\n'}
+[3.176714] (pcl_example) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/ws/src/pcl_example/src/pcl_example.cpp:26\x1b[m\x1b[K:\n'}
+[3.176739] (pcl_example) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/complex:401:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _Tp> std::complex<_Tp> std::operator*(const std::complex<_Tp>&, const _Tp&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.176766] (pcl_example) StderrLine: {'line': b'  401 |     \x1b[01;36m\x1b[Koperator\x1b[m\x1b[K*(const complex<_Tp>& __x, const _Tp& __y)\n'}
+[3.176791] (pcl_example) StderrLine: {'line': b'      |     \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[3.176816] (pcl_example) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/complex:401:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[3.176842] (pcl_example) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ws/src/pcl_example/src/pcl_example.cpp:170:25:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Ksensor_msgs::msg::PointCloud2\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Ksensor_msgs::msg::PointCloud2_<std::allocator<void> >\x1b[m\x1b[K\xe2\x80\x99} is not derived from \xe2\x80\x98\x1b[01m\x1b[Kconst std::complex<_Tp>\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.176870] (pcl_example) StderrLine: {'line': b'  170 |     *previous_cloud_ = *\x1b[01;36m\x1b[Kkeypoints_msg\x1b[m\x1b[K;\n'}
+[3.176897] (pcl_example) StderrLine: {'line': b'      |                         \x1b[01;36m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.176923] (pcl_example) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/eigen3/Eigen/Core:50\x1b[m\x1b[K,\n'}
+[3.176949] (pcl_example) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/eigen3/Eigen/StdVector:14\x1b[m\x1b[K,\n'}
+[3.176974] (pcl_example) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/pcl-1.12/pcl/point_cloud.h:45\x1b[m\x1b[K,\n'}
+[3.177000] (pcl_example) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/ws/src/pcl_example/include/pcl_example/pcl_example_node.hpp:8\x1b[m\x1b[K,\n'}
+[3.177025] (pcl_example) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/ws/src/pcl_example/src/pcl_example.cpp:26\x1b[m\x1b[K:\n'}
+[3.177050] (pcl_example) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/complex:410:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _Tp> std::complex<_Tp> std::operator*(const _Tp&, const std::complex<_Tp>&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.177084] (pcl_example) StderrLine: {'line': b'  410 |     \x1b[01;36m\x1b[Koperator\x1b[m\x1b[K*(const _Tp& __x, const complex<_Tp>& __y)\n'}
+[3.177111] (pcl_example) StderrLine: {'line': b'      |     \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[3.177137] (pcl_example) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/complex:410:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[3.177163] (pcl_example) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ws/src/pcl_example/src/pcl_example.cpp:170:25:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 2 arguments, 1 provided\n'}
+[3.177189] (pcl_example) StderrLine: {'line': b'  170 |     *previous_cloud_ = *\x1b[01;36m\x1b[Kkeypoints_msg\x1b[m\x1b[K;\n'}
+[3.177214] (pcl_example) StderrLine: {'line': b'      |                         \x1b[01;36m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.209255] (-) TimerEvent: {}
+[3.309572] (-) TimerEvent: {}
+[3.409900] (-) TimerEvent: {}
+[3.510131] (-) TimerEvent: {}
+[3.610432] (-) TimerEvent: {}
+[3.710750] (-) TimerEvent: {}
+[3.811020] (-) TimerEvent: {}
+[3.911275] (-) TimerEvent: {}
+[4.011609] (-) TimerEvent: {}
+[4.111976] (-) TimerEvent: {}
+[4.212304] (-) TimerEvent: {}
+[4.312631] (-) TimerEvent: {}
+[4.412956] (-) TimerEvent: {}
+[4.513273] (-) TimerEvent: {}
+[4.613597] (-) TimerEvent: {}
+[4.713927] (-) TimerEvent: {}
+[4.814258] (-) TimerEvent: {}
+[4.914587] (-) TimerEvent: {}
+[5.014936] (-) TimerEvent: {}
+[5.115158] (-) TimerEvent: {}
+[5.215416] (-) TimerEvent: {}
+[5.315656] (-) TimerEvent: {}
+[5.415963] (-) TimerEvent: {}
+[5.516303] (-) TimerEvent: {}
+[5.616633] (-) TimerEvent: {}
+[5.716973] (-) TimerEvent: {}
+[5.817317] (-) TimerEvent: {}
+[5.917646] (-) TimerEvent: {}
+[6.017974] (-) TimerEvent: {}
+[6.118295] (-) TimerEvent: {}
+[6.218510] (-) TimerEvent: {}
+[6.318733] (-) TimerEvent: {}
+[6.418980] (-) TimerEvent: {}
+[6.519203] (-) TimerEvent: {}
+[6.619448] (-) TimerEvent: {}
+[6.719684] (-) TimerEvent: {}
+[6.820021] (-) TimerEvent: {}
+[6.920382] (-) TimerEvent: {}
+[7.020708] (-) TimerEvent: {}
+[7.117088] (pcl_example) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/pcl_example_node.dir/build.make:90: CMakeFiles/pcl_example_node.dir/src/pcl_example.cpp.o] Error 1\n'}
+[7.117421] (pcl_example) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/pcl_example_node.dir/all] Error 2\n'}
+[7.117556] (pcl_example) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[7.118935] (pcl_example) CommandEnded: {'returncode': 2}
+[7.120978] (-) TimerEvent: {}
+[7.140540] (pcl_example) JobEnded: {'identifier': 'pcl_example', 'rc': 2}
+[7.151202] (-) EventReactorShutdown: {}

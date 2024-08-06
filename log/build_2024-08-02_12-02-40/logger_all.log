@@ -1,0 +1,101 @@
+[0.055s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--cmake-args', '-DCMAKE_BUILD_TYPE=Release']
+[0.055s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=20, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, cmake_args=['-DCMAKE_BUILD_TYPE=Release'], cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7f922542b640>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f92255aba30>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f92255aba30>>, mixin_verb=('build',))
+[0.118s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.118s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.118s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.118s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.118s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.118s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.118s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/ws/src/pcl_example'
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.125s] DEBUG:colcon.colcon_core.package_identification:Package '.' with type 'ros.ament_cmake' and name 'pcl_example'
+[0.126s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.126s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.126s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.126s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.126s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.136s] Level 5:colcon.colcon_core.verb:set package 'pcl_example' build argument 'cmake_args' from command line to '['-DCMAKE_BUILD_TYPE=Release']'
+[0.136s] Level 5:colcon.colcon_core.verb:set package 'pcl_example' build argument 'cmake_target' from command line to 'None'
+[0.136s] Level 5:colcon.colcon_core.verb:set package 'pcl_example' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.136s] Level 5:colcon.colcon_core.verb:set package 'pcl_example' build argument 'cmake_clean_cache' from command line to 'False'
+[0.137s] Level 5:colcon.colcon_core.verb:set package 'pcl_example' build argument 'cmake_clean_first' from command line to 'False'
+[0.137s] Level 5:colcon.colcon_core.verb:set package 'pcl_example' build argument 'cmake_force_configure' from command line to 'False'
+[0.137s] Level 5:colcon.colcon_core.verb:set package 'pcl_example' build argument 'ament_cmake_args' from command line to 'None'
+[0.137s] Level 5:colcon.colcon_core.verb:set package 'pcl_example' build argument 'catkin_cmake_args' from command line to 'None'
+[0.137s] Level 5:colcon.colcon_core.verb:set package 'pcl_example' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.137s] DEBUG:colcon.colcon_core.verb:Building package 'pcl_example' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ws/src/pcl_example/build/pcl_example', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DCMAKE_BUILD_TYPE=Release'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ws/src/pcl_example/install/pcl_example', 'merge_install': False, 'path': '/home/ws/src/pcl_example', 'symlink_install': False, 'test_result_base': None}
+[0.137s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.138s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.138s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/ws/src/pcl_example' with build type 'ament_cmake'
+[0.138s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/ws/src/pcl_example'
+[0.139s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.139s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.139s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.145s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ws/src/pcl_example/build/pcl_example': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/ws/src/pcl_example/build/pcl_example -- -j20 -l20
+[13.212s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ws/src/pcl_example/build/pcl_example' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/ws/src/pcl_example/build/pcl_example -- -j20 -l20
+[13.231s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ws/src/pcl_example/build/pcl_example': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/ws/src/pcl_example/build/pcl_example
+[13.240s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(pcl_example)
+[13.241s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ws/src/pcl_example/build/pcl_example' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/ws/src/pcl_example/build/pcl_example
+[13.242s] Level 1:colcon.colcon_core.environment:checking '/home/ws/src/pcl_example/install/pcl_example' for CMake module files
+[13.242s] Level 1:colcon.colcon_core.environment:checking '/home/ws/src/pcl_example/install/pcl_example' for CMake config files
+[13.242s] Level 1:colcon.colcon_core.shell:create_environment_hook('pcl_example', 'cmake_prefix_path')
+[13.242s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ws/src/pcl_example/install/pcl_example/share/pcl_example/hook/cmake_prefix_path.ps1'
+[13.243s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ws/src/pcl_example/install/pcl_example/share/pcl_example/hook/cmake_prefix_path.dsv'
+[13.243s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ws/src/pcl_example/install/pcl_example/share/pcl_example/hook/cmake_prefix_path.sh'
+[13.243s] Level 1:colcon.colcon_core.environment:checking '/home/ws/src/pcl_example/install/pcl_example/lib'
+[13.243s] Level 1:colcon.colcon_core.environment:checking '/home/ws/src/pcl_example/install/pcl_example/bin'
+[13.243s] Level 1:colcon.colcon_core.environment:checking '/home/ws/src/pcl_example/install/pcl_example/lib/pkgconfig/pcl_example.pc'
+[13.244s] Level 1:colcon.colcon_core.environment:checking '/home/ws/src/pcl_example/install/pcl_example/lib/python3.10/site-packages'
+[13.245s] Level 1:colcon.colcon_core.environment:checking '/home/ws/src/pcl_example/install/pcl_example/bin'
+[13.245s] INFO:colcon.colcon_core.shell:Creating package script '/home/ws/src/pcl_example/install/pcl_example/share/pcl_example/package.ps1'
+[13.245s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ws/src/pcl_example/install/pcl_example/share/pcl_example/package.dsv'
+[13.245s] INFO:colcon.colcon_core.shell:Creating package script '/home/ws/src/pcl_example/install/pcl_example/share/pcl_example/package.sh'
+[13.246s] INFO:colcon.colcon_core.shell:Creating package script '/home/ws/src/pcl_example/install/pcl_example/share/pcl_example/package.bash'
+[13.246s] INFO:colcon.colcon_core.shell:Creating package script '/home/ws/src/pcl_example/install/pcl_example/share/pcl_example/package.zsh'
+[13.246s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ws/src/pcl_example/install/pcl_example/share/colcon-core/packages/pcl_example)
+[13.261s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(pcl_example)
+[13.261s] Level 1:colcon.colcon_core.environment:checking '/home/ws/src/pcl_example/install/pcl_example' for CMake module files
+[13.262s] Level 1:colcon.colcon_core.environment:checking '/home/ws/src/pcl_example/install/pcl_example' for CMake config files
+[13.262s] Level 1:colcon.colcon_core.shell:create_environment_hook('pcl_example', 'cmake_prefix_path')
+[13.262s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ws/src/pcl_example/install/pcl_example/share/pcl_example/hook/cmake_prefix_path.ps1'
+[13.263s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ws/src/pcl_example/install/pcl_example/share/pcl_example/hook/cmake_prefix_path.dsv'
+[13.263s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ws/src/pcl_example/install/pcl_example/share/pcl_example/hook/cmake_prefix_path.sh'
+[13.263s] Level 1:colcon.colcon_core.environment:checking '/home/ws/src/pcl_example/install/pcl_example/lib'
+[13.264s] Level 1:colcon.colcon_core.environment:checking '/home/ws/src/pcl_example/install/pcl_example/bin'
+[13.264s] Level 1:colcon.colcon_core.environment:checking '/home/ws/src/pcl_example/install/pcl_example/lib/pkgconfig/pcl_example.pc'
+[13.264s] Level 1:colcon.colcon_core.environment:checking '/home/ws/src/pcl_example/install/pcl_example/lib/python3.10/site-packages'
+[13.264s] Level 1:colcon.colcon_core.environment:checking '/home/ws/src/pcl_example/install/pcl_example/bin'
+[13.264s] INFO:colcon.colcon_core.shell:Creating package script '/home/ws/src/pcl_example/install/pcl_example/share/pcl_example/package.ps1'
+[13.265s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ws/src/pcl_example/install/pcl_example/share/pcl_example/package.dsv'
+[13.265s] INFO:colcon.colcon_core.shell:Creating package script '/home/ws/src/pcl_example/install/pcl_example/share/pcl_example/package.sh'
+[13.266s] INFO:colcon.colcon_core.shell:Creating package script '/home/ws/src/pcl_example/install/pcl_example/share/pcl_example/package.bash'
+[13.266s] INFO:colcon.colcon_core.shell:Creating package script '/home/ws/src/pcl_example/install/pcl_example/share/pcl_example/package.zsh'
+[13.266s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ws/src/pcl_example/install/pcl_example/share/colcon-core/packages/pcl_example)
+[13.266s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[13.267s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[13.267s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[13.267s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[13.270s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[13.270s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[13.270s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[13.270s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[13.272s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.Spawn.ExecFailed: /usr/bin/dbus-launch terminated abnormally without any error message
+[13.272s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[13.272s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ws/src/pcl_example/install/local_setup.ps1'
+[13.273s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ws/src/pcl_example/install/_local_setup_util_ps1.py'
+[13.274s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ws/src/pcl_example/install/setup.ps1'
+[13.274s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ws/src/pcl_example/install/local_setup.sh'
+[13.275s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ws/src/pcl_example/install/_local_setup_util_sh.py'
+[13.275s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ws/src/pcl_example/install/setup.sh'
+[13.275s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ws/src/pcl_example/install/local_setup.bash'
+[13.275s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ws/src/pcl_example/install/setup.bash'
+[13.276s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ws/src/pcl_example/install/local_setup.zsh'
+[13.276s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ws/src/pcl_example/install/setup.zsh'

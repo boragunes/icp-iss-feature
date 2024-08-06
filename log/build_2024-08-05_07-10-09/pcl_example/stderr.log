@@ -1,0 +1,37 @@
+[01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:[m[K In member function ‘[01m[Kvoid Pcl_Example::topic_callback(sensor_msgs::msg::PointCloud2_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:150:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kpath_history_[m[K’ was not declared in this scope
+  150 |             [01;31m[Kpath_history_[m[K.push_back(odom_msg);
+      |             [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:160:30:[m[K [01;31m[Kerror: [m[K‘[01m[Kinsert[m[K’ was not declared in this scope
+  160 |             path_msg.poses = [01;31m[Kinsert[m[K(path_msg.poses.end(),path_history_.begin(),path_history_.end());
+      |                              [01;31m[K^~~~~~[m[K
+[01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:160:30:[m[K [01;36m[Knote: [m[Ksuggested alternatives:
+In file included from [01m[K/usr/include/boost/mpl/insert.hpp:17[m[K,
+                 from [01m[K/usr/include/boost/fusion/mpl/insert.hpp:11[m[K,
+                 from [01m[K/usr/include/boost/fusion/mpl.hpp:24[m[K,
+                 from [01m[K/usr/include/boost/fusion/include/mpl.hpp:12[m[K,
+                 from [01m[K/usr/include/pcl-1.12/pcl/common/impl/accumulators.hpp:44[m[K,
+                 from [01m[K/usr/include/pcl-1.12/pcl/common/centroid.h:955[m[K,
+                 from [01m[K/usr/include/pcl-1.12/pcl/features/normal_3d.h:46[m[K,
+                 from [01m[K/usr/include/pcl-1.12/pcl/features/normal_3d_omp.h:43[m[K,
+                 from [01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:31[m[K:
+[01m[K/usr/include/boost/mpl/insert_fwd.hpp:20:69:[m[K [01;36m[Knote: [m[K  ‘[01m[Kboost::mpl::insert[m[K’
+   20 | template< typename Sequence, typename Pos_or_T, typename T > struct [01;36m[Kinsert[m[K;
+      |                                                                     [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/boost/fusion/mpl/insert.hpp:13[m[K,
+                 from [01m[K/usr/include/boost/fusion/mpl.hpp:24[m[K,
+                 from [01m[K/usr/include/boost/fusion/include/mpl.hpp:12[m[K,
+                 from [01m[K/usr/include/pcl-1.12/pcl/common/impl/accumulators.hpp:44[m[K,
+                 from [01m[K/usr/include/pcl-1.12/pcl/common/centroid.h:955[m[K,
+                 from [01m[K/usr/include/pcl-1.12/pcl/features/normal_3d.h:46[m[K,
+                 from [01m[K/usr/include/pcl-1.12/pcl/features/normal_3d_omp.h:43[m[K,
+                 from [01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:31[m[K:
+[01m[K/usr/include/boost/fusion/algorithm/transformation/insert.hpp:49:5:[m[K [01;36m[Knote: [m[K  ‘[01m[Kboost::fusion::insert[m[K’
+   49 |     [01;36m[Kinsert[m[K(Sequence const& seq, Position const& pos, T const& x)
+      |     [01;36m[K^~~~~~[m[K
+[01m[K/usr/include/boost/fusion/algorithm/transformation/insert.hpp:27:16:[m[K [01;36m[Knote: [m[K  ‘[01m[Kboost::fusion::result_of::insert[m[K’
+   27 |         struct [01;36m[Kinsert[m[K
+      |                [01;36m[K^~~~~~[m[K
+gmake[2]: *** [CMakeFiles/pcl_example_node.dir/build.make:90: CMakeFiles/pcl_example_node.dir/src/pcl_example.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/pcl_example_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

@@ -1,0 +1,96 @@
+[0.000000] (-) TimerEvent: {}
+[0.000086] (pcl_example) JobQueued: {'identifier': 'pcl_example', 'dependencies': OrderedDict()}
+[0.000114] (pcl_example) JobStarted: {'identifier': 'pcl_example'}
+[0.004978] (pcl_example) JobProgress: {'identifier': 'pcl_example', 'progress': 'cmake'}
+[0.011468] (pcl_example) JobProgress: {'identifier': 'pcl_example', 'progress': 'build'}
+[0.012039] (pcl_example) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/ws/src/pcl_example/build/pcl_example', '--', '-j20', '-l20'], 'cwd': '/home/ws/src/pcl_example/build/pcl_example', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('HOSTNAME', 'boragunes'), ('GIT_ASKPASS', '/vscode/vscode-server/bin/linux-x64/b1c0a14de1414fcdaa400695b4db1c0799bc3124/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/vscode/vscode-server/bin/linux-x64/b1c0a14de1414fcdaa400695b4db1c0799bc3124/bin/helpers/browser.sh'), ('HOME', '/home/boragunes'), ('TERM_PROGRAM_VERSION', '1.92.0'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-7e5bfd0b-d03b-4e94-82fc-e10c9de64056.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/vscode/vscode-server/bin/linux-x64/b1c0a14de1414fcdaa400695b4db1c0799bc3124/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/vscode/vscode-server/bin/linux-x64/b1c0a14de1414fcdaa400695b4db1c0799bc3124/node'), ('COLORTERM', 'truecolor'), ('REMOTE_CONTAINERS', 'true'), ('_colcon_cd_root', '/opt/ros/humble/'), ('COLCON_PREFIX_PATH', '/home/ws/src/pcl_example/install'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-c745513c-920e-4115-ad8d-e5a4edcb0ff3.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '1'), ('PATH', '/vscode/vscode-server/bin/linux-x64/b1c0a14de1414fcdaa400695b4db1c0799bc3124/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-c745513c-920e-4115-ad8d-e5a4edcb0ff3.sock","/home/boragunes/.gnupg/S.gpg-agent"]'), ('DISPLAY', ':1'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-d9ed358602.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-c745513c-920e-4115-ad8d-e5a4edcb0ff3.sock'), ('ROS_DOMAIN_ID', '42'), ('AMENT_PREFIX_PATH', '/home/ws/src/pcl_example/install/pcl_example:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/ws/src/pcl_example/build/pcl_example'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/ws/src/pcl_example/install/pcl_example:/opt/ros/humble')]), 'shell': False}
+[0.044862] (pcl_example) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target pcl_example_node\x1b[0m\n'}
+[0.063812] (pcl_example) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/pcl_example_node.dir/src/pcl_example.cpp.o\x1b[0m\n'}
+[0.099568] (-) TimerEvent: {}
+[0.199817] (-) TimerEvent: {}
+[0.300111] (-) TimerEvent: {}
+[0.400386] (-) TimerEvent: {}
+[0.500677] (-) TimerEvent: {}
+[0.600930] (-) TimerEvent: {}
+[0.701215] (-) TimerEvent: {}
+[0.801615] (-) TimerEvent: {}
+[0.901997] (-) TimerEvent: {}
+[1.002378] (-) TimerEvent: {}
+[1.102749] (-) TimerEvent: {}
+[1.203140] (-) TimerEvent: {}
+[1.303389] (-) TimerEvent: {}
+[1.403647] (-) TimerEvent: {}
+[1.504075] (-) TimerEvent: {}
+[1.604367] (-) TimerEvent: {}
+[1.704604] (-) TimerEvent: {}
+[1.804853] (-) TimerEvent: {}
+[1.905115] (-) TimerEvent: {}
+[2.005366] (-) TimerEvent: {}
+[2.105680] (-) TimerEvent: {}
+[2.206005] (-) TimerEvent: {}
+[2.306320] (-) TimerEvent: {}
+[2.406647] (-) TimerEvent: {}
+[2.506904] (-) TimerEvent: {}
+[2.607226] (-) TimerEvent: {}
+[2.707554] (-) TimerEvent: {}
+[2.807810] (-) TimerEvent: {}
+[2.908157] (-) TimerEvent: {}
+[2.958600] (pcl_example) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ws/src/pcl_example/src/pcl_example.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid Pcl_Example::topic_callback(sensor_msgs::msg::PointCloud2_<std::allocator<void> >::SharedPtr)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.958747] (pcl_example) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ws/src/pcl_example/src/pcl_example.cpp:66:18:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Khigh_resolution_clock\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[2.958783] (pcl_example) StderrLine: {'line': b'   66 |     auto start = \x1b[01;31m\x1b[Khigh_resolution_clock\x1b[m\x1b[K::now();\n'}
+[2.958812] (pcl_example) StderrLine: {'line': b'      |                  \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.964612] (pcl_example) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ws/src/pcl_example/src/pcl_example.cpp:110:14:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Khigh_resolution_clock\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[2.964709] (pcl_example) StderrLine: {'line': b'  110 |   auto end = \x1b[01;31m\x1b[Khigh_resolution_clock\x1b[m\x1b[K::now();\n'}
+[2.964745] (pcl_example) StderrLine: {'line': b'      |              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.965512] (pcl_example) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ws/src/pcl_example/src/pcl_example.cpp:111:19:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kduration_cast\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.965543] (pcl_example) StderrLine: {'line': b'  111 |   auto duration = \x1b[01;31m\x1b[Kduration_cast\x1b[m\x1b[K<microseconds>(end - start).count();\n'}
+[2.965572] (pcl_example) StderrLine: {'line': b'      |                   \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.965598] (pcl_example) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ws/src/pcl_example/src/pcl_example.cpp:111:19:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Ksuggested alternatives:\n'}
+[2.965624] (pcl_example) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/ws/src/pcl_example/src/pcl_example.cpp:18\x1b[m\x1b[K:\n'}
+[2.965649] (pcl_example) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/chrono:267:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Kstd::chrono::duration_cast\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.965675] (pcl_example) StderrLine: {'line': b'  267 |       \x1b[01;36m\x1b[Kduration_cast\x1b[m\x1b[K(const duration<_Rep, _Period>& __d)\n'}
+[2.965705] (pcl_example) StderrLine: {'line': b'      |       \x1b[01;36m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.965730] (pcl_example) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/chrono:267:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Kstd::chrono::duration_cast\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.966291] (pcl_example) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ws/src/pcl_example/src/pcl_example.cpp:111:33:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kmicroseconds\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.966368] (pcl_example) StderrLine: {'line': b'  111 |   auto duration = duration_cast<\x1b[01;31m\x1b[Kmicroseconds\x1b[m\x1b[K>(end - start).count();\n'}
+[2.966401] (pcl_example) StderrLine: {'line': b'      |                                 \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.966429] (pcl_example) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ws/src/pcl_example/src/pcl_example.cpp:111:33:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Ksuggested alternatives:\n'}
+[2.966457] (pcl_example) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/ws/src/pcl_example/src/pcl_example.cpp:18\x1b[m\x1b[K:\n'}
+[2.966483] (pcl_example) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/chrono:841:11:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Kstd::chrono::microseconds\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.966510] (pcl_example) StderrLine: {'line': b'  841 |     using \x1b[01;36m\x1b[Kmicroseconds\x1b[m\x1b[K  = duration<_GLIBCXX_CHRONO_INT64_T, micro>;\n'}
+[2.966536] (pcl_example) StderrLine: {'line': b'      |           \x1b[01;36m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.966564] (pcl_example) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/boost/interprocess/detail/posix_time_types_wrk.hpp:33\x1b[m\x1b[K,\n'}
+[2.966590] (pcl_example) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/interprocess/detail/os_thread_functions.hpp:36\x1b[m\x1b[K,\n'}
+[2.966616] (pcl_example) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/interprocess/sync/file_lock.hpp:26\x1b[m\x1b[K,\n'}
+[2.966641] (pcl_example) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/pcl-1.12/pcl/io/pcd_io.h:46\x1b[m\x1b[K,\n'}
+[2.966666] (pcl_example) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/ws/src/pcl_example/src/pcl_example.cpp:28\x1b[m\x1b[K:\n'}
+[2.966692] (pcl_example) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/boost/date_time/posix_time/posix_time_duration.hpp:74:64:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Kboost::posix_time::microseconds\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.966717] (pcl_example) StderrLine: {'line': b'   74 |   typedef date_time::subsecond_duration<time_duration,1000000> \x1b[01;36m\x1b[Kmicroseconds\x1b[m\x1b[K;\n'}
+[2.966742] (pcl_example) StderrLine: {'line': b'      |                                                                \x1b[01;36m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.008353] (-) TimerEvent: {}
+[3.108668] (-) TimerEvent: {}
+[3.208891] (-) TimerEvent: {}
+[3.309166] (-) TimerEvent: {}
+[3.409488] (-) TimerEvent: {}
+[3.509819] (-) TimerEvent: {}
+[3.610141] (-) TimerEvent: {}
+[3.710370] (-) TimerEvent: {}
+[3.810750] (-) TimerEvent: {}
+[3.911122] (-) TimerEvent: {}
+[4.011442] (-) TimerEvent: {}
+[4.111771] (-) TimerEvent: {}
+[4.212143] (-) TimerEvent: {}
+[4.312475] (-) TimerEvent: {}
+[4.412746] (-) TimerEvent: {}
+[4.513002] (-) TimerEvent: {}
+[4.613317] (-) TimerEvent: {}
+[4.713559] (-) TimerEvent: {}
+[4.813909] (-) TimerEvent: {}
+[4.914156] (-) TimerEvent: {}
+[5.014486] (-) TimerEvent: {}
+[5.015062] (pcl_example) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/pcl_example_node.dir/build.make:90: CMakeFiles/pcl_example_node.dir/src/pcl_example.cpp.o] Error 1\n'}
+[5.015358] (pcl_example) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/pcl_example_node.dir/all] Error 2\n'}
+[5.015556] (pcl_example) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[5.017235] (pcl_example) CommandEnded: {'returncode': 2}
+[5.042292] (pcl_example) JobEnded: {'identifier': 'pcl_example', 'rc': 2}
+[5.052870] (-) EventReactorShutdown: {}

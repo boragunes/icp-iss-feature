@@ -23,8 +23,8 @@ def generate_launch_description():
             executable='pcl_example_node',
             name='pcl_example_node',
             parameters= [
-            {'frame_id': 'lidar'},
-            {'topic_pointcloud_in': 'bf_lidar/point_cloud_out'},
+            {'frame_id': 'map'},
+            {'topic_pointcloud_in': 'ls128/lslidar'},
             {'topic_pointcloud_out': 'bf_lidar/point_cloud_pcl_example'}],
         )
     ])

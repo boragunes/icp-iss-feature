@@ -1,0 +1,53 @@
+In file included from [01m[K/usr/include/pcl-1.12/pcl/type_traits.h:40[m[K,
+                 from [01m[K/usr/include/pcl-1.12/pcl/memory.h:46[m[K,
+                 from [01m[K/usr/include/pcl-1.12/pcl/io/pcd_io.h:42[m[K,
+                 from [01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:28[m[K:
+/usr/include/pcl-1.12/pcl/point_struct_traits.h: In instantiation of ‘[01m[Kstruct pcl::traits::fieldList<sensor_msgs::msg::PointCloud2_<std::allocator<void> > >[m[K’:
+[01m[K/usr/include/pcl-1.12/pcl/filters/voxel_grid.h:488:13:[m[K   required from ‘[01m[Kclass pcl::VoxelGrid<sensor_msgs::msg::PointCloud2_<std::allocator<void> > >[m[K’
+[01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:84:51:[m[K   required from here
+[01m[K/usr/include/pcl-1.12/pcl/point_struct_traits.h:195:8:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type ‘[01m[Kstruct pcl::traits::fieldList<sensor_msgs::msg::PointCloud2_<std::allocator<void> > >[m[K’
+  195 | struct [01;31m[KfieldList[m[K /** \cond NO_WARN_RECURSIVE */ : fieldList<typename POD<PointT>::type> /** \endcond */
+      |        [01;31m[K^~~~~~~~~[m[K
+[01m[K/usr/include/pcl-1.12/pcl/point_struct_traits.h:195:8:[m[K [01;36m[Knote: [m[Kdeclaration of ‘[01m[Kstruct pcl::traits::fieldList<sensor_msgs::msg::PointCloud2_<std::allocator<void> > >[m[K’
+In file included from [01m[K/usr/include/pcl-1.12/pcl/point_struct_traits.h:40[m[K,
+                 from [01m[K/usr/include/pcl-1.12/pcl/type_traits.h:40[m[K,
+                 from [01m[K/usr/include/pcl-1.12/pcl/memory.h:46[m[K,
+                 from [01m[K/usr/include/pcl-1.12/pcl/io/pcd_io.h:42[m[K,
+                 from [01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:28[m[K:
+[01m[K/usr/include/pcl-1.12/pcl/point_struct_traits.h:201:3:[m[K [01;31m[Kerror: [m[Kcould not convert ‘[01m[Kpcl::traits::fieldList<sensor_msgs::msg::PointCloud2_<std::allocator<void> > >::POINT_TYPE_NOT_PROPERLY_REGISTERED201::assert_arg()[m[K’ from ‘[01m[Kmpl_::failed************ (pcl::traits::fieldList<sensor_msgs::msg::PointCloud2_<std::allocator<void> > >::POINT_TYPE_NOT_PROPERLY_REGISTERED::************)(sensor_msgs::msg::PointCloud2_<std::allocator<void> >&)[m[K’ to ‘[01m[Kmpl_::assert<false>::type[m[K’ {aka ‘[01m[Kmpl_::assert<false>[m[K’}
+  201 |   [01;31m[KB[m[KOOST_MPL_ASSERT_MSG((!std::is_same<PointT, typename POD<PointT>::type>::value),
+      |   [01;31m[K^[m[K
+      |   [01;31m[K|[m[K
+      |   [01;31m[Kmpl_::failed************ (pcl::traits::fieldList<sensor_msgs::msg::PointCloud2_<std::allocator<void> > >::POINT_TYPE_NOT_PROPERLY_REGISTERED::************)(sensor_msgs::msg::PointCloud2_<std::allocator<void> >&)[m[K
+In file included from [01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:35[m[K:
+/usr/include/pcl-1.12/pcl/filters/voxel_grid.h: In instantiation of ‘[01m[Kclass pcl::VoxelGrid<sensor_msgs::msg::PointCloud2_<std::allocator<void> > >[m[K’:
+[01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:84:51:[m[K   required from here
+[01m[K/usr/include/pcl-1.12/pcl/filters/voxel_grid.h:488:13:[m[K [01;31m[Kerror: [m[Kno type named ‘[01m[Ktype[m[K’ in ‘[01m[Kstruct pcl::traits::fieldList<sensor_msgs::msg::PointCloud2_<std::allocator<void> > >[m[K’
+  488 |       using [01;31m[KFieldList[m[K = typename pcl::traits::fieldList<PointT>::type;
+      |             [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:[m[K In member function ‘[01m[Kvoid Pcl_Example::topic_callback(sensor_msgs::msg::PointCloud2_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:85:28:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kpcl::PointCloud<pcl::PointXYZ>::Ptr[m[K’ {aka ‘[01m[Kstd::shared_ptr<pcl::PointCloud<pcl::PointXYZ> >[m[K’} to ‘[01m[Kconst PointCloudConstPtr&[m[K’ {aka ‘[01m[Kconst std::shared_ptr<const pcl::PointCloud<sensor_msgs::msg::PointCloud2_<std::allocator<void> > > >&[m[K’}
+   85 |   voxel_grid.setInputCloud([01;31m[Kcloud_xyz[m[K);
+      |                            [01;31m[K^~~~~~~~~[m[K
+      |                            [01;31m[K|[m[K
+      |                            [01;31m[Kpcl::PointCloud<pcl::PointXYZ>::Ptr {aka std::shared_ptr<pcl::PointCloud<pcl::PointXYZ> >}[m[K
+In file included from [01m[K/usr/include/pcl-1.12/pcl/features/feature.h:49[m[K,
+                 from [01m[K/usr/include/pcl-1.12/pcl/features/normal_3d.h:45[m[K,
+                 from [01m[K/usr/include/pcl-1.12/pcl/features/normal_3d_omp.h:43[m[K,
+                 from [01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:31[m[K:
+[01m[K/usr/include/pcl-1.12/pcl/pcl_base.h:92:48:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Kvoid pcl::PCLBase<PointT>::setInputCloud(const PointCloudConstPtr&) [with PointT = sensor_msgs::msg::PointCloud2_<std::allocator<void> >; pcl::PCLBase<PointT>::PointCloudConstPtr = std::shared_ptr<const pcl::PointCloud<sensor_msgs::msg::PointCloud2_<std::allocator<void> > > >][m[K’
+   92 |       setInputCloud ([01;36m[Kconst PointCloudConstPtr &cloud[m[K);
+      |                      [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~[m[K
+[01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:88:21:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kstd::__shared_ptr_access<pcl::PointCloud<pcl::PointXYZ>, __gnu_cxx::_S_atomic, false, false>::element_type[m[K’ {aka ‘[01m[Kpcl::PointCloud<pcl::PointXYZ>[m[K’} to ‘[01m[Kpcl::Filter<sensor_msgs::msg::PointCloud2_<std::allocator<void> > >::PointCloud&[m[K’ {aka ‘[01m[Kpcl::PointCloud<sensor_msgs::msg::PointCloud2_<std::allocator<void> > >&[m[K’}
+   88 |   voxel_grid.filter([01;31m[K*cloud_filtered[m[K);
+      |                     [01;31m[K^~~~~~~~~~~~~~~[m[K
+      |                     [01;31m[K|[m[K
+      |                     [01;31m[Kstd::__shared_ptr_access<pcl::PointCloud<pcl::PointXYZ>, __gnu_cxx::_S_atomic, false, false>::element_type {aka pcl::PointCloud<pcl::PointXYZ>}[m[K
+In file included from [01m[K/usr/include/pcl-1.12/pcl/filters/voxel_grid.h:42[m[K,
+                 from [01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:35[m[K:
+[01m[K/usr/include/pcl-1.12/pcl/filters/filter.h:121:27:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Kvoid pcl::Filter<PointT>::filter(pcl::Filter<PointT>::PointCloud&) [with PointT = sensor_msgs::msg::PointCloud2_<std::allocator<void> >; pcl::Filter<PointT>::PointCloud = pcl::PointCloud<sensor_msgs::msg::PointCloud2_<std::allocator<void> > >][m[K’
+  121 |       filter ([01;36m[KPointCloud &output[m[K)
+      |               [01;36m[K~~~~~~~~~~~~^~~~~~[m[K
+gmake[2]: *** [CMakeFiles/pcl_example_node.dir/build.make:90: CMakeFiles/pcl_example_node.dir/src/pcl_example.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/pcl_example_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

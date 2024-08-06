@@ -1,0 +1,9 @@
+[0.012s] Invoking command in '/home/ws/src/pcl_example/build/pcl_example': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/ws/src/pcl_example/build/pcl_example -- -j20 -l20
+[0.041s] [35m[1mConsolidate compiler generated dependencies of target pcl_example_node[0m
+[0.060s] [ 33%] [32mBuilding CXX object CMakeFiles/pcl_example_node.dir/src/pcl_example.cpp.o[0m
+[0.063s] [01m[Kcc1plus:[m[K [01;31m[Kfatal error: [m[K/home/ws/src/pcl_example/src/pcl_example.cpp: No such file or directory
+[0.063s] compilation terminated.
+[0.064s] gmake[2]: *** [CMakeFiles/pcl_example_node.dir/build.make:90: CMakeFiles/pcl_example_node.dir/src/pcl_example.cpp.o] Error 1
+[0.064s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/pcl_example_node.dir/all] Error 2
+[0.064s] gmake: *** [Makefile:146: all] Error 2
+[0.066s] Invoked command in '/home/ws/src/pcl_example/build/pcl_example' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/ws/src/pcl_example/build/pcl_example -- -j20 -l20

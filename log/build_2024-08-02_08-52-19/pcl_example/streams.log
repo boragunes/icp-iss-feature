@@ -1,0 +1,27 @@
+[0.007s] Invoking command in '/home/ws/src/pcl_example/build/pcl_example': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/ws/src/pcl_example/build/pcl_example -- -j20 -l20
+[0.034s] [35m[1mConsolidate compiler generated dependencies of target pcl_example_node[0m
+[0.054s] [ 33%] [32mBuilding CXX object CMakeFiles/pcl_example_node.dir/src/pcl_example.cpp.o[0m
+[0.976s] [01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:84:37:[m[K [01;31m[Kerror: [m[Kextended character ’ is not valid in an identifier
+[0.976s]    84 |   pcl::VoxelGrid< sensor_msgs::msg::[01;31m[KP[m[KointCloud2’ > voxel_grid;
+[0.976s]       |                                     [01;31m[K^[m[K
+[3.129s] [01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:[m[K In member function ‘[01m[Kvoid Pcl_Example::topic_callback(sensor_msgs::msg::PointCloud2_<std::allocator<void> >::SharedPtr)[m[K’:
+[3.129s] [01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:84:37:[m[K [01;31m[Kerror: [m[K‘[01m[KPointCloud2’[m[K’ is not a member of ‘[01m[Ksensor_msgs::msg[m[K’; did you mean ‘[01m[KPointCloud2_[m[K’?
+[3.129s]    84 |   pcl::VoxelGrid< sensor_msgs::msg::[01;31m[KPointCloud2’[m[K > voxel_grid;
+[3.129s]       |                                     [01;31m[K^~~~~~~~~~~~[m[K
+[3.129s]       |                                     [32m[KPointCloud2_[m[K
+[3.129s] [01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:84:50:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[3.129s]    84 |   pcl::VoxelGrid< sensor_msgs::msg::PointCloud2’ [01;31m[K>[m[K voxel_grid;
+[3.129s]       |                                                  [01;31m[K^[m[K
+[3.129s] [01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:85:14:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[KsetInputCloud[m[K’ in ‘[01m[Kvoxel_grid[m[K’, which is of non-class type ‘[01m[Kint[m[K’
+[3.129s]    85 |   voxel_grid.[01;31m[KsetInputCloud[m[K(msg);
+[3.129s]       |              [01;31m[K^~~~~~~~~~~~~[m[K
+[3.129s] [01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:86:14:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[KsetLeafSize[m[K’ in ‘[01m[Kvoxel_grid[m[K’, which is of non-class type ‘[01m[Kint[m[K’
+[3.129s]    86 |   voxel_grid.[01;31m[KsetLeafSize[m[K(0.1f, 0.1f, 0.1f); // Set voxel size (adjust as needed)
+[3.129s]       |              [01;31m[K^~~~~~~~~~~[m[K
+[3.129s] [01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:88:14:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kfilter[m[K’ in ‘[01m[Kvoxel_grid[m[K’, which is of non-class type ‘[01m[Kint[m[K’
+[3.129s]    88 |   voxel_grid.[01;31m[Kfilter[m[K(*cloud_filtered);
+[3.129s]       |              [01;31m[K^~~~~~[m[K
+[5.486s] gmake[2]: *** [CMakeFiles/pcl_example_node.dir/build.make:90: CMakeFiles/pcl_example_node.dir/src/pcl_example.cpp.o] Error 1
+[5.486s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/pcl_example_node.dir/all] Error 2
+[5.486s] gmake: *** [Makefile:146: all] Error 2
+[5.488s] Invoked command in '/home/ws/src/pcl_example/build/pcl_example' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/ws/src/pcl_example/build/pcl_example -- -j20 -l20

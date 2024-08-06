@@ -1,0 +1,114 @@
+[0.008s] Invoking command in '/home/ws/src/pcl_example/build/pcl_example': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/ws/src/pcl_example/build/pcl_example -- -j20 -l20
+[0.028s] -- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.104s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.114s] -- Found rclcpp: 16.0.9 (/opt/ros/humble/share/rclcpp/cmake)
+[0.153s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.155s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.160s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.169s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.181s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.221s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.223s] -- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.304s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.402s] -- Found sensor_msgs: 4.2.4 (/opt/ros/humble/share/sensor_msgs/cmake)
+[0.482s] -- Found nav_msgs: 4.2.4 (/opt/ros/humble/share/nav_msgs/cmake)
+[0.534s] -- Found pcl_conversions: 2.4.0 (/opt/ros/humble/share/pcl_conversions/cmake)
+[0.618s] -- Eigen found (include: /usr/include/eigen3, version: 3.4.0)
+[0.640s] -- FLANN found (include: /usr/include, lib: /usr/lib/x86_64-linux-gnu/libflann_cpp.so)
+[0.868s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[0.872s] [0m** WARNING ** io features related to pcap will be disabled[0m
+[0.872s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[0.961s] -- Eigen found (include: /usr/include/eigen3, version: 3.4.0)
+[0.965s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[0.968s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[1.051s] -- Found Qhull version 8.0.2
+[1.140s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[1.225s] -- looking for PCL_COMMON
+[1.225s] -- looking for PCL_KDTREE
+[1.225s] -- looking for PCL_OCTREE
+[1.225s] -- looking for PCL_SEARCH
+[1.225s] -- looking for PCL_SAMPLE_CONSENSUS
+[1.225s] -- looking for PCL_FILTERS
+[1.225s] -- looking for PCL_2D
+[1.226s] -- looking for PCL_GEOMETRY
+[1.226s] -- looking for PCL_IO
+[1.226s] -- looking for PCL_FEATURES
+[1.226s] -- looking for PCL_ML
+[1.226s] -- looking for PCL_SEGMENTATION
+[1.227s] -- looking for PCL_VISUALIZATION
+[1.227s] -- looking for PCL_SURFACE
+[1.227s] -- looking for PCL_REGISTRATION
+[1.227s] -- looking for PCL_KEYPOINTS
+[1.228s] -- looking for PCL_TRACKING
+[1.228s] -- looking for PCL_RECOGNITION
+[1.228s] -- looking for PCL_STEREO
+[1.228s] -- looking for PCL_APPS
+[1.229s] -- looking for PCL_IN_HAND_SCANNER
+[1.229s] -- looking for PCL_MODELER
+[1.229s] -- looking for PCL_POINT_CLOUD_EDITOR
+[1.229s] -- looking for PCL_OUTOFCORE
+[1.229s] -- looking for PCL_PEOPLE
+[1.275s] -- Found launch_testing_ament_cmake: 1.0.6 (/opt/ros/humble/share/launch_testing_ament_cmake/cmake)
+[1.275s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[1.290s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.290s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[1.290s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[1.330s] -- Configuring done
+[1.364s] -- Generating done
+[1.366s] -- Build files have been written to: /home/ws/src/pcl_example/build/pcl_example
+[1.386s] [35m[1mConsolidate compiler generated dependencies of target pcl_example_node[0m
+[1.405s] [ 33%] [32mBuilding CXX object CMakeFiles/pcl_example_node.dir/src/pcl_example_node.cpp.o[0m
+[1.407s] [ 66%] [32mBuilding CXX object CMakeFiles/pcl_example_node.dir/src/pcl_example.cpp.o[0m
+[2.819s] In file included from [01m[K/home/ws/src/pcl_example/src/pcl_example_node.cpp:16[m[K:
+[2.819s] [01m[K/home/ws/src/pcl_example/include/pcl_example/pcl_example_node.hpp:59:23:[m[K [01;31m[Kerror: [m[K‘[01m[Knav_msgs[m[K’ was not declared in this scope
+[2.819s]    59 |     rclcpp::Publisher<[01;31m[Knav_msgs[m[K::msg::Odometry>::SharedPtr odometry_publisher_;
+[2.819s]       |                       [01;31m[K^~~~~~~~[m[K
+[2.819s] [01m[K/home/ws/src/pcl_example/include/pcl_example/pcl_example_node.hpp:59:46:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.819s]    59 |     rclcpp::Publisher<nav_msgs::msg::Odometry[01;31m[K>[m[K::SharedPtr odometry_publisher_;
+[2.819s]       |                                              [01;31m[K^[m[K
+[2.819s] [01m[K/home/ws/src/pcl_example/include/pcl_example/pcl_example_node.hpp:59:49:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+[2.819s]    59 |     rclcpp::Publisher<nav_msgs::msg::Odometry>::[01;31m[KSharedPtr[m[K odometry_publisher_;
+[2.819s]       |                                                 [01;31m[K^~~~~~~~~[m[K
+[2.819s]       |                                                          [32m[K;[m[K
+[2.821s] [01m[K/home/ws/src/pcl_example/include/pcl_example/pcl_example_node.hpp:59:59:[m[K [01;31m[Kerror: [m[K‘[01m[Kodometry_publisher_[m[K’ does not name a type
+[2.821s]    59 |     rclcpp::Publisher<nav_msgs::msg::Odometry>::SharedPtr [01;31m[Kodometry_publisher_[m[K;
+[2.821s]       |                                                           [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[3.087s] gmake[2]: *** [CMakeFiles/pcl_example_node.dir/build.make:76: CMakeFiles/pcl_example_node.dir/src/pcl_example_node.cpp.o] Error 1
+[3.087s] gmake[2]: *** Waiting for unfinished jobs....
+[3.800s] In file included from [01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:26[m[K:
+[3.800s] [01m[K/home/ws/src/pcl_example/include/pcl_example/pcl_example_node.hpp:59:23:[m[K [01;31m[Kerror: [m[K‘[01m[Knav_msgs[m[K’ was not declared in this scope
+[3.800s]    59 |     rclcpp::Publisher<[01;31m[Knav_msgs[m[K::msg::Odometry>::SharedPtr odometry_publisher_;
+[3.800s]       |                       [01;31m[K^~~~~~~~[m[K
+[3.800s] [01m[K/home/ws/src/pcl_example/include/pcl_example/pcl_example_node.hpp:59:46:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[3.800s]    59 |     rclcpp::Publisher<nav_msgs::msg::Odometry[01;31m[K>[m[K::SharedPtr odometry_publisher_;
+[3.800s]       |                                              [01;31m[K^[m[K
+[3.800s] [01m[K/home/ws/src/pcl_example/include/pcl_example/pcl_example_node.hpp:59:49:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+[3.800s]    59 |     rclcpp::Publisher<nav_msgs::msg::Odometry>::[01;31m[KSharedPtr[m[K odometry_publisher_;
+[3.800s]       |                                                 [01;31m[K^~~~~~~~~[m[K
+[3.800s]       |                                                          [32m[K;[m[K
+[3.806s] [01m[K/home/ws/src/pcl_example/include/pcl_example/pcl_example_node.hpp:59:59:[m[K [01;31m[Kerror: [m[K‘[01m[Kodometry_publisher_[m[K’ does not name a type
+[3.806s]    59 |     rclcpp::Publisher<nav_msgs::msg::Odometry>::SharedPtr [01;31m[Kodometry_publisher_[m[K;
+[3.806s]       |                                                           [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[4.898s] [01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:[m[K In constructor ‘[01m[KPcl_Example::Pcl_Example(const rclcpp::NodeOptions&)[m[K’:
+[4.898s] [01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:59:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kodometry_publisher_[m[K’ was not declared in this scope; did you mean ‘[01m[Kcount_publishers[m[K’?
+[4.898s]    59 |   [01;31m[Kodometry_publisher_[m[K = this->create_publisher<nav_msgs::msg::Odometry>(param_topic_odometry, 100);
+[4.898s]       |   [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[4.898s]       |   [32m[Kcount_publishers[m[K
+[4.915s] [01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:63:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kprevious_cloud_[m[K’ was not declared in this scope
+[4.915s]    63 |   [01;31m[Kprevious_cloud_[m[K = std::make_shared<pcl::PointCloud<pcl::PointXYZ>>();
+[4.915s]       |   [01;31m[K^~~~~~~~~~~~~~~[m[K
+[4.955s] [01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:[m[K In member function ‘[01m[Kvoid Pcl_Example::topic_callback(sensor_msgs::msg::PointCloud2_<std::allocator<void> >::SharedPtr)[m[K’:
+[4.955s] [01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:123:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kprevious_cloud_[m[K’ was not declared in this scope
+[4.955s]   123 |    if (![01;31m[Kprevious_cloud_[m[K->empty())
+[4.955s]       |         [01;31m[K^~~~~~~~~~~~~~~[m[K
+[4.981s] [01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:150:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kodometry_publisher_[m[K’ was not declared in this scope; did you mean ‘[01m[Kcount_publishers[m[K’?
+[4.981s]   150 |             [01;31m[Kodometry_publisher_[m[K->publish(odom_msg);
+[4.981s]       |             [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[4.981s]       |             [32m[Kcount_publishers[m[K
+[4.992s] [01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:159:6:[m[K [01;31m[Kerror: [m[K‘[01m[Kprevious_cloud_[m[K’ was not declared in this scope
+[4.992s]   159 |     *[01;31m[Kprevious_cloud_[m[K = *cloud_filtered;
+[4.992s]       |      [01;31m[K^~~~~~~~~~~~~~~[m[K
+[9.069s] gmake[2]: *** [CMakeFiles/pcl_example_node.dir/build.make:90: CMakeFiles/pcl_example_node.dir/src/pcl_example.cpp.o] Error 1
+[9.069s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/pcl_example_node.dir/all] Error 2
+[9.069s] gmake: *** [Makefile:146: all] Error 2
+[9.072s] Invoked command in '/home/ws/src/pcl_example/build/pcl_example' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/ws/src/pcl_example/build/pcl_example -- -j20 -l20

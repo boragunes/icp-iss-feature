@@ -1,0 +1,65 @@
+[0.006s] Invoking command in '/home/ws/src/pcl_example/build/pcl_example': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/ws/src/pcl_example/build/pcl_example -- -j20 -l20
+[0.034s] [35m[1mConsolidate compiler generated dependencies of target pcl_example_node[0m
+[0.054s] [ 33%] [32mBuilding CXX object CMakeFiles/pcl_example_node.dir/src/pcl_example.cpp.o[0m
+[3.121s] [01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:46:1:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kprivate[m[K’
+[3.121s]    46 | [01;31m[Kprivate[m[K:
+[3.121s]       | [01;31m[K^~~~~~~[m[K
+[3.171s] [01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:[m[K In member function ‘[01m[Kvoid Pcl_Example::topic_callback(sensor_msgs::msg::PointCloud2_<std::allocator<void> >::SharedPtr)[m[K’:
+[3.171s] [01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:144:27:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing _pose_type = struct geometry_msgs::msg::Pose_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct geometry_msgs::msg::Pose_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kpose[m[K’
+[3.171s]   144 |             odom_msg.pose.[01;31m[Kpose[m[K.position.x = transformation(0, 3);
+[3.171s]       |                           [01;31m[K^~~~[m[K
+[3.172s] [01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:145:27:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing _pose_type = struct geometry_msgs::msg::Pose_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct geometry_msgs::msg::Pose_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kpose[m[K’
+[3.172s]   145 |             odom_msg.pose.[01;31m[Kpose[m[K.position.y = transformation(1, 3);
+[3.172s]       |                           [01;31m[K^~~~[m[K
+[3.172s] [01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:146:27:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing _pose_type = struct geometry_msgs::msg::Pose_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct geometry_msgs::msg::Pose_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kpose[m[K’
+[3.172s]   146 |             odom_msg.pose.[01;31m[Kpose[m[K.position.z = transformation(2, 3);
+[3.172s]       |                           [01;31m[K^~~~[m[K
+[3.172s] [01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:147:27:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing _pose_type = struct geometry_msgs::msg::Pose_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct geometry_msgs::msg::Pose_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kpose[m[K’
+[3.172s]   147 |             odom_msg.pose.[01;31m[Kpose[m[K.orientation.x = q.x();
+[3.172s]       |                           [01;31m[K^~~~[m[K
+[3.172s] [01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:148:27:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing _pose_type = struct geometry_msgs::msg::Pose_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct geometry_msgs::msg::Pose_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kpose[m[K’
+[3.172s]   148 |             odom_msg.pose.[01;31m[Kpose[m[K.orientation.y = q.y();
+[3.172s]       |                           [01;31m[K^~~~[m[K
+[3.172s] [01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:149:27:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing _pose_type = struct geometry_msgs::msg::Pose_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct geometry_msgs::msg::Pose_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kpose[m[K’
+[3.172s]   149 |             odom_msg.pose.[01;31m[Kpose[m[K.orientation.z = q.z();
+[3.173s]       |                           [01;31m[K^~~~[m[K
+[3.173s] [01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:150:27:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing _pose_type = struct geometry_msgs::msg::Pose_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct geometry_msgs::msg::Pose_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kpose[m[K’
+[3.173s]   150 |             odom_msg.pose.[01;31m[Kpose[m[K.orientation.w = q.w();
+[3.173s]       |                           [01;31m[K^~~~[m[K
+[3.182s] [01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:152:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kpath_history_[m[K’ was not declared in this scope
+[3.182s]   152 |             [01;31m[Kpath_history_[m[K.push_back(odom_msg);
+[3.182s]       |             [01;31m[K^~~~~~~~~~~~~[m[K
+[3.183s] [01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:162:30:[m[K [01;31m[Kerror: [m[K‘[01m[Kinsert[m[K’ was not declared in this scope
+[3.183s]   162 |             path_msg.poses = [01;31m[Kinsert[m[K(path_msg.poses.end(),path_history_.begin(),path_history_.end());
+[3.183s]       |                              [01;31m[K^~~~~~[m[K
+[3.183s] [01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:162:30:[m[K [01;36m[Knote: [m[Ksuggested alternatives:
+[3.183s] In file included from [01m[K/usr/include/boost/mpl/insert.hpp:17[m[K,
+[3.183s]                  from [01m[K/usr/include/boost/fusion/mpl/insert.hpp:11[m[K,
+[3.183s]                  from [01m[K/usr/include/boost/fusion/mpl.hpp:24[m[K,
+[3.183s]                  from [01m[K/usr/include/boost/fusion/include/mpl.hpp:12[m[K,
+[3.183s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/impl/accumulators.hpp:44[m[K,
+[3.183s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/centroid.h:955[m[K,
+[3.183s]                  from [01m[K/usr/include/pcl-1.12/pcl/features/normal_3d.h:46[m[K,
+[3.183s]                  from [01m[K/usr/include/pcl-1.12/pcl/features/normal_3d_omp.h:43[m[K,
+[3.183s]                  from [01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:31[m[K:
+[3.183s] [01m[K/usr/include/boost/mpl/insert_fwd.hpp:20:69:[m[K [01;36m[Knote: [m[K  ‘[01m[Kboost::mpl::insert[m[K’
+[3.183s]    20 | template< typename Sequence, typename Pos_or_T, typename T > struct [01;36m[Kinsert[m[K;
+[3.183s]       |                                                                     [01;36m[K^~~~~~[m[K
+[3.183s] In file included from [01m[K/usr/include/boost/fusion/mpl/insert.hpp:13[m[K,
+[3.183s]                  from [01m[K/usr/include/boost/fusion/mpl.hpp:24[m[K,
+[3.183s]                  from [01m[K/usr/include/boost/fusion/include/mpl.hpp:12[m[K,
+[3.183s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/impl/accumulators.hpp:44[m[K,
+[3.183s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/centroid.h:955[m[K,
+[3.183s]                  from [01m[K/usr/include/pcl-1.12/pcl/features/normal_3d.h:46[m[K,
+[3.183s]                  from [01m[K/usr/include/pcl-1.12/pcl/features/normal_3d_omp.h:43[m[K,
+[3.183s]                  from [01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:31[m[K:
+[3.183s] [01m[K/usr/include/boost/fusion/algorithm/transformation/insert.hpp:49:5:[m[K [01;36m[Knote: [m[K  ‘[01m[Kboost::fusion::insert[m[K’
+[3.183s]    49 |     [01;36m[Kinsert[m[K(Sequence const& seq, Position const& pos, T const& x)
+[3.183s]       |     [01;36m[K^~~~~~[m[K
+[3.183s] [01m[K/usr/include/boost/fusion/algorithm/transformation/insert.hpp:27:16:[m[K [01;36m[Knote: [m[K  ‘[01m[Kboost::fusion::result_of::insert[m[K’
+[3.183s]    27 |         struct [01;36m[Kinsert[m[K
+[3.183s]       |                [01;36m[K^~~~~~[m[K
+[6.956s] gmake[2]: *** [CMakeFiles/pcl_example_node.dir/build.make:90: CMakeFiles/pcl_example_node.dir/src/pcl_example.cpp.o] Error 1
+[6.957s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/pcl_example_node.dir/all] Error 2
+[6.957s] gmake: *** [Makefile:146: all] Error 2
+[6.959s] Invoked command in '/home/ws/src/pcl_example/build/pcl_example' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/ws/src/pcl_example/build/pcl_example -- -j20 -l20

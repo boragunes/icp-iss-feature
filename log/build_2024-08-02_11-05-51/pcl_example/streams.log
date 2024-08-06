@@ -1,0 +1,51 @@
+[0.007s] Invoking command in '/home/ws/src/pcl_example/build/pcl_example': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/ws/src/pcl_example/build/pcl_example -- -j20 -l20
+[0.035s] [35m[1mConsolidate compiler generated dependencies of target pcl_example_node[0m
+[0.053s] [ 33%] [32mBuilding CXX object CMakeFiles/pcl_example_node.dir/src/pcl_example_node.cpp.o[0m
+[0.056s] [ 66%] [32mBuilding CXX object CMakeFiles/pcl_example_node.dir/src/pcl_example.cpp.o[0m
+[1.453s] In file included from [01m[K/home/ws/src/pcl_example/src/pcl_example_node.cpp:16[m[K:
+[1.453s] [01m[K/home/ws/src/pcl_example/include/pcl_example/pcl_example_node.hpp:59:23:[m[K [01;31m[Kerror: [m[K‘[01m[Knav_msgs[m[K’ was not declared in this scope
+[1.453s]    59 |     rclcpp::Publisher<[01;31m[Knav_msgs[m[K::msg::Odometry>::SharedPtr odometry_publisher_;
+[1.454s]       |                       [01;31m[K^~~~~~~~[m[K
+[1.454s] [01m[K/home/ws/src/pcl_example/include/pcl_example/pcl_example_node.hpp:59:46:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[1.454s]    59 |     rclcpp::Publisher<nav_msgs::msg::Odometry[01;31m[K>[m[K::SharedPtr odometry_publisher_;
+[1.454s]       |                                              [01;31m[K^[m[K
+[1.454s] [01m[K/home/ws/src/pcl_example/include/pcl_example/pcl_example_node.hpp:59:49:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+[1.454s]    59 |     rclcpp::Publisher<nav_msgs::msg::Odometry>::[01;31m[KSharedPtr[m[K odometry_publisher_;
+[1.454s]       |                                                 [01;31m[K^~~~~~~~~[m[K
+[1.454s]       |                                                          [32m[K;[m[K
+[1.455s] [01m[K/home/ws/src/pcl_example/include/pcl_example/pcl_example_node.hpp:59:59:[m[K [01;31m[Kerror: [m[K‘[01m[Kodometry_publisher_[m[K’ does not name a type
+[1.455s]    59 |     rclcpp::Publisher<nav_msgs::msg::Odometry>::SharedPtr [01;31m[Kodometry_publisher_[m[K;
+[1.455s]       |                                                           [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[1.727s] gmake[2]: *** [CMakeFiles/pcl_example_node.dir/build.make:76: CMakeFiles/pcl_example_node.dir/src/pcl_example_node.cpp.o] Error 1
+[1.727s] gmake[2]: *** Waiting for unfinished jobs....
+[2.306s] In file included from [01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:26[m[K:
+[2.306s] [01m[K/home/ws/src/pcl_example/include/pcl_example/pcl_example_node.hpp:59:23:[m[K [01;31m[Kerror: [m[K‘[01m[Knav_msgs[m[K’ was not declared in this scope
+[2.306s]    59 |     rclcpp::Publisher<[01;31m[Knav_msgs[m[K::msg::Odometry>::SharedPtr odometry_publisher_;
+[2.306s]       |                       [01;31m[K^~~~~~~~[m[K
+[2.306s] [01m[K/home/ws/src/pcl_example/include/pcl_example/pcl_example_node.hpp:59:46:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.306s]    59 |     rclcpp::Publisher<nav_msgs::msg::Odometry[01;31m[K>[m[K::SharedPtr odometry_publisher_;
+[2.306s]       |                                              [01;31m[K^[m[K
+[2.306s] [01m[K/home/ws/src/pcl_example/include/pcl_example/pcl_example_node.hpp:59:49:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+[2.306s]    59 |     rclcpp::Publisher<nav_msgs::msg::Odometry>::[01;31m[KSharedPtr[m[K odometry_publisher_;
+[2.306s]       |                                                 [01;31m[K^~~~~~~~~[m[K
+[2.306s]       |                                                          [32m[K;[m[K
+[2.312s] [01m[K/home/ws/src/pcl_example/include/pcl_example/pcl_example_node.hpp:59:59:[m[K [01;31m[Kerror: [m[K‘[01m[Kodometry_publisher_[m[K’ does not name a type
+[2.312s]    59 |     rclcpp::Publisher<nav_msgs::msg::Odometry>::SharedPtr [01;31m[Kodometry_publisher_[m[K;
+[2.313s]       |                                                           [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[3.400s] [01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:[m[K In constructor ‘[01m[KPcl_Example::Pcl_Example(const rclcpp::NodeOptions&)[m[K’:
+[3.400s] [01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:59:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kodometry_publisher_[m[K’ was not declared in this scope; did you mean ‘[01m[Kcount_publishers[m[K’?
+[3.400s]    59 |   [01;31m[Kodometry_publisher_[m[K = this->create_publisher<nav_msgs::msg::Odometry>(param_topic_odometry, 100);
+[3.400s]       |   [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[3.400s]       |   [32m[Kcount_publishers[m[K
+[3.418s] [01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:[m[K In member function ‘[01m[Kvoid Pcl_Example::topic_callback(sensor_msgs::msg::PointCloud2_<std::allocator<void> >::SharedPtr)[m[K’:
+[3.418s] [01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:71:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kprevious_cloud_[m[K’ was not declared in this scope
+[3.418s]    71 |   [01;31m[Kprevious_cloud_[m[K = std::make_shared<pcl::PointCloud<pcl::PointXYZ>>();
+[3.418s]       |   [01;31m[K^~~~~~~~~~~~~~~[m[K
+[3.471s] [01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:150:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kodometry_publisher_[m[K’ was not declared in this scope; did you mean ‘[01m[Kcount_publishers[m[K’?
+[3.471s]   150 |             [01;31m[Kodometry_publisher_[m[K->publish(odom_msg);
+[3.471s]       |             [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[3.471s]       |             [32m[Kcount_publishers[m[K
+[7.646s] gmake[2]: *** [CMakeFiles/pcl_example_node.dir/build.make:90: CMakeFiles/pcl_example_node.dir/src/pcl_example.cpp.o] Error 1
+[7.646s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/pcl_example_node.dir/all] Error 2
+[7.646s] gmake: *** [Makefile:146: all] Error 2
+[7.649s] Invoked command in '/home/ws/src/pcl_example/build/pcl_example' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/ws/src/pcl_example/build/pcl_example -- -j20 -l20
