@@ -1,0 +1,15 @@
+In file included from [01m[K/home/ws/src/pcl_example/src/pcl_example_node.cpp:16[m[K:
+[01m[K/home/ws/src/pcl_example/include/pcl_example/pcl_example_node.hpp:32:17:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+   32 |     std::string [01;31m[Kparam_topic_aligned_cloud[m[K
+      |                 [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                                          [32m[K;[m[K
+gmake[2]: *** [CMakeFiles/pcl_example_node.dir/build.make:76: CMakeFiles/pcl_example_node.dir/src/pcl_example_node.cpp.o] Error 1
+gmake[2]: *** Waiting for unfinished jobs....
+In file included from [01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:26[m[K:
+[01m[K/home/ws/src/pcl_example/include/pcl_example/pcl_example_node.hpp:32:17:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+   32 |     std::string [01;31m[Kparam_topic_aligned_cloud[m[K
+      |                 [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                                          [32m[K;[m[K
+gmake[2]: *** [CMakeFiles/pcl_example_node.dir/build.make:90: CMakeFiles/pcl_example_node.dir/src/pcl_example.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/pcl_example_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

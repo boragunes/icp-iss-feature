@@ -1,0 +1,18 @@
+[0.008s] Invoking command in '/home/ws/src/pcl_example/build/pcl_example': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/ws/src/pcl_example/build/pcl_example -- -j20 -l20
+[0.050s] [35m[1mConsolidate compiler generated dependencies of target pcl_example_node[0m
+[0.069s] [ 33%] [32mBuilding CXX object CMakeFiles/pcl_example_node.dir/src/pcl_example.cpp.o[0m
+[3.517s] [01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:[m[K In constructor ‘[01m[KPcl_Example::Pcl_Example(const rclcpp::NodeOptions&)[m[K’:
+[3.517s] [01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:59:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kparam_topic_aligned_cloud[m[K’ was not declared in this scope
+[3.517s]    59 |   [01;31m[Kparam_topic_aligned_cloud[m[K = get_parameter("topic_aligned_cloud").as_string();
+[3.517s]       |   [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.536s] [01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:61:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kaligned_cloud_publisher_[m[K’ was not declared in this scope
+[3.536s]    61 |   [01;31m[Kaligned_cloud_publisher_[m[K = this->create_publisher<sensor_msgs::msg::PointCloud2>(param_topic_aligned_cloud, 100);
+[3.536s]       |   [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.593s] [01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:[m[K In member function ‘[01m[Kvoid Pcl_Example::topic_callback(sensor_msgs::msg::PointCloud2_<std::allocator<void> >::SharedPtr)[m[K’:
+[3.594s] [01m[K/home/ws/src/pcl_example/src/pcl_example.cpp:175:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kaligned_cloud_publisher_[m[K’ was not declared in this scope
+[3.594s]   175 |             [01;31m[Kaligned_cloud_publisher_[m[K->publish(aligned_cloud_msg);
+[3.594s]       |             [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[7.316s] gmake[2]: *** [CMakeFiles/pcl_example_node.dir/build.make:90: CMakeFiles/pcl_example_node.dir/src/pcl_example.cpp.o] Error 1
+[7.317s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/pcl_example_node.dir/all] Error 2
+[7.317s] gmake: *** [Makefile:146: all] Error 2
+[7.320s] Invoked command in '/home/ws/src/pcl_example/build/pcl_example' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/ws/src/pcl_example/build/pcl_example -- -j20 -l20
