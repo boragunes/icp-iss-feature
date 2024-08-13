@@ -33,7 +33,18 @@
 #include <pcl/keypoints/iss_3d.h>
 #include <pcl/registration/correspondence_estimation.h>
 #include <pcl/filters/voxel_grid.h>
-#include <pcl/registration/icp.h>  // Include ICP header
+#include <pcl/registration/gicp.h>  // Include ICP header
+
+#include <tf2_ros/transform_broadcaster.h>
+#include <tf2_ros/transform_listener.h>
+#include <tf2_ros/buffer.h>
+#include <tf2/transform_datatypes.h>
+#include <tf2/LinearMath/Quaternion.h>
+#include <tf2_geometry_msgs/tf2_geometry_msgs.hpp>
+#include <tf2_sensor_msgs/tf2_sensor_msgs.hpp>
+#include <tf2_eigen/tf2_eigen.hpp>
+
+
 
 #include "sensor_msgs/msg/point_cloud2.hpp"
 #include "std_msgs/msg/header.hpp"
@@ -45,9 +56,11 @@ using std::placeholders::_1;
 
   
 
-Pcl_Example::Pcl_Example(const rclcpp::NodeOptions& options) : Node("pcl_example",options) 
+Pcl_Example::Pcl_Example(const rclcpp::NodeOptions &options)
+: Node("pcl_example", options),
+  tf_broadcaster_(this)  // Initialize tf_broadcaster_ with the Node instance
 {
-      
+  
   declare_parameter<std::string>("topic_pointcloud_in","bf_lidar/point_cloud_out");
   declare_parameter<std::string>("topic_iss_features", "bf_lidar/iss_features");
   declare_parameter<std::string>("topic_odometry", "bf_lidar/odometry");
@@ -61,6 +74,9 @@ Pcl_Example::Pcl_Example(const rclcpp::NodeOptions& options) : Node("pcl_example
   aligned_cloud_publisher_ = this->create_publisher<sensor_msgs::msg::PointCloud2>(param_topic_aligned_cloud, 100);
   iss_features_publisher_ = this->create_publisher<sensor_msgs::msg::PointCloud2>(param_topic_iss_features,100 );
   odometry_publisher_ = this->create_publisher<nav_msgs::msg::Path>(param_topic_odometry, 100);
+
+  previous_cloud_publisher_ = this->create_publisher<sensor_msgs::msg::PointCloud2>("bf_lidar/previous_cloud", 100);
+  filtered_cloud_publisher_ = this->create_publisher<sensor_msgs::msg::PointCloud2>("bf_lidar/filtered_cloud", 100);
   subscription_ = this->create_subscription<sensor_msgs::msg::PointCloud2>(
   param_topic_pointcloud_in, 100, std::bind(&Pcl_Example::topic_callback, this, _1));
   previous_cloud_ = std::make_shared<pcl::PointCloud<pcl::PointXYZ>>();
@@ -69,85 +85,66 @@ Pcl_Example::Pcl_Example(const rclcpp::NodeOptions& options) : Node("pcl_example
 }
 
 void Pcl_Example::topic_callback(const sensor_msgs::msg::PointCloud2::SharedPtr msg)
-{   
+{
     using namespace std::chrono;
     auto start = high_resolution_clock::now();
-  pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_xyz(new pcl::PointCloud<pcl::PointXYZ>());
-  pcl::fromROSMsg(*msg, *cloud_xyz);
+    
+    pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_xyz(new pcl::PointCloud<pcl::PointXYZ>());
+    pcl::fromROSMsg(*msg, *cloud_xyz);
 
-                       
-  // Insert your pcl object here
-  // -----------------------------------
+    // Voxel Grid Filter
+    pcl::VoxelGrid<pcl::PointXYZ> voxel_grid;
+    voxel_grid.setInputCloud(cloud_xyz);
+    voxel_grid.setLeafSize(0.3f, 0.3f, 0.3f);
+    pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_filtered(new pcl::PointCloud<pcl::PointXYZ>());
+    voxel_grid.filter(*cloud_filtered);
+    RCLCPP_INFO(this->get_logger(), "point: %ld size", cloud_filtered->points.size());
 
-  
-  // using them for surface normal calculation
-  
-  
-  // Voxel Grid Filter
-  pcl::VoxelGrid<pcl::PointXYZ> voxel_grid;
-  voxel_grid.setInputCloud(cloud_xyz);
-  voxel_grid.setLeafSize(0.1f, 0.1f, 0.1f); // Set voxel size (adjust as needed)
-  pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_filtered (new pcl::PointCloud<pcl::PointXYZ>());
-  voxel_grid.filter(*cloud_filtered);
-  RCLCPP_INFO(this->get_logger(), "point: %ld size", cloud_filtered->points.size());
+    sensor_msgs::msg::PointCloud2 filtered_cloud_msg;
+    pcl::toROSMsg(*cloud_filtered, filtered_cloud_msg);
+    filtered_cloud_msg.header.frame_id = "base_link2";
+    filtered_cloud_msg.header.stamp = msg->header.stamp;
+    filtered_cloud_publisher_->publish(filtered_cloud_msg);
 
-  // Create the normal estimation class, and pass the input dataset to it
-  pcl::NormalEstimationOMP<pcl::PointXYZ, pcl::Normal> ne;
-  ne.setInputCloud(cloud_filtered);
-  // Create an empty kdtree representation, and pass it to the normal estimation object
-  pcl::search::KdTree<pcl::PointXYZ>::Ptr tree (new pcl::search::KdTree<pcl::PointXYZ>());
-  ne.setSearchMethod(tree);
-  // Output datasets
-  pcl::PointCloud<pcl::Normal>::Ptr cloud_normals (new pcl::PointCloud<pcl::Normal>);
-  // Use all neighbors in a sphere of radius 0.5m
-  ne.setRadiusSearch(0.5);
-  // Compute the features
-  ne.compute(*cloud_normals);
-  //------------------------------------
 
-  pcl::ISSKeypoint3D<pcl::PointXYZ, pcl::PointXYZ> iss;
-  iss.setInputCloud(cloud_filtered);
-  iss.setSearchMethod(tree);
-  // Set ISS parameters
-  iss.setSalientRadius(1.2); // Adjust parameters as needed
-  iss.setNonMaxRadius(1.0); // Adjust parameters as needed
-  iss.setMinNeighbors(4); // Adjust parameters as needed
-  iss.setThreshold21(0.975); // Adjust parameters as needed
-  iss.setThreshold32(0.975);
-  iss.setNumberOfThreads (20); // Adjust parameters as needed
-
-  pcl::PointCloud<pcl::PointXYZ>::Ptr iss_keypoints(new pcl::PointCloud<pcl::PointXYZ>());
-  iss.compute(*iss_keypoints);
-  sensor_msgs::msg::PointCloud2 keypoints_msg;
-  pcl::toROSMsg(*iss_keypoints, keypoints_msg);
-  // Publish to ROS2 network
-  keypoints_msg.header.frame_id = msg->header.frame_id;
-  keypoints_msg.header.stamp = msg->header.stamp;
-  iss_features_publisher_->publish(keypoints_msg);
-
-if (!previous_cloud_->empty())
+    if (!previous_cloud_->empty())
     {
-        pcl::IterativeClosestPoint<pcl::PointXYZ, pcl::PointXYZ> icp;
-        icp.setInputSource(cloud_filtered);
-        icp.setInputTarget(previous_cloud_); 
-        icp.setMaxCorrespondenceDistance(1.0);
-        icp.setMaximumIterations(100);
-        icp.setTransformationEpsilon (1e-9); // Smaller values make the algorithm faster    
-        pcl::PointCloud<pcl::PointXYZ> final_cloud; // Smaller values make the algorithm more precise
 
+        sensor_msgs::msg::PointCloud2 previous_cloud_msg;
+        pcl::toROSMsg(*previous_cloud_, previous_cloud_msg);
+        previous_cloud_msg.header.frame_id = "base_link2";
+        previous_cloud_msg.header.stamp = msg->header.stamp;
+        previous_cloud_publisher_->publish(previous_cloud_msg);
+
+
+        pcl::GeneralizedIterativeClosestPoint<pcl::PointXYZ, pcl::PointXYZ> icp;
+        icp.setInputSource(cloud_filtered);
+        icp.setInputTarget(previous_cloud_);
+        icp.setMaxCorrespondenceDistance(2.0);
+        icp.setMaximumIterations(500);
+        icp.setTransformationEpsilon(1e-12);
+
+        pcl::PointCloud<pcl::PointXYZ> final_cloud;
 
         icp.align(final_cloud);
         RCLCPP_INFO(this->get_logger(), "ICP Converged: %s", icp.hasConverged() ? "true" : "false");
         RCLCPP_INFO(this->get_logger(), "Fitness Score: %f", icp.getFitnessScore());
 
-      
         if (icp.hasConverged())
         {
-            
             Eigen::Matrix4f transformation = icp.getFinalTransformation();
             previous_transfrom_ = transformation * previous_transfrom_;
+
+            // Publish the transformed point cloud
+            sensor_msgs::msg::PointCloud2 aligned_cloud_msg;
+            pcl::toROSMsg(final_cloud, aligned_cloud_msg);
+            aligned_cloud_msg.header.frame_id = "base_link2";
+            aligned_cloud_msg.header.stamp = msg->header.stamp;
+            aligned_cloud_publisher_->publish(aligned_cloud_msg);
+
+            // Publish odometry path
             geometry_msgs::msg::PoseStamped odom_msg;
-            odom_msg.header.frame_id = "map"; // Update frame_id as needed
+            odom_msg.header.frame_id = "map";
             odom_msg.header.stamp = msg->header.stamp;
 
             Eigen::Quaternionf q(Eigen::Matrix3f(previous_transfrom_.block<3,3>(0,0)));
@@ -160,23 +157,28 @@ if (!previous_cloud_->empty())
             odom_msg.pose.orientation.w = q.w();
 
             path_history_.push_back(odom_msg);
-            if (path_history_.size() > 1000)
-            {
-                path_history_.pop_front();
-            }
 
             nav_msgs::msg::Path path_msg;
             path_msg.header.frame_id = "map";
             path_msg.header.stamp = msg->header.stamp;
-
-            path_msg.poses.insert(path_msg.poses.end(),path_history_.begin(),path_history_.end());
+            path_msg.poses.insert(path_msg.poses.end(), path_history_.begin(), path_history_.end());
             odometry_publisher_->publish(path_msg);
 
-            sensor_msgs::msg::PointCloud2 aligned_cloud_msg;
-            pcl::toROSMsg(final_cloud, aligned_cloud_msg);
-            aligned_cloud_msg.header.frame_id = "map";
-            aligned_cloud_msg.header.stamp = msg->header.stamp;
-            aligned_cloud_publisher_->publish(aligned_cloud_msg);
+            // Publish the odom_to_map transform
+            geometry_msgs::msg::TransformStamped transformStamped;
+            transformStamped.header.stamp = msg->header.stamp;
+            transformStamped.header.frame_id = "map";
+            transformStamped.child_frame_id = "base_link2";
+            transformStamped.transform.translation.x = previous_transfrom_(0, 3);
+            transformStamped.transform.translation.y = previous_transfrom_(1, 3);
+            transformStamped.transform.translation.z = previous_transfrom_(2, 3);
+            Eigen::Quaternionf q_odom_to_map(Eigen::Matrix3f(previous_transfrom_.block<3,3>(0,0)));
+            transformStamped.transform.rotation.x = q_odom_to_map.x();
+            transformStamped.transform.rotation.y = q_odom_to_map.y();
+            transformStamped.transform.rotation.z = q_odom_to_map.z();
+            transformStamped.transform.rotation.w = q_odom_to_map.w();
+
+            tf_broadcaster_.sendTransform(transformStamped);
         }
         else
         {
@@ -187,9 +189,8 @@ if (!previous_cloud_->empty())
     // Update previous cloud
     *previous_cloud_ = *cloud_filtered;
 
-  auto end = high_resolution_clock::now();
-  auto duration = duration_cast<microseconds>(end - start).count();
-
-  // Print the time taken in microseconds
-  RCLCPP_INFO(this->get_logger(), "Conversion time: %ld microseconds", duration);
+    auto end = high_resolution_clock::now();
+    auto duration = duration_cast<microseconds>(end - start).count();
+    RCLCPP_INFO(this->get_logger(), "Conversion time: %ld microseconds", duration);
 }
+

@@ -10,6 +10,10 @@
 #include <memory>
 #include <deque>
 
+#include <tf2_ros/transform_broadcaster.h>  // Include tf2_ros header
+#include <geometry_msgs/msg/transform_stamped.hpp>  // Include TransformStamped header
+#include <tf2_eigen/tf2_eigen.hpp> 
+
 class Pcl_Example : public rclcpp::Node
 {
   public:
@@ -23,6 +27,8 @@ class Pcl_Example : public rclcpp::Node
     rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr publisher_;
     rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr iss_features_publisher_;
     rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr aligned_cloud_publisher_;
+    rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr previous_cloud_publisher_;
+    rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr filtered_cloud_publisher_;
     rclcpp::Publisher<nav_msgs::msg::Path>::SharedPtr odometry_publisher_;
 
     std::string param_topic_pointcloud_in;
@@ -35,6 +41,9 @@ class Pcl_Example : public rclcpp::Node
     // Add this line to declare previous_cloud_ as a member variable
     std::shared_ptr<pcl::PointCloud<pcl::PointXYZ>> previous_cloud_;
     Eigen::Matrix4f previous_transfrom_=Eigen::Matrix4f::Identity();
+    Eigen::Matrix4f odom_to_map_transform_ = Eigen::Matrix4f::Identity();  // Add this line
+
+    tf2_ros::TransformBroadcaster tf_broadcaster_;  // Add this line
 };
 
 #endif //PCL_EXAMPLE__PCL_EXAMPLE_NODE_HPP_
