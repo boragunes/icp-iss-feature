@@ -37,9 +37,11 @@ class Pcl_Example : public rclcpp::Node
     std::string param_topic_odometry;
     std::string param_topic_aligned_cloud;
     std::deque<geometry_msgs::msg::PoseStamped> path_history_;
+    std::deque<pcl::PointCloud<pcl::PointXYZI>::Ptr> cloud_history_;
 
     // Add this line to declare previous_cloud_ as a member variable
-    std::shared_ptr<pcl::PointCloud<pcl::PointXYZ>> previous_cloud_;
+    std::shared_ptr<pcl::PointCloud<pcl::PointXYZI>> previous_cloud_;
+    std::shared_ptr<pcl::PointCloud<pcl::PointXYZI>> cumulative_cloud_;
     Eigen::Matrix4f previous_transfrom_=Eigen::Matrix4f::Identity();
     Eigen::Matrix4f odom_to_map_transform_ = Eigen::Matrix4f::Identity();  // Add this line
 

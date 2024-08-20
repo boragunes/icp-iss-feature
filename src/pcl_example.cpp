@@ -79,9 +79,14 @@ Pcl_Example::Pcl_Example(const rclcpp::NodeOptions &options)
   filtered_cloud_publisher_ = this->create_publisher<sensor_msgs::msg::PointCloud2>("bf_lidar/filtered_cloud", 100);
   subscription_ = this->create_subscription<sensor_msgs::msg::PointCloud2>(
   param_topic_pointcloud_in, 100, std::bind(&Pcl_Example::topic_callback, this, _1));
-  previous_cloud_ = std::make_shared<pcl::PointCloud<pcl::PointXYZ>>();
+  previous_cloud_ = std::make_shared<pcl::PointCloud<pcl::PointXYZI>>();
+  cumulative_cloud_ = std::make_shared<pcl::PointCloud<pcl::PointXYZI>>();
+  
   std::deque<geometry_msgs::msg::PoseStamped> path_history_;
 
+
+    std::deque<pcl::PointCloud<pcl::PointXYZI>::Ptr> cloud_history_; // Store the history of added clouds
+    
 }
 
 void Pcl_Example::topic_callback(const sensor_msgs::msg::PointCloud2::SharedPtr msg)
@@ -89,42 +94,50 @@ void Pcl_Example::topic_callback(const sensor_msgs::msg::PointCloud2::SharedPtr 
     using namespace std::chrono;
     auto start = high_resolution_clock::now();
     
-    pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_xyz(new pcl::PointCloud<pcl::PointXYZ>());
+    pcl::PointCloud<pcl::PointXYZI>::Ptr cloud_xyz(new pcl::PointCloud<pcl::PointXYZI>());
     pcl::fromROSMsg(*msg, *cloud_xyz);
 
     // Voxel Grid Filter
-    pcl::VoxelGrid<pcl::PointXYZ> voxel_grid;
+    pcl::VoxelGrid<pcl::PointXYZI> voxel_grid;
     voxel_grid.setInputCloud(cloud_xyz);
-    voxel_grid.setLeafSize(0.3f, 0.3f, 0.3f);
-    pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_filtered(new pcl::PointCloud<pcl::PointXYZ>());
+    voxel_grid.setLeafSize(0.5f, 0.5f, 0.5f);
+    pcl::PointCloud<pcl::PointXYZI>::Ptr cloud_filtered(new pcl::PointCloud<pcl::PointXYZI>());
     voxel_grid.filter(*cloud_filtered);
     RCLCPP_INFO(this->get_logger(), "point: %ld size", cloud_filtered->points.size());
 
     sensor_msgs::msg::PointCloud2 filtered_cloud_msg;
     pcl::toROSMsg(*cloud_filtered, filtered_cloud_msg);
-    filtered_cloud_msg.header.frame_id = "base_link2";
+    filtered_cloud_msg.header.frame_id = "velodyne";
     filtered_cloud_msg.header.stamp = msg->header.stamp;
     filtered_cloud_publisher_->publish(filtered_cloud_msg);
-
+    
+    if(previous_cloud_->empty())
+    {
+        *previous_cloud_ = *cloud_filtered;
+        return;
+    }
 
     if (!previous_cloud_->empty())
     {
 
         sensor_msgs::msg::PointCloud2 previous_cloud_msg;
         pcl::toROSMsg(*previous_cloud_, previous_cloud_msg);
-        previous_cloud_msg.header.frame_id = "base_link2";
+        previous_cloud_msg.header.frame_id = "velodyne";
         previous_cloud_msg.header.stamp = msg->header.stamp;
         previous_cloud_publisher_->publish(previous_cloud_msg);
 
 
-        pcl::GeneralizedIterativeClosestPoint<pcl::PointXYZ, pcl::PointXYZ> icp;
-        icp.setInputSource(cloud_filtered);
-        icp.setInputTarget(previous_cloud_);
-        icp.setMaxCorrespondenceDistance(2.0);
+        pcl::GeneralizedIterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI> icp;
+        icp.setInputSource(previous_cloud_);
+        icp.setInputTarget(cloud_filtered);
+        icp.setMaxCorrespondenceDistance(5.0);
         icp.setMaximumIterations(500);
         icp.setTransformationEpsilon(1e-12);
+        icp.setEuclideanFitnessEpsilon (0.5);
+        icp.setRANSACOutlierRejectionThreshold (0.01);
+        icp.setRANSACIterations(100);
 
-        pcl::PointCloud<pcl::PointXYZ> final_cloud;
+        pcl::PointCloud<pcl::PointXYZI> final_cloud;
 
         icp.align(final_cloud);
         RCLCPP_INFO(this->get_logger(), "ICP Converged: %s", icp.hasConverged() ? "true" : "false");
@@ -133,12 +146,17 @@ void Pcl_Example::topic_callback(const sensor_msgs::msg::PointCloud2::SharedPtr 
         if (icp.hasConverged())
         {
             Eigen::Matrix4f transformation = icp.getFinalTransformation();
-            previous_transfrom_ = transformation * previous_transfrom_;
+            previous_transfrom_ = previous_transfrom_ * transformation;
+
+
+            // Add transformed cloud to the cumulative cloud
+            *cumulative_cloud_ += final_cloud;
+
 
             // Publish the transformed point cloud
             sensor_msgs::msg::PointCloud2 aligned_cloud_msg;
-            pcl::toROSMsg(final_cloud, aligned_cloud_msg);
-            aligned_cloud_msg.header.frame_id = "base_link2";
+            pcl::toROSMsg(*cumulative_cloud_, aligned_cloud_msg);
+            aligned_cloud_msg.header.frame_id = "map";
             aligned_cloud_msg.header.stamp = msg->header.stamp;
             aligned_cloud_publisher_->publish(aligned_cloud_msg);
 
@@ -150,7 +168,7 @@ void Pcl_Example::topic_callback(const sensor_msgs::msg::PointCloud2::SharedPtr 
             Eigen::Quaternionf q(Eigen::Matrix3f(previous_transfrom_.block<3,3>(0,0)));
             odom_msg.pose.position.x = previous_transfrom_(0, 3);
             odom_msg.pose.position.y = previous_transfrom_(1, 3);
-            odom_msg.pose.position.z = previous_transfrom_(2, 3);
+            odom_msg.pose.position.z = 0;
             odom_msg.pose.orientation.x = q.x();
             odom_msg.pose.orientation.y = q.y();
             odom_msg.pose.orientation.z = q.z();
@@ -163,22 +181,22 @@ void Pcl_Example::topic_callback(const sensor_msgs::msg::PointCloud2::SharedPtr 
             path_msg.header.stamp = msg->header.stamp;
             path_msg.poses.insert(path_msg.poses.end(), path_history_.begin(), path_history_.end());
             odometry_publisher_->publish(path_msg);
-
+            /*
             // Publish the odom_to_map transform
             geometry_msgs::msg::TransformStamped transformStamped;
             transformStamped.header.stamp = msg->header.stamp;
             transformStamped.header.frame_id = "map";
-            transformStamped.child_frame_id = "base_link2";
+            transformStamped.child_frame_id = "velodyne";
             transformStamped.transform.translation.x = previous_transfrom_(0, 3);
             transformStamped.transform.translation.y = previous_transfrom_(1, 3);
-            transformStamped.transform.translation.z = previous_transfrom_(2, 3);
+            transformStamped.transform.translation.z = 0;
             Eigen::Quaternionf q_odom_to_map(Eigen::Matrix3f(previous_transfrom_.block<3,3>(0,0)));
             transformStamped.transform.rotation.x = q_odom_to_map.x();
             transformStamped.transform.rotation.y = q_odom_to_map.y();
             transformStamped.transform.rotation.z = q_odom_to_map.z();
             transformStamped.transform.rotation.w = q_odom_to_map.w();
 
-            tf_broadcaster_.sendTransform(transformStamped);
+            tf_broadcaster_.sendTransform(transformStamped);*/
         }
         else
         {
@@ -187,7 +205,7 @@ void Pcl_Example::topic_callback(const sensor_msgs::msg::PointCloud2::SharedPtr 
     }
 
     // Update previous cloud
-    *previous_cloud_ = *cloud_filtered;
+    *previous_cloud_ = *cumulative_cloud_;
 
     auto end = high_resolution_clock::now();
     auto duration = duration_cast<microseconds>(end - start).count();

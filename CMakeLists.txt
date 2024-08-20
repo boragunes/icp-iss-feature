@@ -40,6 +40,7 @@ find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(sensor_msgs REQUIRED)
+find_package(geometry_msgs REQUIRED)
 find_package(nav_msgs REQUIRED)
 find_package(tf2_ros REQUIRED)
 find_package(tf2_sensor_msgs REQUIRED)
@@ -71,6 +72,7 @@ ament_target_dependencies(
   tf2_sensor_msgs
   tf2
   tf2_eigen
+  geometry_msgs
 )
 
 install(TARGETS
@@ -87,6 +89,10 @@ install(FILES
 # Rviz2 config for visualization
 install(FILES config/pcl_example.rviz 
   DESTINATION lib/${PROJECT_NAME}
+)
+
+install(FILES launch/launch.py 
+  DESTINATION share/${PROJECT_NAME}
 )
 
 if(BUILD_TESTING)
