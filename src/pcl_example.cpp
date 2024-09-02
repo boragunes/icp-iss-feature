@@ -100,14 +100,14 @@ void Pcl_Example::topic_callback(const sensor_msgs::msg::PointCloud2::SharedPtr 
     // Voxel Grid Filter
     pcl::VoxelGrid<pcl::PointXYZI> voxel_grid;
     voxel_grid.setInputCloud(cloud_xyz);
-    voxel_grid.setLeafSize(0.5f, 0.5f, 0.5f);
+    voxel_grid.setLeafSize(0.3f, 0.3f, 0.3f);
     pcl::PointCloud<pcl::PointXYZI>::Ptr cloud_filtered(new pcl::PointCloud<pcl::PointXYZI>());
     voxel_grid.filter(*cloud_filtered);
     RCLCPP_INFO(this->get_logger(), "point: %ld size", cloud_filtered->points.size());
 
     sensor_msgs::msg::PointCloud2 filtered_cloud_msg;
     pcl::toROSMsg(*cloud_filtered, filtered_cloud_msg);
-    filtered_cloud_msg.header.frame_id = "velodyne";
+    filtered_cloud_msg.header.frame_id = "base_link2";
     filtered_cloud_msg.header.stamp = msg->header.stamp;
     filtered_cloud_publisher_->publish(filtered_cloud_msg);
     
@@ -122,7 +122,7 @@ void Pcl_Example::topic_callback(const sensor_msgs::msg::PointCloud2::SharedPtr 
 
         sensor_msgs::msg::PointCloud2 previous_cloud_msg;
         pcl::toROSMsg(*previous_cloud_, previous_cloud_msg);
-        previous_cloud_msg.header.frame_id = "velodyne";
+        previous_cloud_msg.header.frame_id = "base_link2";
         previous_cloud_msg.header.stamp = msg->header.stamp;
         previous_cloud_publisher_->publish(previous_cloud_msg);
 
@@ -130,7 +130,7 @@ void Pcl_Example::topic_callback(const sensor_msgs::msg::PointCloud2::SharedPtr 
         pcl::GeneralizedIterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI> icp;
         icp.setInputSource(previous_cloud_);
         icp.setInputTarget(cloud_filtered);
-        icp.setMaxCorrespondenceDistance(5.0);
+        icp.setMaxCorrespondenceDistance(2.0);
         icp.setMaximumIterations(500);
         icp.setTransformationEpsilon(1e-12);
         icp.setEuclideanFitnessEpsilon (0.5);
@@ -140,23 +140,20 @@ void Pcl_Example::topic_callback(const sensor_msgs::msg::PointCloud2::SharedPtr 
         pcl::PointCloud<pcl::PointXYZI> final_cloud;
 
         icp.align(final_cloud);
-        RCLCPP_INFO(this->get_logger(), "ICP Converged: %s", icp.hasConverged() ? "true" : "false");
-        RCLCPP_INFO(this->get_logger(), "Fitness Score: %f", icp.getFitnessScore());
 
-        if (icp.hasConverged())
+        if (true)
         {
             Eigen::Matrix4f transformation = icp.getFinalTransformation();
-            previous_transfrom_ = previous_transfrom_ * transformation;
+            previous_transfrom_ = previous_transfrom_ * transformation.inverse();
 
 
             // Add transformed cloud to the cumulative cloud
-            *cumulative_cloud_ += final_cloud;
 
 
             // Publish the transformed point cloud
             sensor_msgs::msg::PointCloud2 aligned_cloud_msg;
-            pcl::toROSMsg(*cumulative_cloud_, aligned_cloud_msg);
-            aligned_cloud_msg.header.frame_id = "map";
+            pcl::toROSMsg(final_cloud, aligned_cloud_msg);
+            aligned_cloud_msg.header.frame_id = "base_link2";
             aligned_cloud_msg.header.stamp = msg->header.stamp;
             aligned_cloud_publisher_->publish(aligned_cloud_msg);
 
@@ -168,35 +165,34 @@ void Pcl_Example::topic_callback(const sensor_msgs::msg::PointCloud2::SharedPtr 
             Eigen::Quaternionf q(Eigen::Matrix3f(previous_transfrom_.block<3,3>(0,0)));
             odom_msg.pose.position.x = previous_transfrom_(0, 3);
             odom_msg.pose.position.y = previous_transfrom_(1, 3);
-            odom_msg.pose.position.z = 0;
+            odom_msg.pose.position.z = previous_transfrom_(2, 3);
             odom_msg.pose.orientation.x = q.x();
             odom_msg.pose.orientation.y = q.y();
             odom_msg.pose.orientation.z = q.z();
             odom_msg.pose.orientation.w = q.w();
 
             path_history_.push_back(odom_msg);
-
             nav_msgs::msg::Path path_msg;
             path_msg.header.frame_id = "map";
             path_msg.header.stamp = msg->header.stamp;
             path_msg.poses.insert(path_msg.poses.end(), path_history_.begin(), path_history_.end());
             odometry_publisher_->publish(path_msg);
-            /*
-            // Publish the odom_to_map transform
+            
+            //Publish the odom_to_map transform
             geometry_msgs::msg::TransformStamped transformStamped;
             transformStamped.header.stamp = msg->header.stamp;
             transformStamped.header.frame_id = "map";
-            transformStamped.child_frame_id = "velodyne";
+            transformStamped.child_frame_id = "base_link2";
             transformStamped.transform.translation.x = previous_transfrom_(0, 3);
             transformStamped.transform.translation.y = previous_transfrom_(1, 3);
-            transformStamped.transform.translation.z = 0;
+            transformStamped.transform.translation.z = previous_transfrom_(2, 3);
             Eigen::Quaternionf q_odom_to_map(Eigen::Matrix3f(previous_transfrom_.block<3,3>(0,0)));
             transformStamped.transform.rotation.x = q_odom_to_map.x();
             transformStamped.transform.rotation.y = q_odom_to_map.y();
             transformStamped.transform.rotation.z = q_odom_to_map.z();
             transformStamped.transform.rotation.w = q_odom_to_map.w();
 
-            tf_broadcaster_.sendTransform(transformStamped);*/
+            tf_broadcaster_.sendTransform(transformStamped);
         }
         else
         {
@@ -205,7 +201,7 @@ void Pcl_Example::topic_callback(const sensor_msgs::msg::PointCloud2::SharedPtr 
     }
 
     // Update previous cloud
-    *previous_cloud_ = *cumulative_cloud_;
+    *previous_cloud_ = *cloud_filtered;
 
     auto end = high_resolution_clock::now();
     auto duration = duration_cast<microseconds>(end - start).count();
