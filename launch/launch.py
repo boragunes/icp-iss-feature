@@ -24,7 +24,8 @@ def generate_launch_description():
             name='pcl_example_node',
             parameters= [
             {'frame_id': 'velodyne'},
-            {'topic_pointcloud_in': '/matlab_points_raw'},
-            {'topic_pointcloud_out': 'bf_lidar/point_cloud_pcl_example'}],
+            {'topic_pointcloud_in': '/velodyne_points'},
+            {'topic_pointcloud_out': 'bf_lidar/point_cloud_pcl_example'},
+            {'topic_matlab_transform': 'matlab_transform'},],
         )
     ])

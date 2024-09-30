@@ -56,6 +56,9 @@ using std::placeholders::_1;
 
   
 
+geometry_msgs::msg::TransformStamped latest_transform_;
+rclcpp::Subscription<geometry_msgs::msg::TransformStamped>::SharedPtr transform_subscription_;
+
 Pcl_Example::Pcl_Example(const rclcpp::NodeOptions &options)
 : Node("pcl_example", options),
   tf_broadcaster_(this)  // Initialize tf_broadcaster_ with the Node instance
@@ -65,11 +68,13 @@ Pcl_Example::Pcl_Example(const rclcpp::NodeOptions &options)
   declare_parameter<std::string>("topic_iss_features", "bf_lidar/iss_features");
   declare_parameter<std::string>("topic_odometry", "bf_lidar/odometry");
   declare_parameter<std::string>("topic_aligned_cloud", "bf_lidar/aligned_cloud");
-  
+  declare_parameter<std::string>("topic_matlab_transform", "matlab_transform");
+
   param_topic_pointcloud_in = get_parameter("topic_pointcloud_in").as_string();
   param_topic_iss_features = get_parameter("topic_iss_features").as_string();
   param_topic_odometry = get_parameter("topic_odometry").as_string();
   param_topic_aligned_cloud = get_parameter("topic_aligned_cloud").as_string();
+  param_topic_matlab_transform = get_parameter("topic_matlab_transform").as_string();
   
   aligned_cloud_publisher_ = this->create_publisher<sensor_msgs::msg::PointCloud2>(param_topic_aligned_cloud, 100);
   iss_features_publisher_ = this->create_publisher<sensor_msgs::msg::PointCloud2>(param_topic_iss_features,100 );
@@ -79,6 +84,10 @@ Pcl_Example::Pcl_Example(const rclcpp::NodeOptions &options)
   filtered_cloud_publisher_ = this->create_publisher<sensor_msgs::msg::PointCloud2>("bf_lidar/filtered_cloud", 100);
   subscription_ = this->create_subscription<sensor_msgs::msg::PointCloud2>(
   param_topic_pointcloud_in, 100, std::bind(&Pcl_Example::topic_callback, this, _1));
+  
+  transform_subscription_ = this->create_subscription<geometry_msgs::msg::TransformStamped>(
+  param_topic_matlab_transform, 100, std::bind(&Pcl_Example::transform_callback, this, _1));
+
   previous_cloud_ = std::make_shared<pcl::PointCloud<pcl::PointXYZI>>();
   cumulative_cloud_ = std::make_shared<pcl::PointCloud<pcl::PointXYZI>>();
   
@@ -88,6 +97,43 @@ Pcl_Example::Pcl_Example(const rclcpp::NodeOptions &options)
     std::deque<pcl::PointCloud<pcl::PointXYZI>::Ptr> cloud_history_; // Store the history of added clouds
     
 }
+
+
+void Pcl_Example::transform_callback(const geometry_msgs::msg::TransformStamped::SharedPtr msg)
+{
+    // Store the latest received transform for use in the topic_callback
+
+    // Extract translation components from TransformStamped message
+    float tx = msg->transform.translation.x;
+    float ty = msg->transform.translation.y;
+    float tz = msg->transform.translation.z;
+
+    // Extract rotation components from TransformStamped message (quaternion)
+    float qx = msg->transform.rotation.x;
+    float qy = msg->transform.rotation.y;
+    float qz = msg->transform.rotation.z;
+    float qw = msg->transform.rotation.w;
+
+    Eigen::Quaternionf eigen_quat(qw, qx, qy, qz);
+
+    // Convert the quaternion to a 3x3 rotation matrix
+    Eigen::Matrix3f rotation_matrix = eigen_quat.toRotationMatrix();
+
+    // Construct the 4x4 transformation matrix
+    Eigen::Matrix4f transform_matrix = Eigen::Matrix4f::Identity();
+
+        // Set the top-left 3x3 part of the matrix to the rotation matrix
+    transform_matrix.block<3,3>(0, 0) = rotation_matrix;
+
+    // Set the top-right 3x1 part of the matrix to the translation vector
+    transform_matrix(0, 3) = tx;
+    transform_matrix(1, 3) = ty;
+    transform_matrix(2, 3) = tz;
+
+    latest_transform_ = *msg; 
+    matlab_transform_ = transform_matrix; 
+}
+
 
 void Pcl_Example::topic_callback(const sensor_msgs::msg::PointCloud2::SharedPtr msg)
 {
@@ -128,8 +174,8 @@ void Pcl_Example::topic_callback(const sensor_msgs::msg::PointCloud2::SharedPtr 
 
 
         pcl::GeneralizedIterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI> icp;
-        icp.setInputSource(previous_cloud_);
-        icp.setInputTarget(cloud_filtered);
+        icp.setInputSource(cloud_filtered);
+        icp.setInputTarget(previous_cloud_);
         icp.setMaxCorrespondenceDistance(2.0);
         icp.setMaximumIterations(500);
         icp.setTransformationEpsilon(1e-12);
@@ -139,12 +185,12 @@ void Pcl_Example::topic_callback(const sensor_msgs::msg::PointCloud2::SharedPtr 
 
         pcl::PointCloud<pcl::PointXYZI> final_cloud;
 
-        icp.align(final_cloud);
+        icp.align(final_cloud,matlab_transform_);
 
         if (true)
         {
             Eigen::Matrix4f transformation = icp.getFinalTransformation();
-            previous_transfrom_ = previous_transfrom_ * transformation.inverse();
+            previous_transfrom_ = previous_transfrom_ * transformation;
 
 
             // Add transformed cloud to the cumulative cloud
